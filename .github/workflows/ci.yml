@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  lint-and-i18n:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: PHP syntax check
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: php -l all plugin files
+        run: cd vinkius-connector && find . -name '*.php' -exec php -l {} \;
+
+      - name: JS syntax check
+        run: |
+          node --check vinkius-connector/admin/js/vinkius-connector.js
+          node --check vinkius-connector/admin/js/vc-governance.js
+
+      - name: i18n catalog coverage
+        run: |
+          python3 - <<'PY'
+          import re, glob, sys
+          code = set()
+          for f in glob.glob('vinkius-connector/**/*.php', recursive=True):
+              text = open(f, encoding='utf-8').read()
+              code |= set(re.findall(r"""\b(?:__|esc_html__|esc_html_e|esc_attr__|_e|esc_attr)\s*\(\s*'([^']*)'""", text))
+          pot = open('vinkius-connector/languages/vinkius-connector.pot', encoding='utf-8').read()
+          entries = set()
+          for m in re.finditer(r'msgid "((?:[^"\\]|\\.)*)"', pot):
+              s = m.group(1).replace('\\"', '"')
+              if s:
+                  entries.add(s)
+          missing = sorted(s for s in code if s not in entries)
+          print(f'code strings: {len(code)} | pot entries: {len(entries)} | missing: {len(missing)}')
+          sys.exit(1 if missing else 0)
+          PY

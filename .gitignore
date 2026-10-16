@@ -1,0 +1,23 @@
+# Local test instance (Docker volume)
+.wptest/
+
+# Build artifacts
+vinkius-connector.zip
+
+# Internal strategy docs (not part of the open-source repo)
+INOVACAO-e-POSICIONAMENTO-wordpress.md
+OPORTUNIDADE-plugin-wordpress.md
+PLANO-DE-VITORIA-v3.md
+TESE-de-VITORIA.md
+
+# Dev scratch
+.smoke.php
+.smoke-po.php
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+node_modules/

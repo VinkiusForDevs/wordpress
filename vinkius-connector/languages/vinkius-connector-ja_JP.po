@@ -1,0 +1,709 @@
+# Japanese translations for the Vinkius Connector plugin.
+# Copyright (C) 2026 Vinkius
+# This file is distributed under the GPLv2 or later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Vinkius Connector 1.0.0\n"
+"Report-Msgid-Bugs-To: https://vinkius.com\n"
+"POT-Creation-Date: 2026-10-16 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja_JP\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Vinkius"
+msgstr "Vinkius"
+
+msgid "Vinkius Dashboard"
+msgstr "Vinkius ダッシュボード"
+
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+msgid "Agents"
+msgstr "エージェント"
+
+msgid "Consent"
+msgstr "同意"
+
+msgid "Connectors"
+msgstr "コネクタ"
+
+msgid "Seller Console"
+msgstr "販売者コンソール"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Not configured"
+msgstr "未設定"
+
+msgid "Not connected"
+msgstr "未接続"
+
+msgid "Connected"
+msgstr "接続済み"
+
+msgid "Session expired"
+msgstr "セッションの有効期限が切れました"
+
+msgid "Agents are halted on this site."
+msgstr "このサイトではエージェントが停止しています。"
+
+msgid "Agent-facing surfaces return 403 and new consent is blocked."
+msgstr "エージェント向けエンドポイントは 403 を返し、新しい同意はブロックされます。"
+
+msgid "Resume agents"
+msgstr "エージェントを再開"
+
+msgid "You are on the %s plan"
+msgstr "%s プランをご利用中です"
+
+msgid "Subscribe to Vinkius for higher request quotas, longer log retention and the global kill switch."
+msgstr "Vinkius に加入すると、リクエスト上限の増加、ログ保持期間の延長、グローバル・キルスイッチが利用できます。"
+
+msgid "Subscribe to Vinkius"
+msgstr "Vinkius に加入する"
+
+msgid "Vinkius Connector %1$s · Open source · GPLv2 or later"
+msgstr "Vinkius Connector %1$s・オープンソース・GPLv2 以降"
+
+msgid "Executions"
+msgstr "実行回数"
+
+msgid "Visitor Sessions"
+msgstr "訪問者セッション"
+
+msgid "Errors"
+msgstr "エラー"
+
+msgid "Trust Score"
+msgstr "トラストスコア"
+
+msgid "Usage"
+msgstr "使用状況"
+
+msgid "Halt all agents"
+msgstr "全エージェントを停止"
+
+msgid "Used %1$s of %2$s requests this cycle."
+msgstr "今サイクルで %2$s 件中 %1$s 件を使用しました。"
+
+msgid "Connect Vinkius to see live quota and cost."
+msgstr "Vinkius に接続すると、クォータとコストをリアルタイムで確認できます。"
+
+msgid "Live Activity"
+msgstr "ライブアクティビティ"
+
+msgid "Pushed by Vinkius, stored on this site."
+msgstr "Vinkius からプッシュされ、このサイトに保存されます。"
+
+msgid "No activity yet. Once Vinkius is connected, agent executions will appear here."
+msgstr "まだアクティビティはありません。Vinkius に接続すると、エージェントの実行がここに表示されます。"
+
+msgid "%s ms"
+msgstr "%s ms"
+
+msgid "DLP %s"
+msgstr "DLP %s"
+
+msgid "No visitor agent sessions recorded yet."
+msgstr "まだ訪問者のエージェントセッションは記録されていません。"
+
+msgid "Visitor"
+msgstr "訪問者"
+
+msgid "Agent"
+msgstr "エージェント"
+
+msgid "Requests"
+msgstr "リクエスト"
+
+msgid "Last Seen"
+msgstr "最終確認"
+
+msgid "Actions"
+msgstr "アクション"
+
+msgid "Avg Latency"
+msgstr "平均レイテンシ"
+
+msgid "Last Activity"
+msgstr "最終アクティビティ"
+
+msgid "No agents have executed on this site yet. One row will appear per agent token once activity flows in."
+msgstr "まだこのサイトではエージェントが実行されていません。活動が始まると、エージェントトークンごとに 1 行ずつ表示されます。"
+
+msgid "Per-agent deep logs (tool, status, latency, DLP) live in Vinkius once connected; this table is the local audit mirror."
+msgstr "エージェントごとの詳細ログ（ツール、状態、レイテンシ、DLP）は接続後 Vinkius にあります。このテーブルはローカル監査ミラーです。"
+
+msgid "Visitor Consent"
+msgstr "訪問者の同意"
+
+msgid "Agents only act on behalf of a visitor after they opt in with the shortcode below. Revoke any consent at any time."
+msgstr "エージェントは、訪問者が以下のショートコードでオプトインした場合にのみ、その名代わりとして行動します。同意はいつでも取り消せます。"
+
+msgid "No consent records yet."
+msgstr "まだ同意記録はありません。"
+
+msgid "Scopes"
+msgstr "スコープ"
+
+msgid "Purpose"
+msgstr "目的"
+
+msgid "Granted"
+msgstr "付与日"
+
+msgid "Status"
+msgstr "状態"
+
+msgid "Revoked"
+msgstr "取り消済み"
+
+msgid "Active"
+msgstr "有効"
+
+msgid "Create Connector"
+msgstr "コネクタ作成"
+
+msgid "Turn this site’s resources into a Vinkius connector."
+msgstr "このサイトのリソースを Vinkius コネクタにします。"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Source"
+msgstr "ソース"
+
+msgid "WordPress REST API"
+msgstr "WordPress REST API"
+
+msgid "Forms"
+msgstr "フォーム"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "Custom API (OpenAPI URL)"
+msgstr "カスタム API（OpenAPI URL）"
+
+msgid "OpenAPI spec URL (for custom sources)"
+msgstr "OpenAPI 仕様 URL（カスタムソース用）"
+
+msgid "Preview Tools"
+msgstr "ツールのプレビュー"
+
+msgid "Save Draft"
+msgstr "下書きを保存"
+
+msgid "Tools detected"
+msgstr "検出されたツール"
+
+msgid "My Connectors"
+msgstr "マイコネクタ"
+
+msgid "No connectors yet. Draft one above — publishing requires a Vinkius connection."
+msgstr "まだコネクタはありません。上記で下書きを作成してください。公開には Vinkius の接続が必要です。"
+
+msgid "Connector"
+msgstr "コネクタ"
+
+msgid "Tools"
+msgstr "ツール"
+
+msgid "Published"
+msgstr "公開済み"
+
+msgid "Draft"
+msgstr "下書き"
+
+msgid "Publish"
+msgstr "公開"
+
+msgid "Open Marketplace"
+msgstr "マーケットプレイスを開く"
+
+msgid "Connect Vinkius to sync your listings, earnings and marketplace metrics. Until then, new connectors stay as local drafts."
+msgstr "Vinkius に接続すると、公開情報・収益・マーケットプレイス指標が同期されます。接続までの間は、新規コネクタはローカル下書きのままです。"
+
+msgid "Listings"
+msgstr "公開情報"
+
+msgid "No listings yet. Create a connector in Studio and publish it to the Vinkius marketplace."
+msgstr "まだ公開情報はありません。Studio でコネクタを作成し、Vinkius マーケットプレイスに公開してください。"
+
+msgid "Earnings"
+msgstr "収益"
+
+msgid "Loading earnings…"
+msgstr "収益を読み込み中…"
+
+msgid "Free listings publish instantly. Paid listings start at %s. Earnings sync here once connected."
+msgstr "無料公開は即座に公開されます。有料公開は %s からです。接続後、収益がここに同期されます。"
+
+msgid "Connection"
+msgstr "接続"
+
+msgid "Vinkius API Base URL"
+msgstr "Vinkius API ベース URL"
+
+msgid "Leave empty to keep the plugin in prepared (offline) mode."
+msgstr "空にすると、プラグインは準備済み（オフライン）モードのままです。"
+
+msgid "Vinkius Frontend Base URL"
+msgstr "Vinkius フロントエンドベース URL"
+
+msgid "Where device login approval and plan pages live."
+msgstr "デバイスログイン承認とプランページが置かれている場所です。"
+
+msgid "Interface Language"
+msgstr "インターフェース言語"
+
+msgid "Follow site language"
+msgstr "サイトの言語に合わせる"
+
+msgid "Save Settings"
+msgstr "設定を保存"
+
+msgid "Vinkius Login"
+msgstr "Vinkius ログイン"
+
+msgid "Logged in via device flow."
+msgstr "デバイスフローでログイン済みです。"
+
+msgid "Log out"
+msgstr "ログアウト"
+
+msgid "Login uses the Vinkius device flow: start it here, approve on your Vinkius account, and this site connects automatically."
+msgstr "ログインは Vinkius のデバイスフローを使用します。ここで開始し、Vinkius アカウントで承認すると、このサイトが自動で接続されます。"
+
+msgid "Connect with Vinkius"
+msgstr "Vinkius に接続"
+
+msgid "Device code"
+msgstr "デバイスコード"
+
+msgid "Open approval page"
+msgstr "承認ページを開く"
+
+msgid "Waiting for approval…"
+msgstr "承認を待っています…"
+
+msgid "Security"
+msgstr "セキュリティ"
+
+msgid "Webhook secret (Vinkius log destinations)"
+msgstr "Webhook シークレット（Vinkius ログ送信先）"
+
+msgid "Copy"
+msgstr "コピー"
+
+msgid "Copied"
+msgstr "コピーしました"
+
+msgid "Regenerate"
+msgstr "再生成"
+
+msgid "Register this exact secret in Vinkius as your site’s log-destination webhook; signed audit events land in the local panel."
+msgstr "このシークレットを Vinkius に、サイトのログ送信先 Webhook として登録してください。署名付き監査イベントがローカルパネルに届きます。"
+
+msgid "Local kill switch"
+msgstr "ローカルキルスイッチ"
+
+msgid "When on, agent-facing surfaces return 403 and new visitor consent is blocked."
+msgstr "オンにすると、エージェント向けエンドポイントは 403 を返し、新しい訪問者の同意はブロックされます。"
+
+msgid "You are not allowed to do that."
+msgstr "その操作は許可されていません。"
+
+msgid "This site has emergency-halted AI agents. DO NOT RETRY. Approve Resumption first."
+msgstr "このサイトでは AI エージェントが緊急停止されています。再試行しないでください。まず再開を承認してください。"
+
+msgid "Publishing requires a Vinkius connection. Configure the API URL in Settings."
+msgstr "公開には Vinkius の接続が必要です。設定で API URL を構成してください。"
+
+msgid "Agent API is Vinkius-verified · %s"
+msgstr "エージェント API は Vinkius 認証済み・%s"
+
+msgid "Agent actions are currently halted on this site."
+msgstr "現在、このサイトではエージェントのアクションが停止中です。"
+
+msgid "By continuing you allow Vinkius agents to act on your behalf on this site with the selected scopes. You can revoke at any time."
+msgstr "続行すると、Vinkius エージェントが選択したスコープでこのサイトにおいてあなたの代わりに行動することを許可することになります。いつでも取り消せます。"
+
+msgid "Allow AI agents to act on my behalf on this site"
+msgstr "AI エージェントが私の代わりにこのサイトで行動することを許可する"
+
+msgid "Read site content"
+msgstr "サイトのコンテンツを読む"
+
+msgid "Draft site content"
+msgstr "サイト内容を下書きする"
+
+msgid "Subscribe me as a user"
+msgstr "ユーザーとして購読する"
+
+msgid "Upload media on my behalf"
+msgstr "私の代わりにメディアをアップロードする"
+
+msgid "Agent actions are halted on this site right now."
+msgstr "現在、このサイトではエージェントのアクションが停止中です。"
+
+msgid "Listing"
+msgstr "公開情報"
+
+msgid "Set the Vinkius API Base URL above, save, then start device login here."
+msgstr "上記に Vinkius API のベース URL を設定して保存し、ここでデバイスログインを開始してください。"
+
+msgid "Settings saved."
+msgstr "設定を保存しました。"
+
+msgid "Vinkius AI Governance"
+msgstr "Vinkius AI ガバナンス"
+
+msgid "Governance"
+msgstr "ガバナンス"
+
+msgid "Incidents"
+msgstr "インシデント"
+
+msgid "Evidence"
+msgstr "エビデンス"
+
+msgid "Marketplace"
+msgstr "マーケットプレイス"
+
+msgid "Connect your site to Vinkius to see governed agent operations here."
+msgstr "サイトを Vinkius に接続すると、ここでガバナンスされたエージェント操作が表示されます。"
+
+msgid "Agent operations routed through Vinkius are visible in the panel below."
+msgstr "Vinkius 経由のエージェント操作が下のパネルに表示されます。"
+
+msgid "Open panel"
+msgstr "パネルを開く"
+
+msgid "Manage in Vinkius"
+msgstr "Vinkius で管理"
+
+msgid "Executions today: %1$d · Active agents: %2$d · Blocked events: %3$d · Connectors in use: %4$d"
+msgstr "本日の実行: %1$d・アクティブなエージェント: %2$d・ブロックされたイベント: %3$d・使用中のコネクタ: %4$d"
+
+msgid "Vinkius AI Governance — daily digest for %s"
+msgstr "Vinkius AI ガバナンス — %s のデイリーダイジェスト"
+
+msgid "Agent API is Vinkius-verified"
+msgstr "エージェント API は Vinkius 認証済み"
+
+msgid "Connect WordPress to Vinkius"
+msgstr "WordPress を Vinkius に接続"
+
+msgid "Link this site to your Vinkius account to see governed agent operations here."
+msgstr "サイトを Vinkius アカウントに連携すると、ここでガバナンスされたエージェント操作が見えます。"
+
+msgid "Connect"
+msgstr "接続"
+
+msgid "Unlock higher quotas, longer retention and the global kill switch."
+msgstr "高いクォータ、長い保持期間、グローバルキルスイッチが利用可能になります。"
+
+msgid "View plans"
+msgstr "プランを見る"
+
+msgid "This panel shows only operations routed through the Vinkius runtime. Reliability — credential vault, DLP, sandboxing, circuit breakers, kill-switch — is enforced by the Vinkius runtime, not by this site."
+msgstr "このパネルは Vinkius ランタイム経由の操作のみを表示します。信頼性（クレデンシャル vault、DLP、サンドボックス、サーキットブレイカー、キルスイッチ）は Vinkius ランタイムが保証します。"
+
+msgid "Agent fleet"
+msgstr "エージェント群"
+
+msgid "Manage agents & tokens in Vinkius"
+msgstr "Vinkius でエージェントとトークンを管理"
+
+msgid "Read live from the Vinkius runtime. Nothing is stored on this site."
+msgstr "Vinkius ランタイムからライブ取得。このサイトには何も保存されません。"
+
+msgid "Avg latency"
+msgstr "平均レイテンシ"
+
+msgid "No data loaded."
+msgstr "データがありません。"
+
+msgid "Active agents"
+msgstr "アクティブなエージェント"
+
+msgid "Executions today"
+msgstr "本日の実行"
+
+msgid "Blocked events"
+msgstr "ブロックされたイベント"
+
+msgid "Connectors in use"
+msgstr "使用中のコネクタ"
+
+msgid "Live activity"
+msgstr "ライブアクティビティ"
+
+msgid "Routed through the Vinkius runtime."
+msgstr "Vinkius ランタイム経由。"
+
+msgid "No activity in this period."
+msgstr "この期間にアクティビティはありません。"
+
+msgid "Emergency halt"
+msgstr "緊急停止"
+
+msgid "Circuit tripped"
+msgstr "サーキット遮断"
+
+msgid "Stop one connector or the whole runtime for this site. The enforcement happens in the Vinkius runtime."
+msgstr "このサイトの 1 つまたはすべてのコネクタを停止します。強制は Vinkius ランタイムで行われます。"
+
+msgid "Halt all"
+msgstr "すべて停止"
+
+msgid "Reset circuit"
+msgstr "サーキットリセット"
+
+msgid "Manage per-connector halt in Vinkius"
+msgstr "Vinkius でコネクタ別の停止を管理"
+
+msgid "Agents & connectors"
+msgstr "エージェントとコネクタ"
+
+msgid "Policies & DLP"
+msgstr "ポリシーと DLP"
+
+msgid "Publish connectors"
+msgstr "コネクタを公開"
+
+msgid "Webhooks & secrets"
+msgstr "Webhook とシークレット"
+
+msgid "Plans & upgrade"
+msgstr "プランとアップグレード"
+
+msgid "Execution evidence"
+msgstr "実行エビデンス"
+
+msgid "Full evidence in Vinkius"
+msgstr "完全なエビデンスは Vinkius に"
+
+msgid "Select a connector"
+msgstr "コネクタを選択"
+
+msgid "Time"
+msgstr "時刻"
+
+msgid "Tool"
+msgstr "ツール"
+
+msgid "Latency"
+msgstr "レイテンシ"
+
+msgid "DLP"
+msgstr "DLP"
+
+msgid "Errors (today)"
+msgstr "エラー（本日）"
+
+msgid "DLP blocks (today)"
+msgstr "DLP ブロック（本日）"
+
+msgid "Circuit breaker"
+msgstr "サーキットブレイカー"
+
+msgid "What happened"
+msgstr "何が起きたか"
+
+msgid "Tripped"
+msgstr "遮断中"
+
+msgid "No incident summary available for this period."
+msgstr "この期間のインシデント概要はありません。"
+
+msgid "Respond"
+msgstr "対応"
+
+msgid "Open incidents in Vinkius"
+msgstr "Vinkius でインシデントを開く"
+
+msgid "Publish your connectors, reach the catalog, and track earnings — from the Vinkius cloud. This screen only links there; nothing is managed on this site."
+msgstr "コネクタを公開し、カタログに到達し、収益を追跡 — Vinkius クラウドから。この画面はリンクのみで、このサイトでは何も管理しません。"
+
+msgid "Browse catalog"
+msgstr "カタログを見る"
+
+msgid "Trust badge scan ID"
+msgstr "信頼バッジのスキャン ID"
+
+msgid "From your debugger scan in the Vinkius cloud."
+msgstr "Vinkius クラウドのデバッガースキャンから。"
+
+msgid "Daily digest"
+msgstr "デイリーダイジェスト"
+
+msgid "Send a daily digest of agent activity"
+msgstr "エージェント活動のデイリーダイジェストを送信"
+
+msgid "Site secret"
+msgstr "サイトシークレット"
+
+msgid "Signs consent records and the site manifest."
+msgstr "同意記録とサイトマニフェストに署名します。"
+
+msgid "When on, agent-facing surfaces on this site return 403."
+msgstr "オンにすると、このサイトのカージェント向け表面が 403 を返します。"
+
+msgid "Plan & usage"
+msgstr "プランと使用状況"
+
+msgid "Used %1$s of %2$s this cycle."
+msgstr "この周期で %2$s のうち %1$s を使用しました。"
+
+msgid "Session expired. Log in again from Settings to see live data."
+msgstr "セッションの有効期限が切れました。設定から再ログインすると、ライブデータが表示されます。"
+
+msgid "Your Vinkius session has ended."
+msgstr "Vinkius のセッションが終了しました。"
+
+msgid "Log in again to see live data."
+msgstr "ライブデータを見るには再ログインしてください。"
+
+msgid "Log in again"
+msgstr "再ログイン"
+
+msgid "No connectors with activity."
+msgstr "アクティビティのあるコネクタはありません。"
+
+msgid "No executions recorded for this connector."
+msgstr "このコネクタに実行記録はありません。"
+
+msgid "Open"
+msgstr "通常"
+
+msgid "Halt this connector"
+msgstr "このコネクタを停止"
+
+msgid "Halt all agents on this site?"
+msgstr "このサイトのすべてのエージェントを停止しますか？"
+
+msgid "Session expired. Start again."
+msgstr "セッションの有効期限が切れました。最初からやり直してください。"
+
+msgid "Set the Vinkius API Base URL above and save first."
+msgstr "まず上の Vinkius API 基本 URL を設定して保存してください。"
+
+msgid "Consent recorded. You can revoke it anytime."
+msgstr "同意を記録しました。いつでも取り消すことができます。"
+
+msgid "Something went wrong. Please try again."
+msgstr "エラーが発生しました。もう一度お試しください。"
+
+msgid "Could not start device login. Please try again."
+msgstr "デバイスログインを開始できませんでした。もう一度お試しください。"
+
+msgid "%1$s connectors · %2$s capabilities"
+msgstr "%1$s つのコネクタ · %2$s つの機能"
+
+msgid "AI Governance"
+msgstr "AI ガバナンス"
+
+msgid "AI Spend"
+msgstr "AI 支出"
+
+msgid "Access Tokens"
+msgstr "アクセストークン"
+
+msgid "Access tokens"
+msgstr "アクセストークン"
+
+msgid "Agent Activity"
+msgstr "エージェントの活動"
+
+msgid "All"
+msgstr "すべて"
+
+msgid "By client"
+msgstr "クライアント別"
+
+msgid "Capabilities"
+msgstr "機能"
+
+msgid "Capability Reliability"
+msgstr "機能の信頼性"
+
+msgid "Catalog"
+msgstr "カタログ"
+
+msgid "Clear"
+msgstr "クリア"
+
+msgid "Connector Traffic"
+msgstr "コネクタのトラフィック"
+
+msgid "Events by server"
+msgstr "サーバー別イベント"
+
+msgid "Failures by server"
+msgstr "サーバー別の失敗"
+
+msgid "Governance data streams live from your Vinkius account."
+msgstr "ガバナンスデータは Vinkius アカウントからライブ配信されます。"
+
+msgid "Loading…"
+msgstr "読み込み中…"
+
+msgid "Mission Control"
+msgstr "ミッションコントロール"
+
+msgid "Most failing"
+msgstr "最も失敗が多い"
+
+msgid "No connectors in the catalog yet."
+msgstr "カタログにまだコネクタがありません。"
+
+msgid "No data in this period."
+msgstr "この期間にデータはありません。"
+
+msgid "No matches for \"%s\"."
+msgstr "「%s」に一致する結果はありません。"
+
+msgid "Off"
+msgstr "無効"
+
+msgid "On"
+msgstr "有効"
+
+msgid "Open in Vinkius"
+msgstr "Vinkius で開く"
+
+msgid "Reports"
+msgstr "レポート"
+
+msgid "Request Failures"
+msgstr "リクエストの失敗"
+
+msgid "Search capabilities and connectors…"
+msgstr "機能とコネクタを検索…"
+
+msgid "Search is unavailable right now. Please try again."
+msgstr "検索が現在利用できません。もう一度お試しください。"
+
+msgid "Security Posture"
+msgstr "セキュリティの状況"
+
+msgid "Slowest tools"
+msgstr "最も遅いツール"
+
+msgid "Spend by server"
+msgstr "サーバー別の支出"
+
+msgid "Try rephrasing your search."
+msgstr "検索の内容を変更してお試しください。"
+
+msgid "Halted"
+msgstr "停止中"
+
+msgid "Running"
+msgstr "実行中"

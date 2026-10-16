@@ -1,0 +1,709 @@
+# French translations for the Vinkius Connector plugin.
+# Copyright (C) 2026 Vinkius
+# This file is distributed under the GPLv2 or later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Vinkius Connector 1.0.0\n"
+"Report-Msgid-Bugs-To: https://vinkius.com\n"
+"POT-Creation-Date: 2026-10-16 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Vinkius"
+msgstr "Vinkius"
+
+msgid "Vinkius Dashboard"
+msgstr "Tableau de bord Vinkius"
+
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+msgid "Agents"
+msgstr "Agents"
+
+msgid "Consent"
+msgstr "Consentement"
+
+msgid "Connectors"
+msgstr "Connecteurs"
+
+msgid "Seller Console"
+msgstr "Console Vendeur"
+
+msgid "Settings"
+msgstr "Réglages"
+
+msgid "Not configured"
+msgstr "Non configuré"
+
+msgid "Not connected"
+msgstr "Non connecté"
+
+msgid "Connected"
+msgstr "Connecté"
+
+msgid "Session expired"
+msgstr "Session expirée"
+
+msgid "Agents are halted on this site."
+msgstr "Les agents sont arrêtés sur ce site."
+
+msgid "Agent-facing surfaces return 403 and new consent is blocked."
+msgstr "Les surfaces exposées aux agents renvoyent 403 et les nouveaux consentements sont bloqués."
+
+msgid "Resume agents"
+msgstr "Reprendre les agents"
+
+msgid "You are on the %s plan"
+msgstr "Vous êtes sur le plan %s"
+
+msgid "Subscribe to Vinkius for higher request quotas, longer log retention and the global kill switch."
+msgstr "Abonnez-vous à Vinkius pour des quotas plus élevés, une rétention de journaux plus longue et l’interrupteur d’arrêt global."
+
+msgid "Subscribe to Vinkius"
+msgstr "S’abonner à Vinkius"
+
+msgid "Vinkius Connector %1$s · Open source · GPLv2 ou ultérieur"
+msgstr "Vinkius Connector %1$s · Open source · GPLv2 ou ultérieur"
+
+msgid "Executions"
+msgstr "Exécutions"
+
+msgid "Visitor Sessions"
+msgstr "Sessions visiteurs"
+
+msgid "Errors"
+msgstr "Erreurs"
+
+msgid "Trust Score"
+msgstr "Trust Score"
+
+msgid "Usage"
+msgstr "Utilisation"
+
+msgid "Halt all agents"
+msgstr "Arrêter tous les agents"
+
+msgid "Used %1$s of %2$s requests this cycle."
+msgstr "%1$s requêtes utilisées sur %2$s ce cycle."
+
+msgid "Connect Vinkius to see live quota and cost."
+msgstr "Connectez Vinkius pour voir le quota et le coût en direct."
+
+msgid "Live Activity"
+msgstr "Activité en direct"
+
+msgid "Pushed by Vinkius, stored on this site."
+msgstr "Poussée par Vinkius, stockée sur ce site."
+
+msgid "No activity yet. Once Vinkius is connected, agent executions will appear here."
+msgstr "Pas encore d’activité. Une fois Vinkius connecté, les exécutions des agents apparaîtront ici."
+
+msgid "%s ms"
+msgstr "%s ms"
+
+msgid "DLP %s"
+msgstr "DLP %s"
+
+msgid "No visitor agent sessions recorded yet."
+msgstr "Aucune session d’agent visiteur enregistrée pour l’instant."
+
+msgid "Visitor"
+msgstr "Visiteur"
+
+msgid "Agent"
+msgstr "Agent"
+
+msgid "Requests"
+msgstr "Requêtes"
+
+msgid "Last Seen"
+msgstr "Dernière vue"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Avg Latency"
+msgstr "Latence moy."
+
+msgid "Last Activity"
+msgstr "Dernière activité"
+
+msgid "No agents have executed on this site yet. One row will appear per agent token once activity flows in."
+msgstr "Aucun agent n’a encore exécuté sur ce site. Une ligne apparaîtra par jeton d’agent dès qu’une activité arrivera."
+
+msgid "Per-agent deep logs (tool, status, latency, DLP) live in Vinkius once connected; this table is the local audit mirror."
+msgstr "Les journaux détaillés par agent (outil, statut, latence, DLP) vivent dans Vinkius une fois connecté ; ce tableau est le miroir d’audit local."
+
+msgid "Visitor Consent"
+msgstr "Consentement du visiteur"
+
+msgid "Agents only act on behalf of a visitor after they opt in with the shortcode below. Revoke any consent at any time."
+msgstr "Les agents n’agissent qu’au nom d’un visiteur après son consentement via le shortcode ci-dessous. Révoquez tout consentement à tout moment."
+
+msgid "No consent records yet."
+msgstr "Aucun enregistrement de consentement pour l’instant."
+
+msgid "Scopes"
+msgstr "Portées"
+
+msgid "Purpose"
+msgstr "Finalité"
+
+msgid "Granted"
+msgstr "Accordé"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Revoked"
+msgstr "Révoqué"
+
+msgid "Active"
+msgstr "Actif"
+
+msgid "Create Connector"
+msgstr "Créer un connecteur"
+
+msgid "Turn this site’s resources into a Vinkius connector."
+msgstr "Transformez les ressources de ce site en connecteur Vinkius."
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Source"
+msgstr "Source"
+
+msgid "WordPress REST API"
+msgstr "API REST de WordPress"
+
+msgid "Forms"
+msgstr "Formulaire"
+
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+msgid "Custom API (OpenAPI URL)"
+msgstr "API personnalisée (URL OpenAPI)"
+
+msgid "OpenAPI spec URL (for custom sources)"
+msgstr "URL de la spécification OpenAPI (pour les sources personnalisées)"
+
+msgid "Preview Tools"
+msgstr "Aperçu des outils"
+
+msgid "Save Draft"
+msgstr "Enregistrer le brouillon"
+
+msgid "Tools detected"
+msgstr "Outils détectés"
+
+msgid "My Connectors"
+msgstr "Mes connecteurs"
+
+msgid "No connectors yet. Draft one above — publishing requires a Vinkius connection."
+msgstr "Pas encore de connecteurs. Brouillez-en un ci-dessus — la publication nécessite une connexion Vinkius."
+
+msgid "Connector"
+msgstr "Connecteur"
+
+msgid "Tools"
+msgstr "Outils"
+
+msgid "Published"
+msgstr "Publié"
+
+msgid "Draft"
+msgstr "Brouillon"
+
+msgid "Publish"
+msgstr "Publier"
+
+msgid "Open Marketplace"
+msgstr "Ouvrir le marketplace"
+
+msgid "Connect Vinkius to sync your listings, earnings and marketplace metrics. Until then, new connectors stay as local drafts."
+msgstr "Connectez Vinkius pour synchroniser vos annonces, gains et métriques du marketplace. Jusqu’à là, les nouveaux connecteurs restent des brouillons locaux."
+
+msgid "Listings"
+msgstr "Annonces"
+
+msgid "No listings yet. Create a connector in Studio and publish it to the Vinkius marketplace."
+msgstr "Aucune annonce pour l’instant. Créez un connecteur dans Studio et publiez-le sur le marketplace Vinkius."
+
+msgid "Earnings"
+msgstr "Gains"
+
+msgid "Loading earnings…"
+msgstr "Chargement des gains…"
+
+msgid "Free listings publish instantly. Paid listings start at %s. Earnings sync here once connected."
+msgstr "Les annonces gratuites se publient instantanément. Les payantes démarrent à %s. Les gains se synchronisent ici une fois connecté."
+
+msgid "Connection"
+msgstr "Connexion"
+
+msgid "Vinkius API Base URL"
+msgstr "URL de base de l’API Vinkius"
+
+msgid "Leave empty to keep the plugin in prepared (offline) mode."
+msgstr "Laissez vide pour garder le plugin en mode préparé (hors ligne)."
+
+msgid "Vinkius Frontend Base URL"
+msgstr "URL de base du front Vinkius"
+
+msgid "Where device login approval and plan pages live."
+msgstr "Là où se trouvent l’approbation de connexion par appareil et les pages de plans."
+
+msgid "Interface Language"
+msgstr "Langue de l’interface"
+
+msgid "Follow site language"
+msgstr "Suivre la langue du site"
+
+msgid "Save Settings"
+msgstr "Enregistrer les réglages"
+
+msgid "Vinkius Login"
+msgstr "Connexion Vinkius"
+
+msgid "Logged in via device flow."
+msgstr "Connecté via le device flow."
+
+msgid "Log out"
+msgstr "Se déconnecter"
+
+msgid "Login uses the Vinkius device flow: start it here, approve on your Vinkius account, and this site connects automatically."
+msgstr "La connexion utilise le device flow Vinkius : démarrez-le ici, approuvez sur votre compte Vinkius, et ce site se connecte automatiquement."
+
+msgid "Connect with Vinkius"
+msgstr "Se connecter à Vinkius"
+
+msgid "Device code"
+msgstr "Code appareil"
+
+msgid "Open approval page"
+msgstr "Ouvrir la page d’approbation"
+
+msgid "Waiting for approval…"
+msgstr "En attente d’approbation…"
+
+msgid "Security"
+msgstr "Sécurité"
+
+msgid "Webhook secret (Vinkius log destinations)"
+msgstr "Secret de webhook (destinations de journaux Vinkius)"
+
+msgid "Copy"
+msgstr "Copier"
+
+msgid "Copied"
+msgstr "Copié"
+
+msgid "Regenerate"
+msgstr "Régénérer"
+
+msgid "Register this exact secret in Vinkius as your site’s log-destination webhook; signed audit events land in the local panel."
+msgstr "Enregistrez ce secret exact dans Vinkius comme webhook de destination de journaux de votre site ; les événements d’audit signés arrivent dans le panneau local."
+
+msgid "Local kill switch"
+msgstr "Interrupteur d’arrêt local"
+
+msgid "When on, agent-facing surfaces return 403 and new visitor consent is blocked."
+msgstr "Quand actif, les surfaces exposées aux agents renvoient 403 et le nouveau consentement visiteur est bloqué."
+
+msgid "You are not allowed to do that."
+msgstr "Vous n’êtes pas autorisé à faire cela."
+
+msgid "This site has emergency-halted AI agents. DO NOT RETRY. Approve Resumption first."
+msgstr "Ce site a arrêté les agents IA en urgence. NE PAS RÉESSAYER. Approuvez d’abord la reprise."
+
+msgid "Publishing requires a Vinkius connection. Configure the API URL in Settings."
+msgstr "La publication nécessite une connexion Vinkius. Configurez l’URL de l’API dans Réglages."
+
+msgid "Agent API is Vinkius-verified · %s"
+msgstr "API agent vérifiée par Vinkius · %s"
+
+msgid "Agent actions are currently halted on this site."
+msgstr "Les actions des agents sont actuellement arrêtées sur ce site."
+
+msgid "By continuing you allow Vinkius agents to act on your behalf on this site with the selected scopes. You can revoke at any time."
+msgstr "En continuant, vous autorisez les agents Vinkius à agir en votre nom sur ce site avec les portées sélectionnées. Vous pouvez révoquer à tout moment."
+
+msgid "Allow AI agents to act on my behalf on this site"
+msgstr "Autoriser les agents IA à agir en mon nom sur ce site"
+
+msgid "Read site content"
+msgstr "Lire le contenu du site"
+
+msgid "Draft site content"
+msgstr "Brouillonner du contenu du site"
+
+msgid "Subscribe me as a user"
+msgstr "M’inscrire en tant qu’utilisateur"
+
+msgid "Upload media on my behalf"
+msgstr "Téléverser des médias en mon nom"
+
+msgid "Agent actions are halted on this site right now."
+msgstr "Les actions des agents sont actuellement arrêtées sur ce site."
+
+msgid "Listing"
+msgstr "Annonce"
+
+msgid "Set the Vinkius API Base URL above, save, then start device login here."
+msgstr "Définissez l’URL de base de l’API Vinkius ci-dessus, enregistrez, puis démarrez la connexion par appareil ici."
+
+msgid "Settings saved."
+msgstr "Réglages enregistrés."
+
+msgid "Vinkius AI Governance"
+msgstr "Vinkius AI Governance"
+
+msgid "Governance"
+msgstr "Gouvernance"
+
+msgid "Incidents"
+msgstr "Incidents"
+
+msgid "Evidence"
+msgstr "Preuves"
+
+msgid "Marketplace"
+msgstr "Marketplace"
+
+msgid "Connect your site to Vinkius to see governed agent operations here."
+msgstr "Connectez votre site à Vinkius pour voir les opérations d'agents gouvernées ici."
+
+msgid "Agent operations routed through Vinkius are visible in the panel below."
+msgstr "Les opérations d'agents routées via Vinkius sont visibles dans le panneau ci-dessous."
+
+msgid "Open panel"
+msgstr "Ouvrir le panneau"
+
+msgid "Manage in Vinkius"
+msgstr "Gérer dans Vinkius"
+
+msgid "Executions today: %1$d · Active agents: %2$d · Blocked events: %3$d · Connectors in use: %4$d"
+msgstr "Exécutions aujourd'hui : %1$d · Agents actifs : %2$d · Événements bloqués : %3$d · Connecteurs en usage : %4$d"
+
+msgid "Vinkius AI Governance — daily digest for %s"
+msgstr "Vinkius AI Governance — résumé quotidien pour %s"
+
+msgid "Agent API is Vinkius-verified"
+msgstr "API agent vérifiée par Vinkius"
+
+msgid "Connect WordPress to Vinkius"
+msgstr "Connecter WordPress à Vinkius"
+
+msgid "Link this site to your Vinkius account to see governed agent operations here."
+msgstr "Liez ce site à votre compte Vinkius pour voir les opérations d'agents gouvernées ici."
+
+msgid "Connect"
+msgstr "Connecter"
+
+msgid "Unlock higher quotas, longer retention and the global kill switch."
+msgstr "Débloquez des quotas plus élevés, une rétention plus longue et l'arrêt global."
+
+msgid "View plans"
+msgstr "Voir les offres"
+
+msgid "This panel shows only operations routed through the Vinkius runtime. Reliability — credential vault, DLP, sandboxing, circuit breakers, kill-switch — is enforced by the Vinkius runtime, not by this site."
+msgstr "Ce panneau n'affiche que les opérations routées via le runtime Vinkius. La fiabilité — coffre-fort de credentials, DLP, sandboxing, disjoncteurs, kill-switch — est appliquée par le runtime Vinkius, pas par ce site."
+
+msgid "Agent fleet"
+msgstr "Flotte d'agents"
+
+msgid "Manage agents & tokens in Vinkius"
+msgstr "Gérer agents et tokens dans Vinkius"
+
+msgid "Read live from the Vinkius runtime. Nothing is stored on this site."
+msgstr "Lu en direct du runtime Vinkius. Rien n'est stocké sur ce site."
+
+msgid "Avg latency"
+msgstr "Latence moy."
+
+msgid "No data loaded."
+msgstr "Aucune donnée chargée."
+
+msgid "Active agents"
+msgstr "Agents actifs"
+
+msgid "Executions today"
+msgstr "Exécutions aujourd'hui"
+
+msgid "Blocked events"
+msgstr "Événements bloqués"
+
+msgid "Connectors in use"
+msgstr "Connecteurs en usage"
+
+msgid "Live activity"
+msgstr "Activité en direct"
+
+msgid "Routed through the Vinkius runtime."
+msgstr "Routé via le runtime Vinkius."
+
+msgid "No activity in this period."
+msgstr "Aucune activité sur cette période."
+
+msgid "Emergency halt"
+msgstr "Arrêt d'urgence"
+
+msgid "Circuit tripped"
+msgstr "Circuit déclenché"
+
+msgid "Stop one connector or the whole runtime for this site. The enforcement happens in the Vinkius runtime."
+msgstr "Arrêtez un connecteur ou tout le runtime de ce site. L'application se fait dans le runtime Vinkius."
+
+msgid "Halt all"
+msgstr "Tout arrêter"
+
+msgid "Reset circuit"
+msgstr "Réinitialiser le circuit"
+
+msgid "Manage per-connector halt in Vinkius"
+msgstr "Gérer l'arrêt par connecteur dans Vinkius"
+
+msgid "Agents & connectors"
+msgstr "Agents et connecteurs"
+
+msgid "Policies & DLP"
+msgstr "Politiques et DLP"
+
+msgid "Publish connectors"
+msgstr "Publier des connecteurs"
+
+msgid "Webhooks & secrets"
+msgstr "Webhooks et secrets"
+
+msgid "Plans & upgrade"
+msgstr "Offres et montée en gamme"
+
+msgid "Execution evidence"
+msgstr "Preuve d'exécution"
+
+msgid "Full evidence in Vinkius"
+msgstr "Preuve complète dans Vinkius"
+
+msgid "Select a connector"
+msgstr "Sélectionner un connecteur"
+
+msgid "Time"
+msgstr "Heure"
+
+msgid "Tool"
+msgstr "Outil"
+
+msgid "Latency"
+msgstr "Latence"
+
+msgid "DLP"
+msgstr "DLP"
+
+msgid "Errors (today)"
+msgstr "Erreurs (aujourd'hui)"
+
+msgid "DLP blocks (today)"
+msgstr "Blocages DLP (aujourd'hui)"
+
+msgid "Circuit breaker"
+msgstr "Disjoncteur"
+
+msgid "What happened"
+msgstr "Ce qui s'est passé"
+
+msgid "Tripped"
+msgstr "Déclenché"
+
+msgid "No incident summary available for this period."
+msgstr "Aucun résumé d'incident disponible pour cette période."
+
+msgid "Respond"
+msgstr "Réagir"
+
+msgid "Open incidents in Vinkius"
+msgstr "Ouvrir les incidents dans Vinkius"
+
+msgid "Publish your connectors, reach the catalog, and track earnings — from the Vinkius cloud. This screen only links there; nothing is managed on this site."
+msgstr "Publiez vos connecteurs, atteignez le catalogue et suivez les gains — depuis le cloud Vinkius. Cet écran ne fait que relier ; rien n'est géré sur ce site."
+
+msgid "Browse catalog"
+msgstr "Parcourir le catalogue"
+
+msgid "Trust badge scan ID"
+msgstr "ID du scan du badge de confiance"
+
+msgid "From your debugger scan in the Vinkius cloud."
+msgstr "De votre scan dans le cloud Vinkius."
+
+msgid "Daily digest"
+msgstr "Résumé quotidien"
+
+msgid "Send a daily digest of agent activity"
+msgstr "Envoyer un résumé quotidien de l'activité des agents"
+
+msgid "Site secret"
+msgstr "Secret du site"
+
+msgid "Signs consent records and the site manifest."
+msgstr "Signe les registres de consentement et le manifeste du site."
+
+msgid "When on, agent-facing surfaces on this site return 403."
+msgstr "Quand actif, les surfaces agents de ce site renvoient 403."
+
+msgid "Plan & usage"
+msgstr "Plan et utilisation"
+
+msgid "Used %1$s of %2$s this cycle."
+msgstr "Utilisé : %1$s sur %2$s ce cycle."
+
+msgid "Session expired. Log in again from Settings to see live data."
+msgstr "Session expirée. Connectez-vous à nouveau depuis les Paramètres pour voir les données en direct."
+
+msgid "Your Vinkius session has ended."
+msgstr "Votre session Vinkius a pris fin."
+
+msgid "Log in again to see live data."
+msgstr "Reconnectez-vous pour voir les données en direct."
+
+msgid "Log in again"
+msgstr "Se reconnecter"
+
+msgid "No connectors with activity."
+msgstr "Aucun connecteur avec activité."
+
+msgid "No executions recorded for this connector."
+msgstr "Aucune exécution enregistrée pour ce connecteur."
+
+msgid "Open"
+msgstr "Ouvert"
+
+msgid "Halt this connector"
+msgstr "Arrêter ce connecteur"
+
+msgid "Halt all agents on this site?"
+msgstr "Arrêter tous les agents sur ce site ?"
+
+msgid "Session expired. Start again."
+msgstr "Session expirée. Recommencez."
+
+msgid "Set the Vinkius API Base URL above and save first."
+msgstr "Renseignez d'abord l'URL de base de l'API Vinkius ci-dessus puis enregistrez."
+
+msgid "Consent recorded. You can revoke it anytime."
+msgstr "Consentiment enregistré. Vous pouvez le révoquer à tout moment."
+
+msgid "Something went wrong. Please try again."
+msgstr "Une erreur est survenue. Veuillez réessayer."
+
+msgid "Could not start device login. Please try again."
+msgstr "Impossible de démarrer la connexion par appareil. Veuillez réessayer."
+
+msgid "%1$s connectors · %2$s capabilities"
+msgstr "%1$s connecteurs · %2$s capacités"
+
+msgid "AI Governance"
+msgstr "Gouvernance de l'IA"
+
+msgid "AI Spend"
+msgstr "Dépenses IA"
+
+msgid "Access Tokens"
+msgstr "Jets d'accès"
+
+msgid "Access tokens"
+msgstr "Jets d'accès"
+
+msgid "Agent Activity"
+msgstr "Activité des agents"
+
+msgid "All"
+msgstr "Tous"
+
+msgid "By client"
+msgstr "Par client"
+
+msgid "Capabilities"
+msgstr "Capacités"
+
+msgid "Capability Reliability"
+msgstr "Fiabilité des capacités"
+
+msgid "Catalog"
+msgstr "Catalogue"
+
+msgid "Clear"
+msgstr "Effacer"
+
+msgid "Connector Traffic"
+msgstr "Trafic des connecteurs"
+
+msgid "Events by server"
+msgstr "Événements par serveur"
+
+msgid "Failures by server"
+msgstr "Échecs par serveur"
+
+msgid "Governance data streams live from your Vinkius account."
+msgstr "Les données de gouvernance sont diffusées en direct depuis votre compte Vinkius."
+
+msgid "Loading…"
+msgstr "Chargement…"
+
+msgid "Mission Control"
+msgstr "Poste de commandement"
+
+msgid "Most failing"
+msgstr "Les plus défaillantes"
+
+msgid "No connectors in the catalog yet."
+msgstr "Aucun connecteur dans le catalogue pour l'instant."
+
+msgid "No data in this period."
+msgstr "Aucune donnée sur cette période."
+
+msgid "No matches for \"%s\"."
+msgstr "Aucun résultat pour « %s »."
+
+msgid "Off"
+msgstr "Désactivé"
+
+msgid "On"
+msgstr "Activé"
+
+msgid "Open in Vinkius"
+msgstr "Ouvrir dans Vinkius"
+
+msgid "Reports"
+msgstr "Rapports"
+
+msgid "Request Failures"
+msgstr "Échecs de requêtes"
+
+msgid "Search capabilities and connectors…"
+msgstr "Rechercher capacités et connecteurs…"
+
+msgid "Search is unavailable right now. Please try again."
+msgstr "La recherche est momentanément indisponible. Veuillez réessayer."
+
+msgid "Security Posture"
+msgstr "Posture de sécurité"
+
+msgid "Slowest tools"
+msgstr "Outils les plus lents"
+
+msgid "Spend by server"
+msgstr "Dépenses par serveur"
+
+msgid "Try rephrasing your search."
+msgstr "Essayez de reformuler votre recherche."
+
+msgid "Halted"
+msgstr "Arrêté"
+
+msgid "Running"
+msgstr "En cours"
