@@ -1,10 +1,10 @@
 === Vinkius Connector ===
 Contributors: vinkius
 Tags: ai, agent, mcp, governance, vinkius
-Requires at least: 6.0
-Tested up to: 6.8
+Requires at least: 6.2
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ Yes — only the Vinkius platform (fixed endpoints, no user configuration), and 
 Only visitor consent records. Agent executions, incidents and fleet data are read live from the Vinkius runtime and never persisted in WordPress.
 
 == Changelog ==
+
+= 1.0.1 =
+* Prepare() with %i identifier placeholders on all consent-table reads (Plugin Check compliance); minimum WordPress bumped to 6.2.
 
 = 1.0.0 =
 * Initial release: Vinkius AI Governance panel, agent fleet, incidents, evidence, emergency halt, device-flow login, site badge and consent surfaces, 6 locales.

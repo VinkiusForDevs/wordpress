@@ -5,9 +5,9 @@
 > **GPLv2 or later**.
 
 ![License](https://img.shields.io/badge/License-GPLv2%20or%20later-blue.svg)
-![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b?logo=wordpress&logoColor=white)
+![WordPress](https://img.shields.io/badge/WordPress-6.2%2B-21759b?logo=wordpress&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-4F5B93?logo=php&logoColor=white)
-![Version](https://img.shields.io/badge/version-1.0.0-orange.svg)
+![Version](https://img.shields.io/badge/version-1.0.1-orange.svg)
 
 **Vinkius Connector** turns a WordPress site into a first-class node in the
 [Vinkius](https://vinkius.com) AI platform. It gives the site owner a live
@@ -130,7 +130,7 @@ Revoke or reset the session anytime from **Settings → Connect**.
 
 ## Requirements
 
-- WordPress **6.0+**, PHP **7.4+**.
+- WordPress **6.2+**, PHP **7.4+**.
 - A Vinkius account — the Free plan is enough to connect; paid plans unlock
   longer analytics windows.
 

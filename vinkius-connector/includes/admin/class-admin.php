@@ -229,8 +229,10 @@ final class Admin {
 					'device_error'      => __( 'Could not start device login. Please try again.', 'vinkius-connector' ),
 					'secret_copy'       => __( 'Copy', 'vinkius-connector' ),
 					'secret_copied'     => __( 'Copied', 'vinkius-connector' ),
+					// translators: 1: connector count, 2: capability count.
 					'cap_search'        => __( 'Search capabilities and connectors…', 'vinkius-connector' ),
 					'cap_catalog'       => __( '%1$s connectors · %2$s capabilities', 'vinkius-connector' ),
+					// translators: %s: search term the user typed.
 					'cap_no_matches'    => __( 'No matches for "%s".', 'vinkius-connector' ),
 					'cap_try'           => __( 'Try rephrasing your search.', 'vinkius-connector' ),
 					'cap_unavailable'   => __( 'Search is unavailable right now. Please try again.', 'vinkius-connector' ),
@@ -545,6 +547,7 @@ final class Admin {
 
 					/* Capability Reliability (tool-performance). */
 					'tp_kpi_total_requests'  => __( 'Total Requests', 'vinkius-connector' ),
+					// translators: %s: success percentage (the braces are a UI template token, not printf).
 					'tp_success_rate'        => __( '{pct}% success rate', 'vinkius-connector' ),
 					'tp_kpi_unique'          => __( 'Unique Capabilities', 'vinkius-connector' ),
 					'tp_unique_hint'         => __( 'Active in this period', 'vinkius-connector' ),

@@ -82,8 +82,9 @@ defined( 'ABSPATH' ) || exit;
 	<footer class="vc-footer">
 		<?php
 		printf(
+			/* translators: %s: plugin version number. */
 			esc_html__( 'Vinkius Connector %1$s · Open source · GPLv2 or later', 'vinkius-connector' ),
-			VC_VERSION
+			esc_html( VC_VERSION )
 		);
 		?>
 	</footer>

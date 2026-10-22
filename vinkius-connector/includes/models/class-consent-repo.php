@@ -71,7 +71,8 @@ final class ConsentRepo {
 
 		$existing = $wpdb->get_var(
 			$wpdb->prepare(
-				"SELECT id FROM " . self::table() . " WHERE external_id = %s LIMIT 1",
+				"SELECT id FROM %i WHERE external_id = %s LIMIT 1",
+				self::table(),
 				$external_id
 			)
 		);
@@ -139,7 +140,8 @@ final class ConsentRepo {
 
 		$row = $wpdb->get_row(
 			$wpdb->prepare(
-				"SELECT * FROM " . self::table() . " WHERE external_id = %s LIMIT 1",
+				"SELECT * FROM %i WHERE external_id = %s LIMIT 1",
+				self::table(),
 				sanitize_text_field( (string) $external_id )
 			),
 			ARRAY_A
@@ -161,7 +163,8 @@ final class ConsentRepo {
 
 		return (array) $wpdb->get_results(
 			$wpdb->prepare(
-				"SELECT * FROM " . self::table() . " ORDER BY created_at DESC LIMIT %d",
+				"SELECT * FROM %i ORDER BY created_at DESC LIMIT %d",
+				self::table(),
 				$limit
 			),
 			ARRAY_A
@@ -223,7 +226,8 @@ final class ConsentRepo {
 		do {
 			$batch = $wpdb->get_col(
 				$wpdb->prepare(
-					"SELECT id FROM " . self::table() . " WHERE id > %d ORDER BY id ASC LIMIT 500",
+					"SELECT id FROM %i WHERE id > %d ORDER BY id ASC LIMIT 500",
+					self::table(),
 					$cursor
 				)
 			);
