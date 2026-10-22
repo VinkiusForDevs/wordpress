@@ -2554,3 +2554,34 @@ msgstr ""
 #: templates/screen-section.php:20
 msgid "Reporting period"
 msgstr ""
+
+
+#: vinkius-connector/templates/screen-incidents.php:59
+#: templates/screen-incidents.php:59
+msgid "Quarantined connectors"
+msgstr ""
+
+#: vinkius-connector/templates/screen-incidents.php:62
+#: templates/screen-incidents.php:62
+msgid "Reading quarantine state…"
+msgstr ""
+
+#: vinkius-connector/templates/screen-incidents.php:68
+#: templates/screen-incidents.php:68
+msgid "Control trail"
+msgstr ""
+
+#: vinkius-connector/templates/screen-incidents.php:70
+#: templates/screen-incidents.php:70
+msgid "Runtime activity"
+msgstr ""
+
+#: vinkius-connector/templates/screen-incidents.php:71
+#: templates/screen-incidents.php:71
+msgid "Operator audit"
+msgstr ""
+
+#: vinkius-connector/templates/screen-incidents.php:75
+#: templates/screen-incidents.php:75
+msgid "Who acted on this governance estate, agent- and operator-side."
+msgstr ""
