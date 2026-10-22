@@ -5,705 +5,2711 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vinkius Connector 1.0.0\n"
 "Report-Msgid-Bugs-To: https://vinkius.com\n"
-"POT-Creation-Date: 2026-10-16 00:00+0000\n"
+"POT-Creation-Date: 2026-10-20 21:29+0000\n"
+"Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja_JP\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgid "Vinkius"
-msgstr "Vinkius"
-
-msgid "Vinkius Dashboard"
-msgstr "Vinkius ダッシュボード"
-
-msgid "Dashboard"
-msgstr "ダッシュボード"
-
-msgid "Agents"
-msgstr "エージェント"
-
-msgid "Consent"
-msgstr "同意"
-
-msgid "Connectors"
-msgstr "コネクタ"
-
-msgid "Seller Console"
-msgstr "販売者コンソール"
-
-msgid "Settings"
-msgstr "設定"
-
-msgid "Not configured"
-msgstr "未設定"
-
-msgid "Not connected"
-msgstr "未接続"
-
-msgid "Connected"
-msgstr "接続済み"
-
-msgid "Session expired"
-msgstr "セッションの有効期限が切れました"
-
-msgid "Agents are halted on this site."
-msgstr "このサイトではエージェントが停止しています。"
-
-msgid "Agent-facing surfaces return 403 and new consent is blocked."
-msgstr "エージェント向けエンドポイントは 403 を返し、新しい同意はブロックされます。"
-
-msgid "Resume agents"
-msgstr "エージェントを再開"
-
-msgid "You are on the %s plan"
-msgstr "%s プランをご利用中です"
-
-msgid "Subscribe to Vinkius for higher request quotas, longer log retention and the global kill switch."
-msgstr "Vinkius に加入すると、リクエスト上限の増加、ログ保持期間の延長、グローバル・キルスイッチが利用できます。"
-
-msgid "Subscribe to Vinkius"
-msgstr "Vinkius に加入する"
-
-msgid "Vinkius Connector %1$s · Open source · GPLv2 or later"
-msgstr "Vinkius Connector %1$s・オープンソース・GPLv2 以降"
-
-msgid "Executions"
-msgstr "実行回数"
-
-msgid "Visitor Sessions"
-msgstr "訪問者セッション"
-
-msgid "Errors"
-msgstr "エラー"
-
-msgid "Trust Score"
-msgstr "トラストスコア"
-
-msgid "Usage"
-msgstr "使用状況"
-
-msgid "Halt all agents"
-msgstr "全エージェントを停止"
-
-msgid "Used %1$s of %2$s requests this cycle."
-msgstr "今サイクルで %2$s 件中 %1$s 件を使用しました。"
-
-msgid "Connect Vinkius to see live quota and cost."
-msgstr "Vinkius に接続すると、クォータとコストをリアルタイムで確認できます。"
-
-msgid "Live Activity"
-msgstr "ライブアクティビティ"
-
-msgid "Pushed by Vinkius, stored on this site."
-msgstr "Vinkius からプッシュされ、このサイトに保存されます。"
-
-msgid "No activity yet. Once Vinkius is connected, agent executions will appear here."
-msgstr "まだアクティビティはありません。Vinkius に接続すると、エージェントの実行がここに表示されます。"
-
-msgid "%s ms"
-msgstr "%s ms"
-
-msgid "DLP %s"
-msgstr "DLP %s"
-
-msgid "No visitor agent sessions recorded yet."
-msgstr "まだ訪問者のエージェントセッションは記録されていません。"
-
-msgid "Visitor"
-msgstr "訪問者"
-
-msgid "Agent"
-msgstr "エージェント"
-
-msgid "Requests"
-msgstr "リクエスト"
-
-msgid "Last Seen"
-msgstr "最終確認"
-
-msgid "Actions"
-msgstr "アクション"
-
-msgid "Avg Latency"
-msgstr "平均レイテンシ"
-
-msgid "Last Activity"
-msgstr "最終アクティビティ"
-
-msgid "No agents have executed on this site yet. One row will appear per agent token once activity flows in."
-msgstr "まだこのサイトではエージェントが実行されていません。活動が始まると、エージェントトークンごとに 1 行ずつ表示されます。"
-
-msgid "Per-agent deep logs (tool, status, latency, DLP) live in Vinkius once connected; this table is the local audit mirror."
-msgstr "エージェントごとの詳細ログ（ツール、状態、レイテンシ、DLP）は接続後 Vinkius にあります。このテーブルはローカル監査ミラーです。"
-
-msgid "Visitor Consent"
-msgstr "訪問者の同意"
-
-msgid "Agents only act on behalf of a visitor after they opt in with the shortcode below. Revoke any consent at any time."
-msgstr "エージェントは、訪問者が以下のショートコードでオプトインした場合にのみ、その名代わりとして行動します。同意はいつでも取り消せます。"
-
-msgid "No consent records yet."
-msgstr "まだ同意記録はありません。"
-
-msgid "Scopes"
-msgstr "スコープ"
-
-msgid "Purpose"
-msgstr "目的"
-
-msgid "Granted"
-msgstr "付与日"
-
-msgid "Status"
-msgstr "状態"
-
-msgid "Revoked"
-msgstr "取り消済み"
-
-msgid "Active"
-msgstr "有効"
-
-msgid "Create Connector"
-msgstr "コネクタ作成"
-
-msgid "Turn this site’s resources into a Vinkius connector."
-msgstr "このサイトのリソースを Vinkius コネクタにします。"
-
-msgid "Name"
-msgstr "名前"
-
-msgid "Source"
-msgstr "ソース"
-
-msgid "WordPress REST API"
-msgstr "WordPress REST API"
-
-msgid "Forms"
-msgstr "フォーム"
-
-msgid "WooCommerce"
-msgstr "WooCommerce"
-
-msgid "Custom API (OpenAPI URL)"
-msgstr "カスタム API（OpenAPI URL）"
-
-msgid "OpenAPI spec URL (for custom sources)"
-msgstr "OpenAPI 仕様 URL（カスタムソース用）"
-
-msgid "Preview Tools"
-msgstr "ツールのプレビュー"
-
-msgid "Save Draft"
-msgstr "下書きを保存"
-
-msgid "Tools detected"
-msgstr "検出されたツール"
-
-msgid "My Connectors"
-msgstr "マイコネクタ"
-
-msgid "No connectors yet. Draft one above — publishing requires a Vinkius connection."
-msgstr "まだコネクタはありません。上記で下書きを作成してください。公開には Vinkius の接続が必要です。"
-
-msgid "Connector"
-msgstr "コネクタ"
-
-msgid "Tools"
-msgstr "ツール"
-
-msgid "Published"
-msgstr "公開済み"
-
-msgid "Draft"
-msgstr "下書き"
-
-msgid "Publish"
-msgstr "公開"
-
-msgid "Open Marketplace"
-msgstr "マーケットプレイスを開く"
-
-msgid "Connect Vinkius to sync your listings, earnings and marketplace metrics. Until then, new connectors stay as local drafts."
-msgstr "Vinkius に接続すると、公開情報・収益・マーケットプレイス指標が同期されます。接続までの間は、新規コネクタはローカル下書きのままです。"
-
-msgid "Listings"
-msgstr "公開情報"
-
-msgid "No listings yet. Create a connector in Studio and publish it to the Vinkius marketplace."
-msgstr "まだ公開情報はありません。Studio でコネクタを作成し、Vinkius マーケットプレイスに公開してください。"
-
-msgid "Earnings"
-msgstr "収益"
-
-msgid "Loading earnings…"
-msgstr "収益を読み込み中…"
-
-msgid "Free listings publish instantly. Paid listings start at %s. Earnings sync here once connected."
-msgstr "無料公開は即座に公開されます。有料公開は %s からです。接続後、収益がここに同期されます。"
-
-msgid "Connection"
-msgstr "接続"
-
-msgid "Vinkius API Base URL"
-msgstr "Vinkius API ベース URL"
-
-msgid "Leave empty to keep the plugin in prepared (offline) mode."
-msgstr "空にすると、プラグインは準備済み（オフライン）モードのままです。"
-
-msgid "Vinkius Frontend Base URL"
-msgstr "Vinkius フロントエンドベース URL"
-
-msgid "Where device login approval and plan pages live."
-msgstr "デバイスログイン承認とプランページが置かれている場所です。"
-
-msgid "Interface Language"
-msgstr "インターフェース言語"
-
-msgid "Follow site language"
-msgstr "サイトの言語に合わせる"
-
-msgid "Save Settings"
-msgstr "設定を保存"
-
-msgid "Vinkius Login"
-msgstr "Vinkius ログイン"
-
-msgid "Logged in via device flow."
-msgstr "デバイスフローでログイン済みです。"
-
-msgid "Log out"
-msgstr "ログアウト"
-
-msgid "Login uses the Vinkius device flow: start it here, approve on your Vinkius account, and this site connects automatically."
-msgstr "ログインは Vinkius のデバイスフローを使用します。ここで開始し、Vinkius アカウントで承認すると、このサイトが自動で接続されます。"
-
-msgid "Connect with Vinkius"
-msgstr "Vinkius に接続"
-
-msgid "Device code"
-msgstr "デバイスコード"
-
-msgid "Open approval page"
-msgstr "承認ページを開く"
-
-msgid "Waiting for approval…"
-msgstr "承認を待っています…"
-
-msgid "Security"
-msgstr "セキュリティ"
-
-msgid "Webhook secret (Vinkius log destinations)"
-msgstr "Webhook シークレット（Vinkius ログ送信先）"
-
-msgid "Copy"
-msgstr "コピー"
-
-msgid "Copied"
-msgstr "コピーしました"
-
-msgid "Regenerate"
-msgstr "再生成"
-
-msgid "Register this exact secret in Vinkius as your site’s log-destination webhook; signed audit events land in the local panel."
-msgstr "このシークレットを Vinkius に、サイトのログ送信先 Webhook として登録してください。署名付き監査イベントがローカルパネルに届きます。"
-
-msgid "Local kill switch"
-msgstr "ローカルキルスイッチ"
-
-msgid "When on, agent-facing surfaces return 403 and new visitor consent is blocked."
-msgstr "オンにすると、エージェント向けエンドポイントは 403 を返し、新しい訪問者の同意はブロックされます。"
-
-msgid "You are not allowed to do that."
-msgstr "その操作は許可されていません。"
-
-msgid "This site has emergency-halted AI agents. DO NOT RETRY. Approve Resumption first."
-msgstr "このサイトでは AI エージェントが緊急停止されています。再試行しないでください。まず再開を承認してください。"
-
-msgid "Publishing requires a Vinkius connection. Configure the API URL in Settings."
-msgstr "公開には Vinkius の接続が必要です。設定で API URL を構成してください。"
-
-msgid "Agent API is Vinkius-verified · %s"
-msgstr "エージェント API は Vinkius 認証済み・%s"
-
-msgid "Agent actions are currently halted on this site."
-msgstr "現在、このサイトではエージェントのアクションが停止中です。"
-
-msgid "By continuing you allow Vinkius agents to act on your behalf on this site with the selected scopes. You can revoke at any time."
-msgstr "続行すると、Vinkius エージェントが選択したスコープでこのサイトにおいてあなたの代わりに行動することを許可することになります。いつでも取り消せます。"
-
-msgid "Allow AI agents to act on my behalf on this site"
-msgstr "AI エージェントが私の代わりにこのサイトで行動することを許可する"
-
-msgid "Read site content"
-msgstr "サイトのコンテンツを読む"
-
-msgid "Draft site content"
-msgstr "サイト内容を下書きする"
-
-msgid "Subscribe me as a user"
-msgstr "ユーザーとして購読する"
-
-msgid "Upload media on my behalf"
-msgstr "私の代わりにメディアをアップロードする"
-
-msgid "Agent actions are halted on this site right now."
-msgstr "現在、このサイトではエージェントのアクションが停止中です。"
-
-msgid "Listing"
-msgstr "公開情報"
-
-msgid "Set the Vinkius API Base URL above, save, then start device login here."
-msgstr "上記に Vinkius API のベース URL を設定して保存し、ここでデバイスログインを開始してください。"
-
-msgid "Settings saved."
-msgstr "設定を保存しました。"
-
-msgid "Vinkius AI Governance"
-msgstr "Vinkius AI ガバナンス"
-
-msgid "Governance"
-msgstr "ガバナンス"
-
-msgid "Incidents"
-msgstr "インシデント"
-
-msgid "Evidence"
-msgstr "エビデンス"
-
-msgid "Marketplace"
-msgstr "マーケットプレイス"
-
-msgid "Connect your site to Vinkius to see governed agent operations here."
-msgstr "サイトを Vinkius に接続すると、ここでガバナンスされたエージェント操作が表示されます。"
-
-msgid "Agent operations routed through Vinkius are visible in the panel below."
-msgstr "Vinkius 経由のエージェント操作が下のパネルに表示されます。"
-
-msgid "Open panel"
-msgstr "パネルを開く"
-
-msgid "Manage in Vinkius"
-msgstr "Vinkius で管理"
-
-msgid "Executions today: %1$d · Active agents: %2$d · Blocked events: %3$d · Connectors in use: %4$d"
-msgstr "本日の実行: %1$d・アクティブなエージェント: %2$d・ブロックされたイベント: %3$d・使用中のコネクタ: %4$d"
-
-msgid "Vinkius AI Governance — daily digest for %s"
-msgstr "Vinkius AI ガバナンス — %s のデイリーダイジェスト"
-
+#: vinkius-connector/includes/class-trust-badge.php:45
+#: includes/class-trust-badge.php:45
 msgid "Agent API is Vinkius-verified"
 msgstr "エージェント API は Vinkius 認証済み"
 
-msgid "Connect WordPress to Vinkius"
-msgstr "WordPress を Vinkius に接続"
-
-msgid "Link this site to your Vinkius account to see governed agent operations here."
-msgstr "サイトを Vinkius アカウントに連携すると、ここでガバナンスされたエージェント操作が見えます。"
-
-msgid "Connect"
-msgstr "接続"
-
-msgid "Unlock higher quotas, longer retention and the global kill switch."
-msgstr "高いクォータ、長い保持期間、グローバルキルスイッチが利用可能になります。"
-
-msgid "View plans"
-msgstr "プランを見る"
-
-msgid "This panel shows only operations routed through the Vinkius runtime. Reliability — credential vault, DLP, sandboxing, circuit breakers, kill-switch — is enforced by the Vinkius runtime, not by this site."
-msgstr "このパネルは Vinkius ランタイム経由の操作のみを表示します。信頼性（クレデンシャル vault、DLP、サンドボックス、サーキットブレイカー、キルスイッチ）は Vinkius ランタイムが保証します。"
-
-msgid "Agent fleet"
-msgstr "エージェント群"
-
-msgid "Manage agents & tokens in Vinkius"
-msgstr "Vinkius でエージェントとトークンを管理"
-
-msgid "Read live from the Vinkius runtime. Nothing is stored on this site."
-msgstr "Vinkius ランタイムからライブ取得。このサイトには何も保存されません。"
-
-msgid "Avg latency"
-msgstr "平均レイテンシ"
-
-msgid "No data loaded."
-msgstr "データがありません。"
-
-msgid "Active agents"
-msgstr "アクティブなエージェント"
-
-msgid "Executions today"
-msgstr "本日の実行"
-
-msgid "Blocked events"
-msgstr "ブロックされたイベント"
-
-msgid "Connectors in use"
-msgstr "使用中のコネクタ"
-
-msgid "Live activity"
-msgstr "ライブアクティビティ"
-
-msgid "Routed through the Vinkius runtime."
-msgstr "Vinkius ランタイム経由。"
-
-msgid "No activity in this period."
-msgstr "この期間にアクティビティはありません。"
-
-msgid "Emergency halt"
-msgstr "緊急停止"
-
-msgid "Circuit tripped"
-msgstr "サーキット遮断"
-
-msgid "Stop one connector or the whole runtime for this site. The enforcement happens in the Vinkius runtime."
-msgstr "このサイトの 1 つまたはすべてのコネクタを停止します。強制は Vinkius ランタイムで行われます。"
-
-msgid "Halt all"
-msgstr "すべて停止"
-
-msgid "Reset circuit"
-msgstr "サーキットリセット"
-
-msgid "Manage per-connector halt in Vinkius"
-msgstr "Vinkius でコネクタ別の停止を管理"
-
-msgid "Agents & connectors"
-msgstr "エージェントとコネクタ"
-
-msgid "Policies & DLP"
-msgstr "ポリシーと DLP"
-
-msgid "Publish connectors"
-msgstr "コネクタを公開"
-
-msgid "Webhooks & secrets"
-msgstr "Webhook とシークレット"
-
-msgid "Plans & upgrade"
-msgstr "プランとアップグレード"
-
-msgid "Execution evidence"
-msgstr "実行エビデンス"
-
-msgid "Full evidence in Vinkius"
-msgstr "完全なエビデンスは Vinkius に"
-
-msgid "Select a connector"
-msgstr "コネクタを選択"
-
-msgid "Time"
-msgstr "時刻"
-
-msgid "Tool"
-msgstr "ツール"
-
-msgid "Latency"
-msgstr "レイテンシ"
-
-msgid "DLP"
-msgstr "DLP"
-
-msgid "Errors (today)"
-msgstr "エラー（本日）"
-
-msgid "DLP blocks (today)"
-msgstr "DLP ブロック（本日）"
-
-msgid "Circuit breaker"
-msgstr "サーキットブレイカー"
-
-msgid "What happened"
-msgstr "何が起きたか"
-
-msgid "Tripped"
-msgstr "遮断中"
-
-msgid "No incident summary available for this period."
-msgstr "この期間のインシデント概要はありません。"
-
-msgid "Respond"
-msgstr "対応"
-
-msgid "Open incidents in Vinkius"
-msgstr "Vinkius でインシデントを開く"
-
-msgid "Publish your connectors, reach the catalog, and track earnings — from the Vinkius cloud. This screen only links there; nothing is managed on this site."
-msgstr "コネクタを公開し、カタログに到達し、収益を追跡 — Vinkius クラウドから。この画面はリンクのみで、このサイトでは何も管理しません。"
-
-msgid "Browse catalog"
-msgstr "カタログを見る"
-
-msgid "Trust badge scan ID"
-msgstr "信頼バッジのスキャン ID"
-
-msgid "From your debugger scan in the Vinkius cloud."
-msgstr "Vinkius クラウドのデバッガースキャンから。"
-
-msgid "Daily digest"
-msgstr "デイリーダイジェスト"
-
-msgid "Send a daily digest of agent activity"
-msgstr "エージェント活動のデイリーダイジェストを送信"
-
-msgid "Site secret"
-msgstr "サイトシークレット"
-
-msgid "Signs consent records and the site manifest."
-msgstr "同意記録とサイトマニフェストに署名します。"
-
-msgid "When on, agent-facing surfaces on this site return 403."
-msgstr "オンにすると、このサイトのカージェント向け表面が 403 を返します。"
-
-msgid "Plan & usage"
-msgstr "プランと使用状況"
-
-msgid "Used %1$s of %2$s this cycle."
-msgstr "この周期で %2$s のうち %1$s を使用しました。"
-
-msgid "Session expired. Log in again from Settings to see live data."
-msgstr "セッションの有効期限が切れました。設定から再ログインすると、ライブデータが表示されます。"
-
-msgid "Your Vinkius session has ended."
-msgstr "Vinkius のセッションが終了しました。"
-
-msgid "Log in again to see live data."
-msgstr "ライブデータを見るには再ログインしてください。"
-
-msgid "Log in again"
-msgstr "再ログイン"
-
-msgid "No connectors with activity."
-msgstr "アクティビティのあるコネクタはありません。"
-
-msgid "No executions recorded for this connector."
-msgstr "このコネクタに実行記録はありません。"
-
-msgid "Open"
-msgstr "通常"
-
-msgid "Halt this connector"
-msgstr "このコネクタを停止"
-
-msgid "Halt all agents on this site?"
-msgstr "このサイトのすべてのエージェントを停止しますか？"
-
-msgid "Session expired. Start again."
-msgstr "セッションの有効期限が切れました。最初からやり直してください。"
-
-msgid "Set the Vinkius API Base URL above and save first."
-msgstr "まず上の Vinkius API 基本 URL を設定して保存してください。"
-
-msgid "Consent recorded. You can revoke it anytime."
-msgstr "同意を記録しました。いつでも取り消すことができます。"
-
-msgid "Something went wrong. Please try again."
-msgstr "エラーが発生しました。もう一度お試しください。"
-
-msgid "Could not start device login. Please try again."
-msgstr "デバイスログインを開始できませんでした。もう一度お試しください。"
-
-msgid "%1$s connectors · %2$s capabilities"
-msgstr "%1$s つのコネクタ · %2$s つの機能"
-
-msgid "AI Governance"
-msgstr "AI ガバナンス"
-
-msgid "AI Spend"
-msgstr "AI 支出"
-
-msgid "Access Tokens"
-msgstr "アクセストークン"
-
-msgid "Access tokens"
-msgstr "アクセストークン"
-
-msgid "Agent Activity"
-msgstr "エージェントの活動"
-
-msgid "All"
-msgstr "すべて"
-
-msgid "By client"
-msgstr "クライアント別"
-
-msgid "Capabilities"
-msgstr "機能"
-
-msgid "Capability Reliability"
-msgstr "機能の信頼性"
-
-msgid "Catalog"
-msgstr "カタログ"
-
-msgid "Clear"
-msgstr "クリア"
-
+#: vinkius-connector/includes/admin/class-screen-settings.php:66
+#: includes/admin/class-screen-settings.php:66
+msgid "You are not allowed to do that."
+msgstr "その操作は許可されていません。"
+
+#: vinkius-connector/includes/admin/class-screen-connector-traffic.php:43
+#: vinkius-connector/includes/admin/class-admin.php:66
+#: includes/admin/class-screen-connector-traffic.php:43
+#: includes/admin/class-admin.php:66
 msgid "Connector Traffic"
 msgstr "コネクタのトラフィック"
 
-msgid "Events by server"
-msgstr "サーバー別イベント"
+#: vinkius-connector/includes/admin/class-screen-ai-spend.php:43
+#: vinkius-connector/includes/admin/class-admin.php:69
+#: includes/admin/class-screen-ai-spend.php:43
+#: includes/admin/class-admin.php:69
+msgid "AI Spend"
+msgstr "AI 支出"
 
-msgid "Failures by server"
-msgstr "サーバー別の失敗"
+#: vinkius-connector/includes/admin/class-screen-capability-reliability.php:43
+#: vinkius-connector/includes/admin/class-admin.php:70
+#: includes/admin/class-screen-capability-reliability.php:43
+#: includes/admin/class-admin.php:70
+msgid "Capability Reliability"
+msgstr "機能の信頼性"
 
-msgid "Governance data streams live from your Vinkius account."
-msgstr "ガバナンスデータは Vinkius アカウントからライブ配信されます。"
-
-msgid "Loading…"
-msgstr "読み込み中…"
-
+#: vinkius-connector/includes/admin/class-screen-mission-control.php:43
+#: vinkius-connector/includes/admin/class-admin.php:64
+#: includes/admin/class-screen-mission-control.php:43
+#: includes/admin/class-admin.php:64
 msgid "Mission Control"
 msgstr "ミッションコントロール"
 
-msgid "Most failing"
-msgstr "最も失敗が多い"
+#: vinkius-connector/includes/admin/class-screen-access-tokens.php:43
+#: vinkius-connector/includes/admin/class-admin.php:67
+#: includes/admin/class-screen-access-tokens.php:43
+#: includes/admin/class-admin.php:67
+msgid "Access Tokens"
+msgstr "アクセストークン"
 
-msgid "No connectors in the catalog yet."
-msgstr "カタログにまだコネクタがありません。"
+#: vinkius-connector/includes/admin/class-screen-agent-passport.php:43
+#: vinkius-connector/includes/admin/class-admin.php:68
+#: includes/admin/class-screen-agent-passport.php:43
+#: includes/admin/class-admin.php:68
+#, fuzzy
+msgid "Agent Passport"
+msgstr "エージェント"
 
-msgid "No data in this period."
-msgstr "この期間にデータはありません。"
+#: vinkius-connector/includes/admin/class-screen-agent-activity.php:43
+#: vinkius-connector/includes/admin/class-admin.php:65
+#: includes/admin/class-screen-agent-activity.php:43
+#: includes/admin/class-admin.php:65
+msgid "Agent Activity"
+msgstr "エージェントの活動"
 
-msgid "No matches for \"%s\"."
-msgstr "「%s」に一致する結果はありません。"
-
-msgid "Off"
-msgstr "無効"
-
-msgid "On"
-msgstr "有効"
-
-msgid "Open in Vinkius"
-msgstr "Vinkius で開く"
-
-msgid "Reports"
-msgstr "レポート"
-
-msgid "Request Failures"
-msgstr "リクエストの失敗"
-
-msgid "Search capabilities and connectors…"
-msgstr "機能とコネクタを検索…"
-
-msgid "Search is unavailable right now. Please try again."
-msgstr "検索が現在利用できません。もう一度お試しください。"
-
+#: vinkius-connector/includes/admin/class-screen-security-posture.php:43
+#: vinkius-connector/includes/admin/class-admin.php:71
+#: includes/admin/class-screen-security-posture.php:43
+#: includes/admin/class-admin.php:71
 msgid "Security Posture"
 msgstr "セキュリティの状況"
 
-msgid "Slowest tools"
-msgstr "最も遅いツール"
+#: vinkius-connector/includes/admin/class-admin.php:43
+#: vinkius-connector/includes/admin/class-admin.php:133
+#: vinkius-connector/templates/layout.php:15 includes/admin/class-admin.php:43
+#: includes/admin/class-admin.php:133 templates/layout.php:15
+msgid "Vinkius AI Governance"
+msgstr "Vinkius AI ガバナンス"
 
-msgid "Spend by server"
-msgstr "サーバー別の支出"
+#: vinkius-connector/includes/admin/class-admin.php:47
+#: vinkius-connector/includes/admin/class-admin.php:323
+#: vinkius-connector/includes/admin/class-admin.php:679
+#: includes/admin/class-admin.php:47 includes/admin/class-admin.php:323
+#: includes/admin/class-admin.php:679
+msgid "Vinkius"
+msgstr "Vinkius"
 
-msgid "Try rephrasing your search."
-msgstr "検索の内容を変更してお試しください。"
+#: vinkius-connector/includes/admin/class-admin.php:62
+#: vinkius-connector/templates/screen-connect.php:17
+#: includes/admin/class-admin.php:62 templates/screen-connect.php:17
+#, fuzzy
+msgid "AI Connections"
+msgstr "接続"
 
+#: vinkius-connector/includes/admin/class-admin.php:72
+#: vinkius-connector/includes/admin/class-screen-request-failures.php:43
+#: includes/admin/class-admin.php:72
+#: includes/admin/class-screen-request-failures.php:43
+msgid "Request Failures"
+msgstr "リクエストの失敗"
+
+#: vinkius-connector/includes/admin/class-admin.php:73
+#: vinkius-connector/includes/admin/class-screen-compliance.php:43
+#: includes/admin/class-admin.php:73
+#: includes/admin/class-screen-compliance.php:43
+msgid "Compliance & Evidence"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:75
+#: includes/admin/class-admin.php:75
+msgid "Incidents"
+msgstr "インシデント"
+
+#: vinkius-connector/includes/admin/class-admin.php:76
+#: includes/admin/class-admin.php:76
+msgid "Consent"
+msgstr "同意"
+
+#: vinkius-connector/includes/admin/class-admin.php:78
+#: vinkius-connector/templates/screen-settings.php:20
+#: includes/admin/class-admin.php:78 templates/screen-settings.php:20
+msgid "Settings"
+msgstr "設定"
+
+#: vinkius-connector/includes/admin/class-admin.php:150
+#: includes/admin/class-admin.php:150
+msgid "Connect your site to Vinkius to see governed agent operations here."
+msgstr ""
+"サイトを Vinkius に接続すると、ここでガバナンスされたエージェント操作が表示さ"
+"れます。"
+
+#: vinkius-connector/includes/admin/class-admin.php:155
+#: includes/admin/class-admin.php:155
+msgid "Agent operations routed through Vinkius are visible in the panel below."
+msgstr "Vinkius 経由のエージェント操作が下のパネルに表示されます。"
+
+#: vinkius-connector/includes/admin/class-admin.php:162
+#: includes/admin/class-admin.php:162
+msgid "Open panel"
+msgstr "パネルを開く"
+
+#: vinkius-connector/includes/admin/class-admin.php:164
+#: vinkius-connector/templates/screen-settings.php:132
+#: includes/admin/class-admin.php:164 templates/screen-settings.php:132
+msgid "Manage in Vinkius"
+msgstr "Vinkius で管理"
+
+#: vinkius-connector/includes/admin/class-admin.php:206
+#: includes/admin/class-admin.php:206
+msgid "Session expired. Log in again from Settings to see live data."
+msgstr ""
+"セッションの有効期限が切れました。設定から再ログインすると、ライブデータが表"
+"示されます。"
+
+#: vinkius-connector/includes/admin/class-admin.php:207
+#: includes/admin/class-admin.php:207
+msgid "Data could not be loaded. Try again or use a shorter period."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:208
+#: includes/admin/class-admin.php:208
+msgid "No data in this period."
+msgstr "この期間にデータはありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:209
+#: includes/admin/class-admin.php:209
+msgid "Live activity"
+msgstr "ライブアクティビティ"
+
+#: vinkius-connector/includes/admin/class-admin.php:210
+#: includes/admin/class-admin.php:210
+msgid "Plan & usage"
+msgstr "プランと使用状況"
+
+#: vinkius-connector/includes/admin/class-admin.php:211
+#: includes/admin/class-admin.php:211
+#, fuzzy
+msgid "Emergency controls"
+msgstr "緊急停止"
+
+#: vinkius-connector/includes/admin/class-admin.php:212
+#: includes/admin/class-admin.php:212
+msgid "Protection coverage"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:213
+#: includes/admin/class-admin.php:213
+msgid "Subscribe to Vinkius"
+msgstr "Vinkius に加入する"
+
+#: vinkius-connector/includes/admin/class-admin.php:214
+#: vinkius-connector/includes/admin/class-admin.php:216
+#: vinkius-connector/includes/class-notifications.php:79
+#: vinkius-connector/templates/screen-incidents.php:37
+#: includes/admin/class-admin.php:214 includes/admin/class-admin.php:216
+#: includes/class-notifications.php:79 templates/screen-incidents.php:37
+msgid "Tripped"
+msgstr "遮断中"
+
+#: vinkius-connector/includes/admin/class-admin.php:215
+#: vinkius-connector/includes/admin/class-admin.php:217
+#: vinkius-connector/includes/class-notifications.php:79
+#: includes/admin/class-admin.php:215 includes/admin/class-admin.php:217
+#: includes/class-notifications.php:79
+msgid "Open"
+msgstr "通常"
+
+#: vinkius-connector/includes/admin/class-admin.php:218
+#: vinkius-connector/templates/screen-incidents.php:49
+#: includes/admin/class-admin.php:218 templates/screen-incidents.php:49
+msgid "Reset circuit"
+msgstr "サーキットリセット"
+
+#: vinkius-connector/includes/admin/class-admin.php:219
+#: includes/admin/class-admin.php:219
 msgid "Halted"
 msgstr "停止中"
 
+#: vinkius-connector/includes/admin/class-admin.php:220
+#: includes/admin/class-admin.php:220
 msgid "Running"
 msgstr "実行中"
+
+#: vinkius-connector/includes/admin/class-admin.php:221
+#: vinkius-connector/templates/layout.php:30 includes/admin/class-admin.php:221
+#: templates/layout.php:30
+msgid "Resume agents"
+msgstr "エージェントを再開"
+
+#: vinkius-connector/includes/admin/class-admin.php:222
+#: vinkius-connector/templates/screen-incidents.php:50
+#: includes/admin/class-admin.php:222 templates/screen-incidents.php:50
+msgid "Halt all"
+msgstr "すべて停止"
+
+#: vinkius-connector/includes/admin/class-admin.php:223
+#: includes/admin/class-admin.php:223
+msgid "Manage per-connector halt in Vinkius"
+msgstr "Vinkius でコネクタ別の停止を管理"
+
+#: vinkius-connector/includes/admin/class-admin.php:224
+#: includes/admin/class-admin.php:224
+msgid "Halt all agents on this site?"
+msgstr "このサイトのすべてのエージェントを停止しますか？"
+
+#: vinkius-connector/includes/admin/class-admin.php:225
+#: vinkius-connector/templates/layout.php:58
+#: vinkius-connector/templates/screen-settings.php:87
+#: includes/admin/class-admin.php:225 templates/layout.php:58
+#: templates/screen-settings.php:87
+msgid "Device code"
+msgstr "デバイスコード"
+
+#: vinkius-connector/includes/admin/class-admin.php:226
+#: vinkius-connector/templates/layout.php:62
+#: vinkius-connector/templates/screen-settings.php:91
+#: includes/admin/class-admin.php:226 templates/layout.php:62
+#: templates/screen-settings.php:91
+msgid "Open approval page"
+msgstr "承認ページを開く"
+
+#: vinkius-connector/includes/admin/class-admin.php:227
+#: vinkius-connector/templates/layout.php:64
+#: vinkius-connector/templates/screen-settings.php:93
+#: includes/admin/class-admin.php:227 templates/layout.php:64
+#: templates/screen-settings.php:93
+msgid "Waiting for approval…"
+msgstr "承認を待っています…"
+
+#: vinkius-connector/includes/admin/class-admin.php:228
+#: includes/admin/class-admin.php:228
+msgid "Session expired. Start again."
+msgstr "セッションの有効期限が切れました。最初からやり直してください。"
+
+#: vinkius-connector/includes/admin/class-admin.php:229
+#: includes/admin/class-admin.php:229
+msgid "Could not start device login. Please try again."
+msgstr "デバイスログインを開始できませんでした。もう一度お試しください。"
+
+#: vinkius-connector/includes/admin/class-admin.php:230
+#: vinkius-connector/templates/screen-settings.php:113
+#: includes/admin/class-admin.php:230 templates/screen-settings.php:113
+msgid "Copy"
+msgstr "コピー"
+
+#: vinkius-connector/includes/admin/class-admin.php:231
+#: includes/admin/class-admin.php:231
+msgid "Copied"
+msgstr "コピーしました"
+
+#: vinkius-connector/includes/admin/class-admin.php:232
+#: vinkius-connector/templates/screen-connect.php:24
+#: includes/admin/class-admin.php:232 templates/screen-connect.php:24
+msgid "Search capabilities and connectors…"
+msgstr "機能とコネクタを検索…"
+
+#: vinkius-connector/includes/admin/class-admin.php:233
+#: includes/admin/class-admin.php:233
+#, php-format
+msgid "%1$s connectors · %2$s capabilities"
+msgstr "%1$s つのコネクタ · %2$s つの機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:234
+#: includes/admin/class-admin.php:234
+#, php-format
+msgid "No matches for \"%s\"."
+msgstr "「%s」に一致する結果はありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:235
+#: includes/admin/class-admin.php:235
+msgid "Try rephrasing your search."
+msgstr "検索の内容を変更してお試しください。"
+
+#: vinkius-connector/includes/admin/class-admin.php:236
+#: includes/admin/class-admin.php:236
+msgid "Search is unavailable right now. Please try again."
+msgstr "検索が現在利用できません。もう一度お試しください。"
+
+#: vinkius-connector/includes/admin/class-admin.php:237
+#: includes/admin/class-admin.php:237
+msgid "No connectors in the catalog yet."
+msgstr "カタログにまだコネクタがありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:238
+#: vinkius-connector/templates/layout.php:19
+#: vinkius-connector/templates/screen-settings.php:69
+#: includes/admin/class-admin.php:238 templates/layout.php:19
+#: templates/screen-settings.php:69
+msgid "Connected"
+msgstr "接続済み"
+
+#. Completion: remaining chart/KPI/table keys.
+#: vinkius-connector/includes/admin/class-admin.php:239
+#: vinkius-connector/includes/admin/class-admin.php:663
+#: includes/admin/class-admin.php:239 includes/admin/class-admin.php:663
+msgid "Open in Vinkius"
+msgstr "Vinkius で開く"
+
+#: vinkius-connector/includes/admin/class-admin.php:240
+#: includes/admin/class-admin.php:240
+msgid "All"
+msgstr "すべて"
+
+#: vinkius-connector/includes/admin/class-admin.php:241
+#: includes/admin/class-admin.php:241
+#, fuzzy
+msgid "Top connections"
+msgstr "接続"
+
+#: vinkius-connector/includes/admin/class-admin.php:242
+#: includes/admin/class-admin.php:242
+msgid "New"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:243
+#: includes/admin/class-admin.php:243
+#, fuzzy
+msgid "capabilities"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:244
+#: includes/admin/class-admin.php:244
+msgid "On"
+msgstr "有効"
+
+#: vinkius-connector/includes/admin/class-admin.php:245
+#: includes/admin/class-admin.php:245
+msgid "Off"
+msgstr "無効"
+
+#: vinkius-connector/includes/admin/class-admin.php:246
+#: includes/admin/class-admin.php:246
+msgid "By client"
+msgstr "クライアント別"
+
+#. Access Tokens (token-fleet).
+#: vinkius-connector/includes/admin/class-admin.php:247
+#: vinkius-connector/includes/admin/class-admin.php:444
+#: vinkius-connector/includes/admin/class-admin.php:670
+#: includes/admin/class-admin.php:247 includes/admin/class-admin.php:444
+#: includes/admin/class-admin.php:670
+msgid "Connectors"
+msgstr "コネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:248
+#: includes/admin/class-admin.php:248
+msgid "Access tokens"
+msgstr "アクセストークン"
+
+#: vinkius-connector/includes/admin/class-admin.php:249
+#: includes/admin/class-admin.php:249
+msgid "Spend by server"
+msgstr "サーバー別の支出"
+
+#: vinkius-connector/includes/admin/class-admin.php:250
+#: includes/admin/class-admin.php:250
+msgid "Events by server"
+msgstr "サーバー別イベント"
+
+#: vinkius-connector/includes/admin/class-admin.php:251
+#: includes/admin/class-admin.php:251
+msgid "Failures by server"
+msgstr "サーバー別の失敗"
+
+#: vinkius-connector/includes/admin/class-admin.php:252
+#: includes/admin/class-admin.php:252
+msgid "Slowest tools"
+msgstr "最も遅いツール"
+
+#: vinkius-connector/includes/admin/class-admin.php:253
+#: includes/admin/class-admin.php:253
+msgid "Most failing"
+msgstr "最も失敗が多い"
+
+#: vinkius-connector/includes/admin/class-admin.php:254
+#: includes/admin/class-admin.php:254
+msgid "Tool"
+msgstr "ツール"
+
+#: vinkius-connector/includes/admin/class-admin.php:255
+#: includes/admin/class-admin.php:255
+msgid "Server"
+msgstr ""
+
+#. Mission Control (overview).
+#: vinkius-connector/includes/admin/class-admin.php:256
+#: vinkius-connector/includes/admin/class-admin.php:302
+#: vinkius-connector/includes/admin/class-admin.php:357
+#: vinkius-connector/includes/admin/class-admin.php:647
+#: includes/admin/class-admin.php:256 includes/admin/class-admin.php:302
+#: includes/admin/class-admin.php:357 includes/admin/class-admin.php:647
+msgid "Requests"
+msgstr "リクエスト"
+
+#: vinkius-connector/includes/admin/class-admin.php:257
+#: includes/admin/class-admin.php:257
+msgid "Avg latency"
+msgstr "平均レイテンシ"
+
+#: vinkius-connector/includes/admin/class-admin.php:258
+#: vinkius-connector/includes/admin/class-admin.php:281
+#: vinkius-connector/includes/admin/class-admin.php:284
+#: vinkius-connector/includes/admin/class-admin.php:310
+#: vinkius-connector/includes/admin/class-admin.php:653
+#: includes/admin/class-admin.php:258 includes/admin/class-admin.php:281
+#: includes/admin/class-admin.php:284 includes/admin/class-admin.php:310
+#: includes/admin/class-admin.php:653
+msgid "Errors"
+msgstr "エラー"
+
+#: vinkius-connector/includes/admin/class-admin.php:259
+#: vinkius-connector/includes/admin/class-admin.php:657
+#: includes/admin/class-admin.php:259 includes/admin/class-admin.php:657
+msgid "Time"
+msgstr "時刻"
+
+#: vinkius-connector/includes/admin/class-admin.php:260
+#: includes/admin/class-admin.php:260
+#, fuzzy
+msgid "Activity"
+msgstr "ライブアクティビティ"
+
+#: vinkius-connector/includes/admin/class-admin.php:261
+#: vinkius-connector/includes/admin/class-admin.php:459
+#: vinkius-connector/templates/screen-consent.php:31
+#: includes/admin/class-admin.php:261 includes/admin/class-admin.php:459
+#: templates/screen-consent.php:31
+msgid "Status"
+msgstr "状態"
+
+#: vinkius-connector/includes/admin/class-admin.php:262
+#: includes/admin/class-admin.php:262
+#, fuzzy
+msgid "Client"
+msgstr "クライアント別"
+
+#. Shared table columns.
+#: vinkius-connector/includes/admin/class-admin.php:263
+#: vinkius-connector/includes/admin/class-admin.php:308
+#: vinkius-connector/includes/admin/class-admin.php:646
+#: includes/admin/class-admin.php:263 includes/admin/class-admin.php:308
+#: includes/admin/class-admin.php:646
+msgid "Connector"
+msgstr "コネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:264
+#: includes/admin/class-admin.php:264
+msgid "Transport"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:265
+#: includes/admin/class-admin.php:265
+#, fuzzy
+msgid "Tool calls"
+msgstr "ツール"
+
+#: vinkius-connector/includes/admin/class-admin.php:266
+#: vinkius-connector/includes/admin/class-admin.php:304
+#: vinkius-connector/includes/admin/class-admin.php:361
+#: vinkius-connector/includes/admin/class-admin.php:648
+#: includes/admin/class-admin.php:266 includes/admin/class-admin.php:304
+#: includes/admin/class-admin.php:361 includes/admin/class-admin.php:648
+#, fuzzy
+msgid "Tokens"
+msgstr "アクセストークン"
+
+#: vinkius-connector/includes/admin/class-admin.php:267
+#: vinkius-connector/includes/admin/class-admin.php:279
+#: vinkius-connector/includes/admin/class-admin.php:540
+#: includes/admin/class-admin.php:267 includes/admin/class-admin.php:279
+#: includes/admin/class-admin.php:540
+msgid "Cost"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:268
+#: vinkius-connector/includes/admin/class-admin.php:280
+#: vinkius-connector/includes/admin/class-admin.php:542
+#: includes/admin/class-admin.php:268 includes/admin/class-admin.php:280
+#: includes/admin/class-admin.php:542
+#, fuzzy
+msgid "Savings"
+msgstr "設定を保存"
+
+#: vinkius-connector/includes/admin/class-admin.php:269
+#: includes/admin/class-admin.php:269
+msgid "Volume"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:270
+#: includes/admin/class-admin.php:270
+msgid "DLP redactions"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:271
+#: includes/admin/class-admin.php:271
+#, fuzzy
+msgid "Truncations"
+msgstr "アクション"
+
+#: vinkius-connector/includes/admin/class-admin.php:272
+#: includes/admin/class-admin.php:272
+#, fuzzy
+msgid "Error rate"
+msgstr "エラー"
+
+#: vinkius-connector/includes/admin/class-admin.php:273
+#: includes/admin/class-admin.php:273
+msgid "Bytes"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:274
+#: includes/admin/class-admin.php:274
+#, fuzzy
+msgid "Generated"
+msgstr "再生成"
+
+#. Charts + KPIs + tables — exact cloudfrontend en.json values.
+#: vinkius-connector/includes/admin/class-admin.php:277
+#: vinkius-connector/includes/admin/class-admin.php:567
+#: includes/admin/class-admin.php:277 includes/admin/class-admin.php:567
+msgid "DLP Redactions"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:278
+#: vinkius-connector/includes/admin/class-admin.php:568
+#: includes/admin/class-admin.php:278 includes/admin/class-admin.php:568
+msgid "FinOps Truncations"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:282
+#: vinkius-connector/includes/admin/class-admin.php:286
+#: vinkius-connector/includes/admin/class-admin.php:317
+#: vinkius-connector/includes/admin/class-admin.php:359
+#: vinkius-connector/includes/admin/class-admin.php:450
+#: vinkius-connector/includes/admin/class-admin.php:551
+#: includes/admin/class-admin.php:282 includes/admin/class-admin.php:286
+#: includes/admin/class-admin.php:317 includes/admin/class-admin.php:359
+#: includes/admin/class-admin.php:450 includes/admin/class-admin.php:551
+msgid "Avg Latency"
+msgstr "平均レイテンシ"
+
+#: vinkius-connector/includes/admin/class-admin.php:283
+#: includes/admin/class-admin.php:283
+#, fuzzy
+msgid "Max Latency"
+msgstr "レイテンシ"
+
+#: vinkius-connector/includes/admin/class-admin.php:285
+#: includes/admin/class-admin.php:285
+msgid "Rate %"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:287
+#: includes/admin/class-admin.php:287
+msgid "Failure Rate (%)"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:288
+#: includes/admin/class-admin.php:288
+#, fuzzy
+msgid "No data available"
+msgstr "データがありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:289
+#: includes/admin/class-admin.php:289
+msgid "Not available"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:290
+#: includes/admin/class-admin.php:290
+msgid "Never"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:291
+#: includes/admin/class-admin.php:291
+msgid "just now"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:292
+#: includes/admin/class-admin.php:292
+msgid "minutes ago"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:293
+#: includes/admin/class-admin.php:293
+msgid "hours ago"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:294
+#: includes/admin/class-admin.php:294
+msgid "days ago"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:295
+#: includes/admin/class-admin.php:295
+msgid "Healthy"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:296
+#: includes/admin/class-admin.php:296
+msgid "Moderate"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:297
+#: includes/admin/class-admin.php:297
+msgid "Slow"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:298
+#: includes/admin/class-admin.php:298
+msgid "Unknown"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:299
+#: includes/admin/class-admin.php:299
+msgid "Total: {total}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:300
+#: includes/admin/class-admin.php:300
+msgid "API: {api} | Vinkius: {vinkius} | Total: {total}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:301
+#: includes/admin/class-admin.php:301
+#, fuzzy
+msgid "Vinkius Overhead"
+msgstr "Vinkius ダッシュボード"
+
+#: vinkius-connector/includes/admin/class-admin.php:303
+#: vinkius-connector/includes/admin/class-admin.php:651
+#: includes/admin/class-admin.php:303 includes/admin/class-admin.php:651
+msgid "Total"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:305
+#: vinkius-connector/includes/admin/class-admin.php:654
+#: includes/admin/class-admin.php:305 includes/admin/class-admin.php:654
+msgid "Health"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:306
+#: vinkius-connector/includes/admin/class-admin.php:649
+#: includes/admin/class-admin.php:306 includes/admin/class-admin.php:649
+msgid "API"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:307
+#: vinkius-connector/includes/admin/class-admin.php:650
+#: includes/admin/class-admin.php:307 includes/admin/class-admin.php:650
+msgid "Overhead"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:309
+#: vinkius-connector/includes/admin/class-admin.php:676
+#: includes/admin/class-admin.php:309 includes/admin/class-admin.php:676
+#, fuzzy
+msgid "Capability"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:311
+#: vinkius-connector/includes/admin/class-admin.php:652
+#: includes/admin/class-admin.php:311 includes/admin/class-admin.php:652
+msgid "Rate"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:312
+#: includes/admin/class-admin.php:312
+msgid "Avg"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:313
+#: includes/admin/class-admin.php:313
+msgid "Max"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:314
+#: includes/admin/class-admin.php:314
+msgid "Fail Rate"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:315
+#: vinkius-connector/includes/admin/class-admin.php:655
+#: includes/admin/class-admin.php:315 includes/admin/class-admin.php:655
+msgid "DLP"
+msgstr "DLP"
+
+#: vinkius-connector/includes/admin/class-admin.php:316
+#: vinkius-connector/includes/admin/class-admin.php:656
+#: includes/admin/class-admin.php:316 includes/admin/class-admin.php:656
+msgid "FinOps"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:318
+#: includes/admin/class-admin.php:318
+msgid "Capabilities"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:319
+#: includes/admin/class-admin.php:319
+#, fuzzy
+msgid "Total Latency"
+msgstr "レイテンシ"
+
+#: vinkius-connector/includes/admin/class-admin.php:320
+#: includes/admin/class-admin.php:320
+#, fuzzy
+msgid "API Response"
+msgstr "対応"
+
+#: vinkius-connector/includes/admin/class-admin.php:321
+#: vinkius-connector/includes/admin/class-admin.php:677
+#: includes/admin/class-admin.php:321 includes/admin/class-admin.php:677
+msgid "Agent"
+msgstr "エージェント"
+
+#: vinkius-connector/includes/admin/class-admin.php:322
+#: vinkius-connector/includes/admin/class-admin.php:678
+#: includes/admin/class-admin.php:322 includes/admin/class-admin.php:678
+msgid "Upstream"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:324
+#: includes/admin/class-admin.php:324
+msgid "API: {api} · Overhead: {overhead}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:325
+#: includes/admin/class-admin.php:325
+msgid "API: {api} · Vinkius: {vinkius}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:326
+#: includes/admin/class-admin.php:326
+msgid "Agent: {agent} · Upstream: {upstream} · Vinkius: {vinkius}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:327
+#: includes/admin/class-admin.php:327
+msgid "Requests: {requests} · Rate: {rate}%"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:328
+#: includes/admin/class-admin.php:328
+msgid "Errors: {errors} of {requests} requests · {rate}%"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:329
+#: includes/admin/class-admin.php:329
+msgid "{count} connections ({pct}%)"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:330
+#: includes/admin/class-admin.php:330
+msgid "{day} at {hour}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:331
+#: vinkius-connector/includes/admin/class-admin.php:569
+#: includes/admin/class-admin.php:331 includes/admin/class-admin.php:569
+msgid "Data Protected"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:332
+#: includes/admin/class-admin.php:332
+#, fuzzy
+msgid "{count} interaction"
+msgstr "接続"
+
+#: vinkius-connector/includes/admin/class-admin.php:333
+#: includes/admin/class-admin.php:333
+#, fuzzy
+msgid "{count} interactions"
+msgstr "接続"
+
+#: vinkius-connector/includes/admin/class-admin.php:334
+#: includes/admin/class-admin.php:334
+msgid "High Volume"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:335
+#: includes/admin/class-admin.php:335
+msgid "Details"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:336
+#: includes/admin/class-admin.php:336
+msgid "Expand chart"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:337
+#: includes/admin/class-admin.php:337
+msgid "Close"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:338
+#: includes/admin/class-admin.php:338
+#, fuzzy
+msgid "Previous"
+msgstr "ツールのプレビュー"
+
+#: vinkius-connector/includes/admin/class-admin.php:339
+#: includes/admin/class-admin.php:339
+msgid "Next"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:340
+#: includes/admin/class-admin.php:340
+msgid "{from} to {to} of {total}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:341
+#: includes/admin/class-admin.php:341
+msgid "Today"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:342
+#: includes/admin/class-admin.php:342
+msgid "3 days"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:343
+#: includes/admin/class-admin.php:343
+msgid "7 days"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:344
+#: includes/admin/class-admin.php:344
+msgid "14 days"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:345
+#: includes/admin/class-admin.php:345
+msgid "30 days"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:346
+#: includes/admin/class-admin.php:346
+msgid "Sunday"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:347
+#: includes/admin/class-admin.php:347
+msgid "Monday"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:348
+#: includes/admin/class-admin.php:348
+msgid "Tuesday"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:349
+#: includes/admin/class-admin.php:349
+msgid "Wednesday"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:350
+#: includes/admin/class-admin.php:350
+msgid "Thursday"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:351
+#: includes/admin/class-admin.php:351
+msgid "Friday"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:352
+#: includes/admin/class-admin.php:352
+msgid "Saturday"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:353
+#: includes/admin/class-admin.php:353
+msgid ""
+"Agent: {agentCount} · Upstream: {upstreamCount} · Vinkius: {vinkiusCount}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:354
+#: includes/admin/class-admin.php:354
+msgid "API: {apiValue} · Overhead: {overhead}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:358
+#: includes/admin/class-admin.php:358
+#, fuzzy
+msgid "Total in this period"
+msgstr "この期間にデータはありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:360
+#: includes/admin/class-admin.php:360
+#, fuzzy
+msgid "Vinkius Reliability"
+msgstr "機能の信頼性"
+
+#: vinkius-connector/includes/admin/class-admin.php:362
+#: includes/admin/class-admin.php:362
+msgid "AI tokens processed"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:363
+#: includes/admin/class-admin.php:363
+msgid "DLP Protected"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:364
+#: includes/admin/class-admin.php:364
+msgid "Sensitive data redacted"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:365
+#: includes/admin/class-admin.php:365
+msgid "Cost Saved"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:366
+#: includes/admin/class-admin.php:366
+msgid "FinOps truncations applied"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:367
+#: includes/admin/class-admin.php:367
+#, fuzzy
+msgid "No data"
+msgstr "データがありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:368
+#: includes/admin/class-admin.php:368
+msgid "Hourly"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:369
+#: includes/admin/class-admin.php:369
+msgid "Daily"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:370
+#: includes/admin/class-admin.php:370
+#, fuzzy
+msgid "AI Agents Activities"
+msgstr "エージェントの活動"
+
+#: vinkius-connector/includes/admin/class-admin.php:371
+#: includes/admin/class-admin.php:371
+msgid "Interactions per hour"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:372
+#: includes/admin/class-admin.php:372
+#, fuzzy
+msgid "Interactions per day"
+msgstr "本日の実行"
+
+#: vinkius-connector/includes/admin/class-admin.php:373
+#: includes/admin/class-admin.php:373
+msgid "Request Volume & Latency"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:374
+#: includes/admin/class-admin.php:374
+msgid "{cadence} dual-axis overview"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:375
+#: includes/admin/class-admin.php:375
+#, fuzzy
+msgid "Top Connectors"
+msgstr "コネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:376
+#: includes/admin/class-admin.php:376
+msgid "Volume by connector · color = latency health"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:377
+#: includes/admin/class-admin.php:377
+msgid "Firewall Enforcement"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:378
+#: includes/admin/class-admin.php:378
+msgid "{cadence} DLP + FinOps actions"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:379
+#: includes/admin/class-admin.php:379
+msgid "Cost vs Savings"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:380
+#: includes/admin/class-admin.php:380
+msgid "{cadence} token cost attribution"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:381
+#: includes/admin/class-admin.php:381
+msgid "Failure Breakdown"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:382
+#: includes/admin/class-admin.php:382
+msgid "{cadence} requests · Agent / Upstream / Vinkius failures"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:383
+#: includes/admin/class-admin.php:383
+#, fuzzy
+msgid "Capability Health Matrix"
+msgstr "機能の信頼性"
+
+#: vinkius-connector/includes/admin/class-admin.php:384
+#: includes/admin/class-admin.php:384
+msgid "Latency × Failure rate · bubble size = request volume"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:385
+#: includes/admin/class-admin.php:385
+msgid "Live Activity"
+msgstr "ライブアクティビティ"
+
+#: vinkius-connector/includes/admin/class-admin.php:386
+#: includes/admin/class-admin.php:386
+msgid "Latest capability executions across all connectors"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:387
+#: includes/admin/class-admin.php:387
+#, fuzzy
+msgid "No activity recorded in this period."
+msgstr "この期間にアクティビティはありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:388
+#: vinkius-connector/includes/admin/class-admin.php:660
+#: includes/admin/class-admin.php:388 includes/admin/class-admin.php:660
+msgid "Outcome"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:389
+#: includes/admin/class-admin.php:389
+msgid "OK"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:390
+#: includes/admin/class-admin.php:390
+msgid "Enforced"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:391
+#: includes/admin/class-admin.php:391
+#, fuzzy
+msgid "Agent Err"
+msgstr "エージェント"
+
+#: vinkius-connector/includes/admin/class-admin.php:392
+#: includes/admin/class-admin.php:392
+msgid "Upstream Err"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:393
+#: includes/admin/class-admin.php:393
+#, fuzzy
+msgid "Vinkius Err"
+msgstr "Vinkius"
+
+#: vinkius-connector/includes/admin/class-admin.php:394
+#: includes/admin/class-admin.php:394
+msgid "{count} DLP redaction"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:395
+#: includes/admin/class-admin.php:395
+msgid "{count} DLP redactions"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:396
+#: includes/admin/class-admin.php:396
+msgid "FinOps truncated oversized payload"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:397
+#: includes/admin/class-admin.php:397
+msgid "AI Briefing"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:398
+#: includes/admin/class-admin.php:398
+msgid "Upgrade to unlock"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:399
+#: includes/admin/class-admin.php:399
+msgid ""
+"Know exactly what needs your attention before you even look at the charts. "
+"One briefing. The full picture. The next move."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:400
+#: includes/admin/class-admin.php:400
+msgid ""
+"Stop guessing which agents matter. See who drives value, who drains "
+"resources, and what your connection patterns are really telling you."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:401
+#: includes/admin/class-admin.php:401
+msgid ""
+"Spot the connector that is about to become a problem before your users do. "
+"Fleet health, latency trends, and traffic hotspots in one read."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:402
+#: includes/admin/class-admin.php:402
+msgid ""
+"Find the spend you did not know you had. Pinpoint the connectors costing you "
+"the most, measure your policy savings, and know exactly where to cut next."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:403
+#: includes/admin/class-admin.php:403
+msgid ""
+"See which capabilities are slowing everything down and which ones are "
+"failing silently. Ranked, diagnosed, and ready for you to act on."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:404
+#: includes/admin/class-admin.php:404
+msgid ""
+"Know your blind spots before they become incidents. Threat interceptions, "
+"policy coverage, and compliance readiness scored and explained."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:405
+#: includes/admin/class-admin.php:405
+msgid ""
+"Trace every failure back to its source. See the exact combination of "
+"connector and capability behind the noise, and whether things are getting "
+"better or worse."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:406
+#: includes/admin/class-admin.php:406
+msgid ""
+"Audit every token across your fleet. See which tokens are active, which are "
+"stale, and where your security perimeter needs reinforcement."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:407
+#: includes/admin/class-admin.php:407
+msgid ""
+"Audit every credential that can act for your organization. Identity chains, "
+"least-privilege gaps, and dormant agents — with the next cleanup step ready."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:408
+#: includes/admin/class-admin.php:408
+msgid ""
+"See your governance posture as an auditor would. Readiness grade, open "
+"control gaps, and the evidence that backs every answer — all from your live "
+"ledgers."
+msgstr ""
+
+#. Agent Activity (clients).
+#: vinkius-connector/includes/admin/class-admin.php:411
+#: vinkius-connector/includes/admin/class-admin.php:424
+#: vinkius-connector/includes/admin/class-admin.php:625
+#: includes/admin/class-admin.php:411 includes/admin/class-admin.php:424
+#: includes/admin/class-admin.php:625
+#, fuzzy
+msgid "Connections"
+msgstr "接続"
+
+#: vinkius-connector/includes/admin/class-admin.php:412
+#: includes/admin/class-admin.php:412
+#, fuzzy
+msgid "Active sessions in period"
+msgstr "この期間にアクティビティはありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:413
+#: vinkius-connector/includes/admin/class-admin.php:425
+#: includes/admin/class-admin.php:413 includes/admin/class-admin.php:425
+#, fuzzy
+msgid "Capability Requests"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:414
+#: includes/admin/class-admin.php:414
+msgid "{count} requests/session"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:415
+#: vinkius-connector/includes/admin/class-admin.php:426
+#: includes/admin/class-admin.php:415 includes/admin/class-admin.php:426
+msgid "Data Transfer"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:416
+#: includes/admin/class-admin.php:416
+msgid "Total payload volume"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:417
+#: vinkius-connector/includes/admin/class-admin.php:427
+#: includes/admin/class-admin.php:417 includes/admin/class-admin.php:427
+msgid "Avg Session"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:418
+#: includes/admin/class-admin.php:418
+msgid "Average connection duration"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:419
+#: includes/admin/class-admin.php:419
+msgid "Token Distribution"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:420
+#: includes/admin/class-admin.php:420
+msgid "Connections per client, stacked by token"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:421
+#: includes/admin/class-admin.php:421
+#, fuzzy
+msgid "Capability Usage by Client"
+msgstr "機能の信頼性"
+
+#: vinkius-connector/includes/admin/class-admin.php:422
+#: includes/admin/class-admin.php:422
+msgid "Total capability requests · color = latency health"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:423
+#: includes/admin/class-admin.php:423
+#, fuzzy
+msgid "AI Client"
+msgstr "クライアント別"
+
+#: vinkius-connector/includes/admin/class-admin.php:428
+#: includes/admin/class-admin.php:428
+msgid "Req/Day"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:429
+#: includes/admin/class-admin.php:429
+#, fuzzy
+msgid "No AI client connections recorded in this period."
+msgstr "このコネクタに実行記録はありません。"
+
+#. Connector Traffic.
+#: vinkius-connector/includes/admin/class-admin.php:432
+#: includes/admin/class-admin.php:432
+#, fuzzy
+msgid "Active Connectors"
+msgstr "コネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:433
+#: includes/admin/class-admin.php:433
+#, fuzzy
+msgid "Connectors with traffic in period"
+msgstr "コネクタのトラフィック"
+
+#. Capability Reliability (tool-performance).
+#: vinkius-connector/includes/admin/class-admin.php:434
+#: vinkius-connector/includes/admin/class-admin.php:448
+#: vinkius-connector/includes/admin/class-admin.php:547
+#: includes/admin/class-admin.php:434 includes/admin/class-admin.php:448
+#: includes/admin/class-admin.php:547
+#, fuzzy
+msgid "Total Requests"
+msgstr "リクエスト"
+
+#: vinkius-connector/includes/admin/class-admin.php:435
+#: includes/admin/class-admin.php:435
+msgid "Peak Hour"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:436
+#: includes/admin/class-admin.php:436
+msgid "Highest traffic window"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:437
+#: includes/admin/class-admin.php:437
+msgid "Traffic Distribution"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:438
+#: includes/admin/class-admin.php:438
+msgid "Requests by day of week × hour"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:439
+#: includes/admin/class-admin.php:439
+#, fuzzy
+msgid "Request Volume by Connector"
+msgstr "コネクタ作成"
+
+#: vinkius-connector/includes/admin/class-admin.php:440
+#: includes/admin/class-admin.php:440
+msgid "Total requests · color = latency health"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:441
+#: includes/admin/class-admin.php:441
+#, fuzzy
+msgid "No connectors recorded in this period."
+msgstr "このコネクタに実行記録はありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:445
+#: includes/admin/class-admin.php:445
+msgid "With active tokens"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:446
+#: includes/admin/class-admin.php:446
+msgid "Total Tokens"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:447
+#: vinkius-connector/includes/admin/class-admin.php:673
+#: includes/admin/class-admin.php:447 includes/admin/class-admin.php:673
+#, fuzzy
+msgid "Across all connectors"
+msgstr "エージェントとコネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:449
+#: includes/admin/class-admin.php:449
+msgid "In selected period"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:451
+#: includes/admin/class-admin.php:451
+msgid "{count} token"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:452
+#: includes/admin/class-admin.php:452
+msgid "{count} tokens"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:453
+#: includes/admin/class-admin.php:453
+msgid "{count} req"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:454
+#: includes/admin/class-admin.php:454
+msgid "{value} avg"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:455
+#: includes/admin/class-admin.php:455
+msgid "Search MCP or token name..."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:456
+#: includes/admin/class-admin.php:456
+msgid "Token Name"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:457
+#: includes/admin/class-admin.php:457
+msgid "Hint"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:458
+#: includes/admin/class-admin.php:458
+#, fuzzy
+msgid "Last Used"
+msgstr "最終確認"
+
+#: vinkius-connector/includes/admin/class-admin.php:460
+#: vinkius-connector/includes/admin/class-admin.php:473
+#: vinkius-connector/includes/admin/class-admin.php:484
+#: vinkius-connector/templates/screen-consent.php:46
+#: includes/admin/class-admin.php:460 includes/admin/class-admin.php:473
+#: includes/admin/class-admin.php:484 templates/screen-consent.php:46
+msgid "Active"
+msgstr "有効"
+
+#: vinkius-connector/includes/admin/class-admin.php:461
+#: vinkius-connector/includes/admin/class-admin.php:487
+#: vinkius-connector/includes/admin/class-admin.php:515
+#: includes/admin/class-admin.php:461 includes/admin/class-admin.php:487
+#: includes/admin/class-admin.php:515
+msgid "Disabled"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:462
+#: includes/admin/class-admin.php:462
+#, fuzzy
+msgid "No tokens found for this connector."
+msgstr "このコネクタに実行記録はありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:463
+#: includes/admin/class-admin.php:463
+#, fuzzy
+msgid "No connectors with tokens found."
+msgstr "アクティビティのあるコネクタはありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:464
+#: includes/admin/class-admin.php:464
+#, fuzzy
+msgid "Loading tokens…"
+msgstr "収益を読み込み中…"
+
+#: vinkius-connector/includes/admin/class-admin.php:465
+#: includes/admin/class-admin.php:465
+msgid "Failed to load tokens. Collapse and expand again to retry."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:466
+#: includes/admin/class-admin.php:466
+msgid "Try a different search term."
+msgstr ""
+
+#. Agent Passport (agents).
+#: vinkius-connector/includes/admin/class-admin.php:469
+#: includes/admin/class-admin.php:469
+msgid "Credential calling overview"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:470
+#: includes/admin/class-admin.php:470
+msgid ""
+"Every credential that places calls on behalf of this organization, comparing "
+"the tools it may invoke with those it actually used over the selected window."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:471
+#: includes/admin/class-admin.php:471
+msgid "Agents"
+msgstr "エージェント"
+
+#: vinkius-connector/includes/admin/class-admin.php:472
+#: includes/admin/class-admin.php:472
+msgid "Credentials with a full identity chain"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:474
+#: includes/admin/class-admin.php:474
+msgid "With calls in the last 7 days"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:475
+#: vinkius-connector/includes/admin/class-admin.php:486
+#: includes/admin/class-admin.php:475 includes/admin/class-admin.php:486
+msgid "Zombie"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:476
+#: includes/admin/class-admin.php:476
+msgid "Enabled without a call for over 30 days"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:477
+#: includes/admin/class-admin.php:477
+msgid "Over-provisioned"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:478
+#: includes/admin/class-admin.php:478
+msgid "Holding granted tools that remain unused"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:479
+#: includes/admin/class-admin.php:479
+msgid "Destructive reach"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:480
+#: includes/admin/class-admin.php:480
+msgid "Agents with access to destructive tools"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:481
+#: includes/admin/class-admin.php:481
+msgid "Least-privilege median"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:482
+#: includes/admin/class-admin.php:482
+#, fuzzy
+msgid "Connect SDK user"
+msgstr "使用中のコネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:483
+#: includes/admin/class-admin.php:483
+msgid "Org automation"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:485
+#: includes/admin/class-admin.php:485
+msgid "Dormant"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:488
+#: includes/admin/class-admin.php:488
+msgid "Never used"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:489
+#: includes/admin/class-admin.php:489
+msgid "Placed a call within the last 7 days."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:490
+#: includes/admin/class-admin.php:490
+msgid "Last called between 8 and 30 days ago."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:491
+#: includes/admin/class-admin.php:491
+msgid "Enabled for over 30 days without a single call."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:492
+#: includes/admin/class-admin.php:492
+msgid "The credential is disabled and cannot place calls."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:493
+#: includes/admin/class-admin.php:493
+msgid "Issued, with no call on record."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:494
+#: includes/admin/class-admin.php:494
+msgid ""
+"Uses its full grant: {used} of {granted} tools, across {calls} calls in the "
+"window."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:495
+#: includes/admin/class-admin.php:495
+msgid ""
+"Holds {granted} tools but used only {used} in the window, leaving {unused} "
+"granted tools unused."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:496
+#: includes/admin/class-admin.php:496
+msgid "Holds {granted} granted tools and used none of them in the window."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:497
+#: includes/admin/class-admin.php:497
+msgid ""
+"The connection grants no enabled tools, so this credential cannot place any "
+"call."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:498
+#: includes/admin/class-admin.php:498
+msgid "{n} of its granted tools can destroy data."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:499
+#: includes/admin/class-admin.php:499
+msgid "App user of {application} · on behalf of {appUser}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:500
+#: includes/admin/class-admin.php:500
+msgid "Automation over {connection}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:501
+#: includes/admin/class-admin.php:501
+msgid "Window: the last {hours} hours covered by your plan."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:502
+#: includes/admin/class-admin.php:502
+#, php-format
+msgid "Median score: {percent}% of granted tools actually used."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:503
+#: includes/admin/class-admin.php:503
+msgid "No agent holds enabled tools, so no least-privilege score exists yet."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:504
+#: includes/admin/class-admin.php:504
+msgid "Identity chain"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:505
+#: includes/admin/class-admin.php:505
+msgid "Permissions"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:506
+#: includes/admin/class-admin.php:506
+msgid "Usage in window"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:507
+#: includes/admin/class-admin.php:507
+#, fuzzy
+msgid "Over this connection"
+msgstr "このコネクタを停止"
+
+#: vinkius-connector/includes/admin/class-admin.php:508
+#: includes/admin/class-admin.php:508
+msgid "End user the SDK token represents"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:509
+#: includes/admin/class-admin.php:509
+#, fuzzy
+msgid "granted"
+msgstr "付与日"
+
+#: vinkius-connector/includes/admin/class-admin.php:510
+#: includes/admin/class-admin.php:510
+msgid "used"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:511
+#: includes/admin/class-admin.php:511
+msgid "unused"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:512
+#: includes/admin/class-admin.php:512
+msgid "calls"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:513
+#: includes/admin/class-admin.php:513
+#, fuzzy
+msgid "errors"
+msgstr "エラー"
+
+#: vinkius-connector/includes/admin/class-admin.php:514
+#: includes/admin/class-admin.php:514
+msgid "Last call: {when}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:516
+#: includes/admin/class-admin.php:516
+msgid ""
+"No credentials are active yet. Once a connection or an SDK token places its "
+"first call, its passport appears here."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:517
+#: includes/admin/class-admin.php:517
+msgid "Printable inventory"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:518
+#: includes/admin/class-admin.php:518
+msgid ""
+"One document with the full registry: identity, permissions and usage per "
+"credential, ready for your security review."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:519
+#: includes/admin/class-admin.php:519
+msgid "Export inventory"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:520
+#: includes/admin/class-admin.php:520
+#, fuzzy
+msgid "Paid plans"
+msgstr "プランを見る"
+
+#: vinkius-connector/includes/admin/class-admin.php:521
+#: includes/admin/class-admin.php:521
+msgid "The registry could not be exported. Please try again in a moment."
+msgstr ""
+
+#. AI Spend (cost).
+#: vinkius-connector/includes/admin/class-admin.php:524
+#: includes/admin/class-admin.php:524
+msgid "Estimated Cost"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:525
+#: includes/admin/class-admin.php:525
+msgid "{count} tokens consumed"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:526
+#: includes/admin/class-admin.php:526
+msgid "FinOps Savings"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:527
+#: includes/admin/class-admin.php:527
+msgid "{count} tokens saved"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:528
+#: includes/admin/class-admin.php:528
+msgid "Cost per Request"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:529
+#: includes/admin/class-admin.php:529
+msgid "FinOps ROI"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:530
+#: includes/admin/class-admin.php:530
+msgid "DLP: {dlp} · FinOps: {finops}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:531
+#: includes/admin/class-admin.php:531
+msgid "Cost & Savings Trend"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:532
+#: includes/admin/class-admin.php:532
+msgid "Daily estimated spend and savings over time"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:533
+#: includes/admin/class-admin.php:533
+msgid "Hourly estimated spend and savings over time"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:534
+#: includes/admin/class-admin.php:534
+msgid "Cost Distribution"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:535
+#: includes/admin/class-admin.php:535
+msgid "Spend proportion by connector"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:536
+#: includes/admin/class-admin.php:536
+#, fuzzy
+msgid "Cost by Connector"
+msgstr "マイコネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:537
+#: includes/admin/class-admin.php:537
+msgid "Token consumption in USD per connector"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:538
+#: includes/admin/class-admin.php:538
+#, fuzzy
+msgid "Connector Cost Detail"
+msgstr "コネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:539
+#: includes/admin/class-admin.php:539
+#, fuzzy
+msgid "No cost data recorded in this period."
+msgstr "この期間にデータはありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:541
+#: includes/admin/class-admin.php:541
+msgid "Saved"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:543
+#: includes/admin/class-admin.php:543
+#, fuzzy
+msgid "DLP Events"
+msgstr "DLP %s"
+
+#: vinkius-connector/includes/admin/class-admin.php:544
+#: includes/admin/class-admin.php:544
+msgid "FinOps Events"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:548
+#: includes/admin/class-admin.php:548
+#, php-format
+msgid "{pct}% success rate"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:549
+#: includes/admin/class-admin.php:549
+#, fuzzy
+msgid "Unique Capabilities"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:550
+#: includes/admin/class-admin.php:550
+#, fuzzy
+msgid "Active in this period"
+msgstr "この期間にアクティビティはありません。"
+
+#. Request Failures (errors).
+#: vinkius-connector/includes/admin/class-admin.php:552
+#: vinkius-connector/includes/admin/class-admin.php:591
+#: includes/admin/class-admin.php:552 includes/admin/class-admin.php:591
+#, fuzzy
+msgid "Total Errors"
+msgstr "エラー"
+
+#: vinkius-connector/includes/admin/class-admin.php:553
+#: includes/admin/class-admin.php:553
+#, fuzzy
+msgid "Slowest Capabilities"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:554
+#: includes/admin/class-admin.php:554
+msgid "Avg latency (amber) · max spike (red)"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:555
+#: includes/admin/class-admin.php:555
+#, fuzzy
+msgid "Most Failing Capabilities"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:556
+#: includes/admin/class-admin.php:556
+msgid "Health Matrix"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:557
+#: includes/admin/class-admin.php:557
+msgid "Latency × Failure rate · bubble = request volume"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:558
+#: includes/admin/class-admin.php:558
+#, fuzzy
+msgid "Slowest Capabilities Detail"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:559
+#: includes/admin/class-admin.php:559
+msgid "Most Failing Capabilities Detail"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:560
+#: includes/admin/class-admin.php:560
+#, fuzzy
+msgid "Last seen"
+msgstr "最終確認"
+
+#: vinkius-connector/includes/admin/class-admin.php:561
+#: includes/admin/class-admin.php:561
+msgid "No capability performance data recorded in this period."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:562
+#: includes/admin/class-admin.php:562
+#, fuzzy
+msgid "No capability error data recorded in this period."
+msgstr "この期間にデータはありません。"
+
+#. Security Posture.
+#: vinkius-connector/includes/admin/class-admin.php:565
+#: includes/admin/class-admin.php:565
+msgid "Firewall Events"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:566
+#: includes/admin/class-admin.php:566
+msgid "{count} requests inspected"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:570
+#: includes/admin/class-admin.php:570
+msgid "{count} total processed"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:571
+#: includes/admin/class-admin.php:571
+#, php-format
+msgid "{pct}% of firewall events"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:572
+#: includes/admin/class-admin.php:572
+msgid "Enforcement Rate"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:573
+#: includes/admin/class-admin.php:573
+msgid "Events per request ratio"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:574
+#: includes/admin/class-admin.php:574
+#, fuzzy
+msgid "Requests Inspected"
+msgstr "リクエスト"
+
+#: vinkius-connector/includes/admin/class-admin.php:575
+#: includes/admin/class-admin.php:575
+msgid "All traffic through firewall"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:576
+#: includes/admin/class-admin.php:576
+msgid "Payload Volume"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:577
+#: includes/admin/class-admin.php:577
+msgid "Total data volume inspected"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:578
+#: includes/admin/class-admin.php:578
+#, fuzzy
+msgid "Firewall Activity"
+msgstr "ライブアクティビティ"
+
+#: vinkius-connector/includes/admin/class-admin.php:579
+#: includes/admin/class-admin.php:579
+msgid "Daily DLP and FinOps enforcement actions"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:580
+#: includes/admin/class-admin.php:580
+msgid "Compliance Coverage"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:581
+#: vinkius-connector/includes/admin/class-admin.php:587
+#: includes/admin/class-admin.php:581 includes/admin/class-admin.php:587
+msgid "Approval"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:582
+#: includes/admin/class-admin.php:582
+msgid "{active}/{total}"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:583
+#: includes/admin/class-admin.php:583
+#, fuzzy
+msgid "Enforcement by Connector"
+msgstr "コネクタ作成"
+
+#: vinkius-connector/includes/admin/class-admin.php:584
+#: includes/admin/class-admin.php:584
+msgid "Firewall activity and active policies per connector"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:585
+#: includes/admin/class-admin.php:585
+#, fuzzy
+msgid "No security data recorded in this period."
+msgstr "この期間にデータはありません。"
+
+#: vinkius-connector/includes/admin/class-admin.php:586
+#: includes/admin/class-admin.php:586
+msgid "MCP Server"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:588
+#: includes/admin/class-admin.php:588
+msgid "Bytes Saved"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:592
+#: includes/admin/class-admin.php:592
+msgid "of {count} requests"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:593
+#: includes/admin/class-admin.php:593
+#, fuzzy
+msgid "Failure Rate"
+msgstr "サーバー別の失敗"
+
+#: vinkius-connector/includes/admin/class-admin.php:594
+#: includes/admin/class-admin.php:594
+#, fuzzy
+msgid "Worst Connector"
+msgstr "コネクタ作成"
+
+#: vinkius-connector/includes/admin/class-admin.php:595
+#: includes/admin/class-admin.php:595
+#, fuzzy
+msgid "Most erroring connector"
+msgstr "このコネクタを停止"
+
+#: vinkius-connector/includes/admin/class-admin.php:596
+#: includes/admin/class-admin.php:596
+#, fuzzy
+msgid "Worst Capability"
+msgstr "機能"
+
+#: vinkius-connector/includes/admin/class-admin.php:597
+#: includes/admin/class-admin.php:597
+msgid "Most erroring capability"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:598
+#: includes/admin/class-admin.php:598
+msgid "Failure Timeline"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:599
+#: includes/admin/class-admin.php:599
+msgid "Errors (red) · Agent / Upstream / Vinkius rates"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:600
+#: includes/admin/class-admin.php:600
+msgid "Transport Distribution"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:601
+#: includes/admin/class-admin.php:601
+msgid "Connection protocol breakdown"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:602
+#: includes/admin/class-admin.php:602
+#, fuzzy
+msgid "Errors by Connector"
+msgstr "マイコネクタ"
+
+#: vinkius-connector/includes/admin/class-admin.php:603
+#: includes/admin/class-admin.php:603
+msgid "Stacked by Agent / Upstream / Vinkius"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:604
+#: includes/admin/class-admin.php:604
+msgid "Error Distribution by Connector"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:605
+#: includes/admin/class-admin.php:605
+#, fuzzy
+msgid "No error data recorded in this period."
+msgstr "この期間にデータはありません。"
+
+#. Compliance & Evidence.
+#: vinkius-connector/includes/admin/class-admin.php:608
+#: includes/admin/class-admin.php:608
+#, fuzzy
+msgid "Governance readiness"
+msgstr "AI ガバナンス"
+
+#: vinkius-connector/includes/admin/class-admin.php:609
+#: includes/admin/class-admin.php:609
+msgid "Each answer below is quoted straight from your live ledgers."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:610
+#: includes/admin/class-admin.php:610
+msgid "Is my data safe while the AI works?"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:611
+#: includes/admin/class-admin.php:611
+msgid "Can I stop it if it misbehaves?"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:612
+#: includes/admin/class-admin.php:612
+msgid "Can I prove what the AI did?"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:613
+#: includes/admin/class-admin.php:613
+msgid "Ready, nothing blocking"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:614
+#: includes/admin/class-admin.php:614
+msgid "Almost there, a few settings to flip"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:615
+#: includes/admin/class-admin.php:615
+msgid "Needs attention, close the gaps below"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:616
+#: includes/admin/class-admin.php:616
+msgid "What to do about it"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:617
+#: includes/admin/class-admin.php:617
+msgid ""
+"Plain-language steps: flip a policy once and it covers every connection."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:618
+#: includes/admin/class-admin.php:618
+msgid "Nothing to fix. Every control is fully in force."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:619
+#: includes/admin/class-admin.php:619
+msgid "Reference: frameworks & ledgers"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:620
+#: includes/admin/class-admin.php:620
+msgid ""
+"The layer an auditor wants: control-by-control mapping and the raw counters "
+"behind it."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:621
+#: includes/admin/class-admin.php:621
+#, fuzzy
+msgid "Ledger evidence"
+msgstr "エビデンス"
+
+#: vinkius-connector/includes/admin/class-admin.php:622
+#: includes/admin/class-admin.php:622
+msgid ""
+"Counters read straight from your live ledgers, the receipts behind the "
+"scorecards above."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:623
+#: includes/admin/class-admin.php:623
+#, fuzzy
+msgid "Circuit-breaker events"
+msgstr "サーキットブレイカー"
+
+#: vinkius-connector/includes/admin/class-admin.php:624
+#: includes/admin/class-admin.php:624
+msgid "Deploy chains valid"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:626
+#: includes/admin/class-admin.php:626
+msgid "Deploy ledger rows"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:627
+#: includes/admin/class-admin.php:627
+msgid "Org audit events"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:628
+#: includes/admin/class-admin.php:628
+msgid "Sealed request receipts"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:629
+#: includes/admin/class-admin.php:629
+#, fuzzy
+msgid "Evidence pack"
+msgstr "エビデンス"
+
+#: vinkius-connector/includes/admin/class-admin.php:630
+#: includes/admin/class-admin.php:630
+msgid ""
+"A frozen, re-verifiable snapshot of your governance evidence. Share it with "
+"a board, regulator, or auditor."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:631
+#: includes/admin/class-admin.php:631
+msgid "Download evidence pack"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:632
+#: includes/admin/class-admin.php:632
+msgid "Satisfied"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:633
+#: includes/admin/class-admin.php:633
+msgid "Partial"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:634
+#: includes/admin/class-admin.php:634
+msgid "Missing"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:635
+#: includes/admin/class-admin.php:635
+msgid "Yes"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:636
+#: includes/admin/class-admin.php:636
+msgid "Partly"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:637
+#: includes/admin/class-admin.php:637
+#, fuzzy
+msgid "Not yet"
+msgstr "未接続"
+
+#: vinkius-connector/includes/admin/class-admin.php:638
+#: includes/admin/class-admin.php:638
+msgid "{n} satisfied"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:639
+#: includes/admin/class-admin.php:639
+msgid "{n} partial"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:640
+#: includes/admin/class-admin.php:640
+msgid "{n} missing"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:641
+#: includes/admin/class-admin.php:641
+msgid ""
+"Data masking on {dlp_on}/{connections} connections · spend limits on "
+"{finops_on}/{connections}."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:642
+#: includes/admin/class-admin.php:642
+msgid ""
+"Two-person approval on {approval_on}/{connections} connections · "
+"{breaker_events} automatic stops in retention."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:643
+#: includes/admin/class-admin.php:643
+msgid ""
+"{sealed} sealed call receipts · {deploys} sealed deploys · chains "
+"{chains_valid}."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:658
+#: includes/admin/class-admin.php:658
+msgid "Token"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:659
+#: includes/admin/class-admin.php:659
+msgid "Trace"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:664
+#: includes/admin/class-admin.php:664
+msgid "Vinkius error {code}. Failure originated inside the Vinkius proxy."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:665
+#: includes/admin/class-admin.php:665
+msgid ""
+"Vinkius policy applied in-flight: {parts}. Upstream returned {code}. "
+"Enforcement working as designed."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:666
+#: includes/admin/class-admin.php:666
+msgid "Upstream returned {code}."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:667
+#: includes/admin/class-admin.php:667
+msgid "Client error {code}. The caller sent a bad request."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:668
+#: includes/admin/class-admin.php:668
+msgid "Upstream error {code}. The upstream provider failed."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:669
+#: includes/admin/class-admin.php:669
+msgid "Showing the latest {count} of {total} in this period."
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:671
+#: includes/admin/class-admin.php:671
+msgid "AM"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:672
+#: includes/admin/class-admin.php:672
+msgid "PM"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:674
+#: includes/admin/class-admin.php:674
+msgid "{count} requests"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:675
+#: includes/admin/class-admin.php:675
+msgid "{count} reqs"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:680
+#: includes/admin/class-admin.php:680
+msgid "Critical"
+msgstr ""
+
+#: vinkius-connector/includes/admin/class-admin.php:681
+#: includes/admin/class-admin.php:681
+msgid "Chart"
+msgstr ""
+
+#: vinkius-connector/includes/class-shortcodes.php:42
+#: includes/class-shortcodes.php:42
+msgid "Agent actions are currently halted on this site."
+msgstr "現在、このサイトではエージェントのアクションが停止中です。"
+
+#: vinkius-connector/includes/class-shortcodes.php:55
+#: includes/class-shortcodes.php:55
+msgid ""
+"By continuing you allow Vinkius agents to act on your behalf on this site "
+"with the selected scopes. You can revoke at any time."
+msgstr ""
+"続行すると、Vinkius エージェントが選択したスコープでこのサイトにおいてあなた"
+"の代わりに行動することを許可することになります。いつでも取り消せます。"
+
+#: vinkius-connector/includes/class-shortcodes.php:57
+#: includes/class-shortcodes.php:57
+msgid "Consent recorded. You can revoke it anytime."
+msgstr "同意を記録しました。いつでも取り消すことができます。"
+
+#: vinkius-connector/includes/class-shortcodes.php:58
+#: includes/class-shortcodes.php:58
+msgid "Something went wrong. Please try again."
+msgstr "エラーが発生しました。もう一度お試しください。"
+
+#. phpcs:ignore WordPress.Security.EscapeOutput
+#: vinkius-connector/includes/class-shortcodes.php:66
+#: includes/class-shortcodes.php:66
+msgid "Allow AI agents to act on my behalf on this site"
+msgstr "AI エージェントが私の代わりにこのサイトで行動することを許可する"
+
+#: vinkius-connector/includes/class-shortcodes.php:125
+#: includes/class-shortcodes.php:125
+msgid "Read site content"
+msgstr "サイトのコンテンツを読む"
+
+#: vinkius-connector/includes/class-shortcodes.php:126
+#: includes/class-shortcodes.php:126
+msgid "Draft site content"
+msgstr "サイト内容を下書きする"
+
+#: vinkius-connector/includes/class-shortcodes.php:127
+#: includes/class-shortcodes.php:127
+msgid "Subscribe me as a user"
+msgstr "ユーザーとして購読する"
+
+#: vinkius-connector/includes/class-shortcodes.php:128
+#: includes/class-shortcodes.php:128
+msgid "Upload media on my behalf"
+msgstr "私の代わりにメディアをアップロードする"
+
+#. translators: 1: errors today, 2: DLP events today, 3: circuit breaker state
+#: vinkius-connector/includes/class-notifications.php:76
+#: includes/class-notifications.php:76
+#, php-format
+msgid "Errors today: %1$d · DLP events: %2$d · Circuit breaker: %3$s"
+msgstr "本日のエラー: %1$d・DLPイベント: %2$d・サーキットブレイカー: %3$s"
+
+#. translators: %s: site name
+#: vinkius-connector/includes/class-notifications.php:87
+#: includes/class-notifications.php:87
+#, php-format
+msgid "Vinkius AI Governance — daily digest for %s"
+msgstr "Vinkius AI ガバナンス — %s のデイリーダイジェスト"
+
+#: vinkius-connector/includes/rest/class-consent-service.php:39
+#: includes/rest/class-consent-service.php:39
+msgid "Agent actions are halted on this site right now."
+msgstr "現在、このサイトではエージェントのアクションが停止中です。"
+
+#: vinkius-connector/includes/rest/class-consent-service.php:58
+#: includes/rest/class-consent-service.php:58
+msgid "Too many requests. Please try again later."
+msgstr "リクエストが多すぎます。しばらくしてからもう一度お試しください。"
+
+#: vinkius-connector/includes/rest/class-rest.php:93
+#: includes/rest/class-rest.php:93
+msgid ""
+"This site has emergency-halted AI agents. DO NOT RETRY. Approve Resumption "
+"first."
+msgstr ""
+"このサイトでは AI エージェントが緊急停止されています。再試行しないでくださ"
+"い。まず再開を承認してください。"
+
+#: vinkius-connector/templates/screen-incidents.php:17
+#: templates/screen-incidents.php:17
+msgid "Errors (today)"
+msgstr "エラー（本日）"
+
+#: vinkius-connector/templates/screen-incidents.php:23
+#: templates/screen-incidents.php:23
+msgid "DLP blocks (today)"
+msgstr "DLP ブロック（本日）"
+
+#: vinkius-connector/templates/screen-incidents.php:29
+#: templates/screen-incidents.php:29
+msgid "Circuit breaker"
+msgstr "サーキットブレイカー"
+
+#: vinkius-connector/templates/screen-incidents.php:36
+#: templates/screen-incidents.php:36
+msgid "What happened"
+msgstr "何が起きたか"
+
+#: vinkius-connector/templates/screen-incidents.php:40
+#: templates/screen-incidents.php:40
+msgid "No incident summary available for this period."
+msgstr "この期間のインシデント概要はありません。"
+
+#: vinkius-connector/templates/screen-incidents.php:46
+#: templates/screen-incidents.php:46
+msgid "Respond"
+msgstr "対応"
+
+#: vinkius-connector/templates/screen-incidents.php:52
+#: templates/screen-incidents.php:52
+msgid "Open incidents in Vinkius"
+msgstr "Vinkius でインシデントを開く"
+
+#: vinkius-connector/templates/layout.php:18
+#: vinkius-connector/templates/screen-settings.php:68 templates/layout.php:18
+#: templates/screen-settings.php:68
+msgid "Not connected"
+msgstr "未接続"
+
+#: vinkius-connector/templates/layout.php:20
+#: vinkius-connector/templates/screen-settings.php:70 templates/layout.php:20
+#: templates/screen-settings.php:70
+msgid "Session expired"
+msgstr "セッションの有効期限が切れました"
+
+#: vinkius-connector/templates/layout.php:29 templates/layout.php:29
+msgid "Agents are halted on this site."
+msgstr "このサイトではエージェントが停止しています。"
+
+#: vinkius-connector/templates/layout.php:40 templates/layout.php:40
+msgid "Your Vinkius session has ended."
+msgstr "Vinkius のセッションが終了しました。"
+
+#: vinkius-connector/templates/layout.php:42 templates/layout.php:42
+msgid "Connect WordPress to Vinkius"
+msgstr "WordPress を Vinkius に接続"
+
+#: vinkius-connector/templates/layout.php:48 templates/layout.php:48
+msgid "Log in again to see live data."
+msgstr "ライブデータを見るには再ログインしてください。"
+
+#: vinkius-connector/templates/layout.php:49 templates/layout.php:49
+msgid "Log in again"
+msgstr "再ログイン"
+
+#: vinkius-connector/templates/layout.php:51 templates/layout.php:51
+msgid ""
+"Link this site to your Vinkius account to see governed agent operations here."
+msgstr ""
+"サイトを Vinkius アカウントに連携すると、ここでガバナンスされたエージェント操"
+"作が見えます。"
+
+#: vinkius-connector/templates/layout.php:52
+#: vinkius-connector/templates/screen-settings.php:82 templates/layout.php:52
+#: templates/screen-settings.php:82
+msgid "Connect with Vinkius"
+msgstr "Vinkius に接続"
+
+#: vinkius-connector/templates/layout.php:79 templates/layout.php:79
+msgid ""
+"This panel shows only operations routed through the Vinkius runtime. "
+"Reliability — credential vault, DLP, sandboxing, circuit breakers, kill-"
+"switch — is enforced by the Vinkius runtime, not by this site."
+msgstr ""
+"このパネルは Vinkius ランタイム経由の操作のみを表示します。信頼性（クレデン"
+"シャル vault、DLP、サンドボックス、サーキットブレイカー、キルスイッチ）は "
+"Vinkius ランタイムが保証します。"
+
+#: vinkius-connector/templates/layout.php:85 templates/layout.php:85
+#, php-format
+msgid "Vinkius Connector %1$s · Open source · GPLv2 or later"
+msgstr "Vinkius Connector %1$s・オープンソース・GPLv2 以降"
+
+#: vinkius-connector/templates/screen-connect.php:20
+#: templates/screen-connect.php:20
+msgid ""
+"Browse and search the Vinkius catalog of AI capabilities and connectors. "
+"Open any listing in the Vinkius cloud to connect it."
+msgstr ""
+
+#: vinkius-connector/templates/screen-connect.php:22
+#: templates/screen-connect.php:22
+#, fuzzy
+msgid "Search capabilities and connectors"
+msgstr "機能とコネクタを検索…"
+
+#: vinkius-connector/templates/screen-connect.php:25
+#: templates/screen-connect.php:25
+msgid "Clear"
+msgstr "クリア"
+
+#: vinkius-connector/templates/screen-connect.php:37
+#: templates/screen-connect.php:37
+#, fuzzy
+msgid "All connectors"
+msgstr "コネクタを公開"
+
+#: vinkius-connector/templates/screen-settings.php:28
+#: templates/screen-settings.php:28
+msgid "Interface Language"
+msgstr "インターフェース言語"
+
+#: vinkius-connector/templates/screen-settings.php:31
+#: templates/screen-settings.php:31
+msgid "Follow site language"
+msgstr "サイトの言語に合わせる"
+
+#: vinkius-connector/templates/screen-settings.php:39
+#: templates/screen-settings.php:39
+msgid "Trust badge scan ID"
+msgstr "信頼バッジのスキャン ID"
+
+#: vinkius-connector/templates/screen-settings.php:43
+#: templates/screen-settings.php:43
+msgid "From your debugger scan in the Vinkius cloud."
+msgstr "Vinkius クラウドのデバッガースキャンから。"
+
+#: vinkius-connector/templates/screen-settings.php:47
+#: templates/screen-settings.php:47
+msgid "Daily digest"
+msgstr "デイリーダイジェスト"
+
+#: vinkius-connector/templates/screen-settings.php:53
+#: templates/screen-settings.php:53
+msgid "Send a daily digest of agent activity"
+msgstr "エージェント活動のデイリーダイジェストを送信"
+
+#: vinkius-connector/templates/screen-settings.php:58
+#: templates/screen-settings.php:58
+msgid "Save Settings"
+msgstr "設定を保存"
+
+#: vinkius-connector/templates/screen-settings.php:65
+#: templates/screen-settings.php:65
+msgid "Vinkius Login"
+msgstr "Vinkius ログイン"
+
+#: vinkius-connector/templates/screen-settings.php:78
+#: templates/screen-settings.php:78
+msgid "Logged in via device flow."
+msgstr "デバイスフローでログイン済みです。"
+
+#: vinkius-connector/templates/screen-settings.php:79
+#: templates/screen-settings.php:79
+msgid "Log out"
+msgstr "ログアウト"
+
+#: vinkius-connector/templates/screen-settings.php:81
+#: templates/screen-settings.php:81
+msgid ""
+"Login uses the Vinkius device flow: start it here, approve on your Vinkius "
+"account, and this site connects automatically."
+msgstr ""
+"ログインは Vinkius のデバイスフローを使用します。ここで開始し、Vinkius アカウ"
+"ントで承認すると、このサイトが自動で接続されます。"
+
+#: vinkius-connector/templates/screen-settings.php:103
+#: templates/screen-settings.php:103
+msgid "Security"
+msgstr "セキュリティ"
+
+#: vinkius-connector/templates/screen-settings.php:108
+#: templates/screen-settings.php:108
+msgid "Site secret"
+msgstr "サイトシークレット"
+
+#: vinkius-connector/templates/screen-settings.php:114
+#: templates/screen-settings.php:114
+msgid "Regenerate"
+msgstr "再生成"
+
+#: vinkius-connector/templates/screen-settings.php:116
+#: templates/screen-settings.php:116
+msgid "Signs consent records and the site manifest."
+msgstr "同意記録とサイトマニフェストに署名します。"
+
+#: vinkius-connector/templates/screen-settings.php:120
+#: templates/screen-settings.php:120
+msgid "Local kill switch"
+msgstr "ローカルキルスイッチ"
+
+#: vinkius-connector/templates/screen-settings.php:123
+#: templates/screen-settings.php:123
+msgid "When on, agent-facing surfaces on this site return 403."
+msgstr "オンにすると、このサイトのカージェント向け表面が 403 を返します。"
+
+#: vinkius-connector/templates/screen-settings.php:136
+#: templates/screen-settings.php:136
+msgid "Agents & connectors"
+msgstr "エージェントとコネクタ"
+
+#: vinkius-connector/templates/screen-settings.php:137
+#: templates/screen-settings.php:137
+msgid "Policies & DLP"
+msgstr "ポリシーと DLP"
+
+#: vinkius-connector/templates/screen-settings.php:138
+#: templates/screen-settings.php:138
+msgid "Webhooks & secrets"
+msgstr "Webhook とシークレット"
+
+#: vinkius-connector/templates/screen-settings.php:139
+#: templates/screen-settings.php:139
+msgid "Plans & upgrade"
+msgstr "プランとアップグレード"
+
+#: vinkius-connector/templates/screen-consent.php:16
+#: templates/screen-consent.php:16
+msgid "Visitor Consent"
+msgstr "訪問者の同意"
+
+#: vinkius-connector/templates/screen-consent.php:20
+#: templates/screen-consent.php:20
+msgid ""
+"Agents only act on behalf of a visitor after they opt in with the shortcode "
+"below. Revoke any consent at any time."
+msgstr ""
+"エージェントは、訪問者が以下のショートコードでオプトインした場合にのみ、その"
+"名代わりとして行動します。同意はいつでも取り消せます。"
+
+#: vinkius-connector/templates/screen-consent.php:22
+#: templates/screen-consent.php:22
+msgid "No consent records yet."
+msgstr "まだ同意記録はありません。"
+
+#: vinkius-connector/templates/screen-consent.php:27
+#: templates/screen-consent.php:27
+msgid "Visitor"
+msgstr "訪問者"
+
+#: vinkius-connector/templates/screen-consent.php:28
+#: templates/screen-consent.php:28
+msgid "Scopes"
+msgstr "スコープ"
+
+#: vinkius-connector/templates/screen-consent.php:29
+#: templates/screen-consent.php:29
+msgid "Purpose"
+msgstr "目的"
+
+#: vinkius-connector/templates/screen-consent.php:30
+#: templates/screen-consent.php:30
+msgid "Granted"
+msgstr "付与日"
+
+#: vinkius-connector/templates/screen-consent.php:44
+#: templates/screen-consent.php:44
+msgid "Revoked"
+msgstr "取り消済み"
+
+#: vinkius-connector/templates/screen-section.php:20
+#: templates/screen-section.php:20
+msgid "Reporting period"
+msgstr ""
+

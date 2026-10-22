@@ -23,6 +23,5 @@ final class Deactivator {
 	 */
 	public static function deactivate() {
 		wp_clear_scheduled_hook( 'vc_daily_digest' );
-		wp_clear_scheduled_hook( 'vc_sync_usage' );
 	}
 }

@@ -80,7 +80,21 @@ final class Shortcodes {
 			if (!btn) { return; }
 			btn.addEventListener('click', function () {
 				var scopes = Array.prototype.map.call(box.querySelectorAll('input[name="vc_scopes[]"]:checked'), function (el) { return el.value; });
-				var anon = 'v_' + Math.random().toString(36).slice(2, 26);
+				var anon;
+				try {
+					/*
+					 * Stable per-browser pseudonym so the same visitor lands on
+					 * the same consent row across visits (the Consent Hub relies
+					 * on it). Random fallback keeps it working with storage blocked.
+					 */
+					anon = localStorage.getItem('vc_anon');
+					if (!anon) {
+						anon = 'v_' + Math.random().toString(36).slice(2, 26);
+						localStorage.setItem('vc_anon', anon);
+					}
+				} catch (e) {
+					anon = 'v_' + Math.random().toString(36).slice(2, 26);
+				}
 				fetch(box.getAttribute('data-endpoint'), {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },

@@ -13,6 +13,8 @@ TESE-de-VITORIA.md
 # Dev scratch
 .smoke.php
 .smoke-po.php
+.agnes/
+.zcode/
 
 # OS / editor
 .DS_Store

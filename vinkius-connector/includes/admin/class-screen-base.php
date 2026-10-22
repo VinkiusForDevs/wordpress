@@ -38,6 +38,15 @@ abstract class ScreenBase {
 	abstract protected function prepare();
 
 	/**
+	 * Template rendered inside the layout (defaults to screen-{slug}).
+	 *
+	 * @return string
+	 */
+	protected function template() {
+		return 'screen-' . $this->slug();
+	}
+
+	/**
 	 * Render the full admin page (menu callback).
 	 *
 	 * @return void
@@ -45,6 +54,7 @@ abstract class ScreenBase {
 	public static function render_page() {
 		$instance = new static();
 		$slug     = $instance->slug();
+		$template = $instance->template();
 		$vars     = $instance->prepare();
 
 		$status = \VinkiusConnector\Auth\AuthStore::status();
@@ -53,6 +63,7 @@ abstract class ScreenBase {
 
 		$chrome = array(
 			'slug'             => $slug,
+			'template'         => $template,
 			'vars'             => $vars,
 			'status'           => $status['state'],
 			'halt'             => Options::is_halted(),

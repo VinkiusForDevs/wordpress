@@ -14,10 +14,9 @@ Vinkius AI Governance for WordPress: see governed agent operations, inspect inci
 
 The plugin is the owner's observation-and-response panel for the Vinkius runtime:
 
-* **Governance dashboard** — active agents, executions today, blocked events and connectors in use, with a live activity feed.
-* **Agents** — the agent fleet (tokens, requests, latency) read live from the runtime.
-* **Incidents** — errors, DLP enforcement and circuit-breaker state, with resumption actions.
-* **Evidence** — per-connector execution evidence, readable and exportable from the runtime.
+* **AI Governance workbench** — Mission Control, Agent Activity, Connector Traffic, Access Tokens, Agent Passport, AI Spend, Capability Reliability, Security Posture and Request Failures, all read live from the runtime and drillable in place.
+* **Compliance & Evidence** — readiness scorecard, framework coverage and re-verifiable evidence packs.
+* **Incidents** — errors, DLP blocks, quarantined connectors and the operator control trail, with resumption actions.
 * **Emergency halt** — stop one connector or the whole runtime, and approve resumption, directly from the panel.
 * **Connect** — one device-flow login binds this site to your Vinkius account.
 

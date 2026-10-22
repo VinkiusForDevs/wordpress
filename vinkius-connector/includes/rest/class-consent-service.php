@@ -41,6 +41,32 @@ final class ConsentService {
 			);
 		}
 
+		/*
+		 * Anti-abuse throttle: this route is public (__return_true), so a
+		 * script could otherwise mint consent rows endlessly. Cap creations
+		 * per source IP with a short window; the anon pseudonym is stable
+		 * (localStorage), so legit visitors are never re-throttled.
+		 */
+		$ip = (string) $ip;
+
+		if ( '' !== $ip ) {
+			$rl_key = 'vc_consent_rl_' . substr( sha1( $ip ), 0, 16 );
+			$rl_hits = (int) get_transient( $rl_key );
+
+			if ( $rl_hits >= 25 ) {
+				return new \WP_REST_Response(
+					array( 'error' => 'rate_limited', 'message' => __( 'Too many requests. Please try again later.', 'vinkius-connector' ) ),
+					429
+				);
+			}
+
+			if ( 0 === $rl_hits && false === get_transient( $rl_key ) ) {
+				set_transient( $rl_key, 1, 10 * MINUTE_IN_SECONDS );
+			} else {
+				set_transient( $rl_key, $rl_hits + 1, 10 * MINUTE_IN_SECONDS );
+			}
+		}
+
 		$hp = (string) $request->get_param( 'hp' );
 
 		if ( '' !== $hp ) {
@@ -55,6 +81,15 @@ final class ConsentService {
 			$external_id = 'wp_user_' . (string) $wp_user_id;
 		} else {
 			$external_id = (string) $request->get_param( 'external_id' );
+
+			/*
+			 * The 'wp_user_' namespace is reserved for consents recorded while
+			 * logged in. An anonymous client supplying it would forge another
+			 * user's identity — drop it and mint a fresh anonymous id instead.
+			 */
+			if ( 0 === strpos( $external_id, 'wp_user_' ) ) {
+				$external_id = '';
+			}
 		}
 
 		if ( strlen( $external_id ) > 255 ) {
@@ -81,12 +116,14 @@ final class ConsentService {
 			return new \WP_REST_Response( array( 'ok' => false, 'error' => 'record_failed' ), 500 );
 		}
 
+		$recorded = ConsentRepo::find( $external_id );
+
 		return rest_ensure_response(
 			array(
 				'ok'        => true,
 				'row_id'    => $row_id,
 				'external_id' => $external_id,
-				'scopes'    => json_decode( (string) ConsentRepo::find( $external_id )['scopes'] ?? '[]', true ),
+				'scopes'    => json_decode( (string) ( $recorded['scopes'] ?? '[]' ), true ),
 				'revoke_url' => rest_url( self::revoke_path( $row_id ) ),
 			)
 		);

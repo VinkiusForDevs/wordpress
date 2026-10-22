@@ -41,7 +41,7 @@ final class VinkiusApi {
 	 *
 	 * @param HttpClient|null $http Injectable for tests.
 	 */
-	public function __construct( HttpClient $http = null ) {
+	public function __construct( ?HttpClient $http = null ) {
 		$this->http = null !== $http ? $http : new HttpClient();
 	}
 
@@ -203,21 +203,25 @@ final class VinkiusApi {
 	/**
 	 * Error breakdown (client/upstream/platform).
 	 *
-	 * @param string $period today|3d|7d|14d|30d.
+	 * @param string $period   today|3d|7d|14d|30d.
+	 * @param int    $page    Table page.
+	 * @param int    $per_page Rows per page.
 	 * @return Result
 	 */
-	public function guardian_errors( $period = '30d' ) {
-		return $this->read( 'GET', '/guardian/errors?period=' . rawurlencode( $period ) );
+	public function guardian_errors( $period = '30d', $page = 1, $per_page = 25 ) {
+		return $this->read( 'GET', '/guardian/errors?period=' . rawurlencode( $period ) . '&page=' . (int) $page . '&per_page=' . (int) $per_page );
 	}
 
 	/**
 	 * Per-connector security posture (DLP/FinOps/quota state).
 	 *
-	 * @param string $period today|3d|7d|14d|30d.
+	 * @param string $period   today|3d|7d|14d|30d.
+	 * @param int    $page     Table page.
+	 * @param int    $per_page Rows per page.
 	 * @return Result
 	 */
-	public function guardian_security_posture( $period = '30d' ) {
-		return $this->read( 'GET', '/guardian/security-posture?period=' . rawurlencode( $period ) );
+	public function guardian_security_posture( $period = '30d', $page = 1, $per_page = 25 ) {
+		return $this->read( 'GET', '/guardian/security-posture?period=' . rawurlencode( $period ) . '&page=' . (int) $page . '&per_page=' . (int) $per_page );
 	}
 
 	/**
@@ -234,11 +238,138 @@ final class VinkiusApi {
 	/**
 	 * FinOps KPIs (tokens, cost, savings, ROI, DLP events).
 	 *
+	 * @param string $period   today|3d|7d|14d|30d.
+	 * @param int    $page     Table page.
+	 * @param int    $per_page Rows per page.
+	 * @return Result
+	 */
+	public function guardian_cost( $period = '30d', $page = 1, $per_page = 25 ) {
+		return $this->read( 'GET', '/guardian/cost?period=' . rawurlencode( $period ) . '&page=' . (int) $page . '&per_page=' . (int) $per_page );
+	}
+
+	/**
+	 * Agent Passport registry (identity chain, permissions, usage).
+	 *
+	 * Server-paginated: KPIs aggregate every agent, `agents` is the page.
+	 * `per_page` is 0 only on the export call (whole registry).
+	 *
+	 * @param string $period   today|3d|7d|14d|30d.
+	 * @param int    $page     Page.
+	 * @param int    $per_page Rows per page (0 = full registry export).
+	 * @return Result
+	 */
+	public function guardian_agents( $period = 'today', $page = 1, $per_page = 25 ) {
+		return $this->read( 'GET', '/guardian/agents?period=' . rawurlencode( $period ) . '&page=' . (int) $page . '&per_page=' . (int) $per_page );
+	}
+
+	/**
+	 * Compliance scorecard: readiness grade, health questions, gaps,
+	 * framework control maps and the ledger evidence counters.
+	 *
+	 * @return Result
+	 */
+	public function guardian_compliance() {
+		return $this->read( 'GET', '/guardian/compliance' );
+	}
+
+	/**
+	 * Freeze the current scorecard + evidence into an immutable pack
+	 * (POST /guardian/evidence-pack). Paid-only upstream (403 on Free).
+	 *
+	 * @return Result
+	 */
+	public function evidence_pack_generate() {
+		return $this->read( 'POST', '/guardian/evidence-pack' );
+	}
+
+	/**
+	 * One evidence pack digest + manifest (GET /guardian/evidence-packs/{id}).
+	 *
+	 * @param string $pack_id Pack id.
+	 * @return Result
+	 */
+	public function evidence_pack( $pack_id ) {
+		return $this->read( 'GET', '/guardian/evidence-packs/' . rawurlencode( $pack_id ) );
+	}
+
+	/**
+	 * Latency timeline (org-scope, period filter).
+	 *
 	 * @param string $period today|3d|7d|14d|30d.
 	 * @return Result
 	 */
-	public function guardian_cost( $period = '30d' ) {
-		return $this->read( 'GET', '/guardian/cost?period=' . rawurlencode( $period ) );
+	public function guardian_latency( $period = '30d' ) {
+		return $this->read( 'GET', '/guardian/latency?period=' . rawurlencode( $period ) );
+	}
+
+	/**
+	 * Drill-down: request log rows behind one entity (org guard on cloud).
+	 *
+	 * @param string $endpoint guardian subsection name (connectors|cost|security-posture|errors).
+	 * @param string $id       Server id.
+	 * @param string $period   Period filter.
+	 * @param int    $page     Table page.
+	 * @return Result
+	 */
+	public function guardian_section_drill( $endpoint, $id, $period = 'today', $page = 1 ) {
+		return $this->read( 'GET', '/guardian/' . rawurlencode( $endpoint ) . '/' . rawurlencode( $id ) . '?period=' . rawurlencode( $period ) . '&page=' . (int) $page );
+	}
+
+	/**
+	 * Drill-down: request log rows behind one agent client.
+	 *
+	 * @param string $client Client key.
+	 * @param string $period Period filter.
+	 * @param int    $page   Table page.
+	 * @return Result
+	 */
+	public function guardian_client_drill( $client, $period = 'today', $page = 1 ) {
+		return $this->read( 'GET', '/guardian/clients/' . rawurlencode( $client ) . '?period=' . rawurlencode( $period ) . '&page=' . (int) $page );
+	}
+
+	/**
+	 * Drill-down: request log rows behind one token (Access Tokens accordion).
+	 *
+	 * @param string $token  Token id.
+	 * @param string $period Period filter.
+	 * @param int    $page   Table page.
+	 * @return Result
+	 */
+	public function guardian_token_drill( $token, $period = 'today', $page = 1 ) {
+		return $this->read( 'GET', '/guardian/token-fleet/' . rawurlencode( $token ) . '?period=' . rawurlencode( $period ) . '&page=' . (int) $page );
+	}
+
+	/**
+	 * Drill-down: request log rows behind one capability (server/tool pair).
+	 *
+	 * @param string $server  Server id.
+	 * @param string $tool    Tool id.
+	 * @param string $period  Period filter.
+	 * @param int    $page    Table page.
+	 * @return Result
+	 */
+	public function guardian_tool_drill( $server, $tool, $period = 'today', $page = 1 ) {
+		return $this->read( 'GET', '/guardian/tool-performance/' . rawurlencode( $server ) . '/' . rawurlencode( $tool ) . '?period=' . rawurlencode( $period ) . '&page=' . (int) $page );
+	}
+
+	/**
+	 * Deepest drill: the single immutable request log row.
+	 *
+	 * @param string $id     Request log id (UUID).
+	 * @param string $period Period filter.
+	 * @return Result
+	 */
+	public function guardian_request_detail( $id, $period = 'today' ) {
+		return $this->read( 'GET', '/guardian/requests/' . rawurlencode( $id ) . '?period=' . rawurlencode( $period ) );
+	}
+
+	/**
+	 * Generated evidence packs (frozen, re-verifiable snapshots).
+	 *
+	 * @return Result
+	 */
+	public function guardian_evidence_packs() {
+		return $this->read( 'GET', '/guardian/evidence-packs' );
 	}
 
 	/**
@@ -274,11 +405,21 @@ final class VinkiusApi {
 	/**
 	 * Tool performance (Capability Reliability section).
 	 *
-	 * @param string $period today|3d|7d|14d|30d.
+	 * @param string $period             today|3d|7d|14d|30d.
+	 * @param int    $slowest_page       Slowest table page.
+	 * @param int    $slowest_per_page   Slowest rows per page.
+	 * @param int    $failing_page       Most-failing table page.
+	 * @param int    $failing_per_page   Most-failing rows per page.
 	 * @return Result
 	 */
-	public function guardian_tool_performance( $period = '30d' ) {
-		return $this->read( 'GET', '/guardian/tool-performance?period=' . rawurlencode( $period ) );
+	public function guardian_tool_performance( $period = '30d', $slowest_page = 1, $slowest_per_page = 25, $failing_page = 1, $failing_per_page = 25 ) {
+		$path = '/guardian/tool-performance?period=' . rawurlencode( $period )
+			. '&slowest_page=' . (int) $slowest_page
+			. '&slowest_per_page=' . (int) $slowest_per_page
+			. '&failing_page=' . (int) $failing_page
+			. '&failing_per_page=' . (int) $failing_per_page;
+
+		return $this->read( 'GET', $path );
 	}
 
 	/* ---------------------------------------------------------------------
@@ -308,12 +449,17 @@ final class VinkiusApi {
 	/**
 	 * Browse listings (no query).
 	 *
-	 * @param string $sort    popular|newest.
-	 * @param int    $page    Page.
+	 * @param string $sort      popular|newest.
+	 * @param int    $page      Page.
+	 * @param string $category  Optional category slug filter.
 	 * @return Result
 	 */
-	public function marketplace_listings( $sort = 'popular', $page = 1 ) {
+	public function marketplace_listings( $sort = 'popular', $page = 1, $category = '' ) {
 		$path = '/marketplace/listings?sort=' . rawurlencode( $sort ) . '&page=' . (int) $page . '&locale=en';
+
+		if ( '' !== $category ) {
+			$path .= '&category=' . rawurlencode( $category );
+		}
 
 		return $this->http->request( 'GET', $path, null, $this->optional_bearer() );
 	}
@@ -354,11 +500,12 @@ final class VinkiusApi {
 	/**
 	 * AI-narrated summary of a scope (paid-only upstream; prepared otherwise).
 	 *
-	 * @param string $scope overview|clients|connectors|cost|tool-performance|security-posture|errors|token-fleet.
+	 * @param string $scope  overview|clients|connectors|cost|tool-performance|security-posture|errors|token-fleet.
+	 * @param string $period today|3d|7d|14d|30d.
 	 * @return Result
 	 */
-	public function guardian_ai_briefing( $scope = 'overview' ) {
-		return $this->read( 'POST', '/guardian/ai-briefing/' . rawurlencode( $scope ), array( 'period' => 'today' ) );
+	public function guardian_ai_briefing( $scope = 'overview', $period = 'today' ) {
+		return $this->read( 'POST', '/guardian/ai-briefing/' . rawurlencode( $scope ), array( 'period' => $period ) );
 	}
 
 	/* ---------------------------------------------------------------------
@@ -394,6 +541,54 @@ final class VinkiusApi {
 	 */
 	public function soar_lift( $server_id ) {
 		return $this->read( 'POST', '/servers/' . rawurlencode( $server_id ) . '/soar/quarantine/lift' );
+	}
+
+	/**
+	 * Extend a SOAR quarantine (another 1h TTL on top of the remaining one).
+	 *
+	 * @param string $server_id Connector id.
+	 * @return Result
+	 */
+	public function soar_extend( $server_id ) {
+		return $this->read( 'POST', '/servers/' . rawurlencode( $server_id ) . '/soar/quarantine/extend' );
+	}
+
+	/**
+	 * DLP enforcement settings of the org (read-only mirror).
+	 *
+	 * @return Result
+	 */
+	public function dlp() {
+		return $this->read( 'GET', '/settings/dlp' );
+	}
+
+	/**
+	 * FinOps enforcement settings of the org (read-only mirror).
+	 *
+	 * @return Result
+	 */
+	public function finops() {
+		return $this->read( 'GET', '/settings/finops' );
+	}
+
+	/**
+	 * Org audit log — the IAM/operator audit trail (who did what).
+	 *
+	 * @param int $page Page.
+	 * @return Result
+	 */
+	public function org_audit_log( $page = 1 ) {
+		return $this->read( 'GET', '/org/audit-log?page=' . (int) $page );
+	}
+
+	/**
+	 * Deploy/edge processing activity log — what the runtime did.
+	 *
+	 * @param int $page Page.
+	 * @return Result
+	 */
+	public function activity_log( $page = 1 ) {
+		return $this->read( 'GET', '/settings/activity-log?page=' . (int) $page );
 	}
 
 	/**

@@ -202,6 +202,9 @@ final class ConsentRepo {
 	/**
 	 * Resolve a revocation token back to a row id.
 	 *
+	 * Scans every consent row in id-ordered batches (never capped), so
+	 * tokens for old rows keep working no matter how many consents exist.
+	 *
 	 * @param string $token 32-char token.
 	 * @return int Row id, 0 when invalid.
 	 */
@@ -210,11 +213,35 @@ final class ConsentRepo {
 
 		$token = substr( (string) $token, 0, 32 );
 
-		foreach ( self::list_all( 500 ) as $row ) {
-			if ( hash_equals( self::revoke_token( $row['id'] ), $token ) ) {
-				return (int) $row['id'];
-			}
+		if ( '' === $token ) {
+			return 0;
 		}
+
+		$secret = (string) \VinkiusConnector\Options::get( 'site_secret' );
+		$cursor = 0;
+
+		do {
+			$batch = $wpdb->get_col(
+				$wpdb->prepare(
+					"SELECT id FROM " . self::table() . " WHERE id > %d ORDER BY id ASC LIMIT 500",
+					$cursor
+				)
+			);
+
+			if ( empty( $batch ) ) {
+				break;
+			}
+
+			foreach ( $batch as $row_id ) {
+				$row_token = substr( hash_hmac( 'sha256', 'revoke:' . (int) $row_id, $secret ), 0, 32 );
+
+				if ( hash_equals( $row_token, $token ) ) {
+					return (int) $row_id;
+				}
+			}
+
+			$cursor = (int) end( $batch );
+		} while ( 500 === count( $batch ) );
 
 		return 0;
 	}

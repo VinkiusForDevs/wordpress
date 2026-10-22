@@ -100,7 +100,11 @@ final class Options {
 	}
 
 	/**
-	 * Platform endpoints are plugin constants, so the plugin is always configured.
+	 * Platform endpoints are plugin constants (VC_API_BASE_URL /
+	 * VC_FRONTEND_BASE_URL), so once the plugin is active it is always
+	 * "configured". The live gate is the Passport session
+	 * (AuthStore::access_token()) — no token, no data — and `halt` is the
+	 * operator kill-switch. Kept for the call sites that guard on it.
 	 *
 	 * @return bool
 	 */

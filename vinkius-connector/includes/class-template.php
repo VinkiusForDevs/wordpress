@@ -26,19 +26,19 @@ final class Template {
 	 * templates are included in this function scope and extracted vars skip
 	 * already-declared names.
 	 *
-	 * @param string $template Template slug (templates/{template}.php).
-	 * @param array  $args     Local variables.
+	 * @param string $render_name Template slug (templates/{render_name}.php).
+	 * @param array  $render_args Local variables.
 	 * @return void
 	 */
-	public static function render( $template, array $args = array() ) {
-		$file = VC_PLUGIN_DIR . 'templates/' . $template . '.php';
+	public static function render( $render_name, array $render_args = array() ) {
+		$file = VC_PLUGIN_DIR . 'templates/' . $render_name . '.php';
 
 		if ( ! file_exists( $file ) ) {
 			return;
 		}
 
 		// Templates receive exactly the declared vars, nothing global.
-		extract( $args, EXTR_SKIP ); // phpcs:ignore WordPress.PHP.DontExtract
+		extract( $render_args, EXTR_SKIP ); // phpcs:ignore WordPress.PHP.DontExtract
 
 		include $file;
 	}

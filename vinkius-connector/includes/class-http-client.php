@@ -23,9 +23,12 @@ final class HttpClient {
 	/**
 	 * Request timeout (seconds).
 	 *
+	 * Longer governance windows (e.g. /guardian/* at 30d) can be slow; a 15s
+	 * cap turned a valid slow response into a spurious "session expired."
+	 *
 	 * @var int
 	 */
-	const TIMEOUT = 15;
+	const TIMEOUT = 30;
 
 	/**
 	 * Perform a JSON request against the configured Vinkius API.

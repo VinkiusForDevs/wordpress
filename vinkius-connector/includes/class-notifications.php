@@ -42,32 +42,46 @@ final class Notifications {
 			$to = get_option( 'admin_email' );
 		}
 
-		$governance = new Governance();
-		$panel      = $governance->panel();
-
-		if ( ! $panel->is_ok() ) {
+		// The digest is only meaningful with a live Passport session — every
+		// KPI below is a live API read, so skip the mail when disconnected.
+		if ( 'connected' !== \VinkiusConnector\Auth\AuthStore::status()['state'] ) {
 			return;
 		}
 
-		$data = $panel->data();
-		$kpis = $data['kpis'];
-		$name = get_bloginfo( 'name' );
+		$governance = new Governance();
+		$incidents  = $governance->incidents();
+
+		if ( ! $incidents->is_ok() ) {
+			return;
+		}
+
+		$data    = $incidents->data();
+		$ekpi    = $data['errors_kpi'];
+		$skpi    = $data['security_kpi'];
+		$circuit = $data['circuit'];
+		$name    = get_bloginfo( 'name' );
+
+		/*
+		 * incidents() still returns ok when individual upstreams degrade
+		 * (each KPI just falls back to empty). Do not mail a digest full of
+		 * misleading zeros — only send when at least one signal came back.
+		 */
+		if ( empty( $ekpi ) && empty( $skpi ) && empty( $circuit ) && empty( $data['briefing'] ) && empty( $data['errors_by_server'] ) ) {
+			return;
+		}
 
 		$lines = array(
 			sprintf(
-				/* translators: 1: executions, 2: agents, 3: blocked, 4: connectors */
-				__( 'Executions today: %1$d · Active agents: %2$d · Blocked events: %3$d · Connectors in use: %4$d', 'vinkius-connector' ),
-				$kpis['executions_today'],
-				$kpis['active_agents'],
-				$kpis['blocked_events'],
-				$kpis['active_connectors']
+				/* translators: 1: errors today, 2: DLP events today, 3: circuit breaker state */
+				__( 'Errors today: %1$d · DLP events: %2$d · Circuit breaker: %3$s', 'vinkius-connector' ),
+				isset( $ekpi['total_errors'] ) ? (int) $ekpi['total_errors'] : ( isset( $ekpi['errors'] ) ? (int) $ekpi['errors'] : 0 ),
+				isset( $skpi['dlp_events'] ) ? (int) $skpi['dlp_events'] : 0,
+				! empty( $circuit['is_tripped'] ) ? __( 'Tripped', 'vinkius-connector' ) : __( 'Open', 'vinkius-connector' )
 			),
 		);
 
-		$incidents = $governance->incidents();
-
-		if ( $incidents->is_ok() && ! empty( $incidents->data()['briefing'] ) ) {
-			$lines[] = (string) $incidents->data()['briefing'];
+		if ( ! empty( $data['briefing'] ) ) {
+			$lines[] = (string) $data['briefing'];
 		}
 
 		$subject = sprintf( /* translators: %s: site name */ __( 'Vinkius AI Governance — daily digest for %s', 'vinkius-connector' ), $name );

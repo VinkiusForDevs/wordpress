@@ -66,159 +66,13 @@
 		}
 	}
 
-	function renderOperations(data) {
-		var k = data.kpis || {};
-
-		setKpi('vc-kpi-agents', k.active_agents != null ? k.active_agents : 0);
-		setKpi('vc-kpi-executions', k.executions_today != null ? k.executions_today : 0);
-		setKpi('vc-kpi-blocked', k.blocked_events != null ? k.blocked_events : 0);
-		setKpi('vc-kpi-connectors', k.active_connectors != null ? k.active_connectors : 0);
-
-		var live = document.getElementById('vc-live');
-
-		if (live) {
-			live.innerHTML = '';
-			var rows = data.live || [];
-
-			if (!rows.length) {
-				live.appendChild(el('li', 'vc-feed-empty', L('live_empty', 'No activity in this period.')));
-			}
-
-			rows.forEach(function (ev) {
-				var code = parseInt(ev.status_code, 10) || 0;
-				var row = el('li', 'vc-feed-row');
-
-				row.appendChild(el('span', 'vc-feed-time', ev.created_at || ''));
-				row.appendChild(el('span', 'vc-feed-tool', (ev.server_name || '') + ' \u00B7 ' + (ev.tool_name || '')));
-				row.appendChild(el('span', 'pill pill-' + (code >= 400 ? 'err' : 'ok'), String(code || '\u00B7')));
-
-				var meta = [];
-
-				if (ev.token_name) {
-					meta.push(ev.token_name);
-				}
-
-				if (ev.response_time_ms != null) {
-					meta.push(ev.response_time_ms + ' ms');
-				}
-
-				if (ev.dlp_redactions > 0) {
-					meta.push('DLP ' + ev.dlp_redactions);
-				}
-
-				row.appendChild(el('span', 'vc-feed-meta', meta.join(' \u00B7 ')));
-				live.appendChild(row);
-			});
-		}
-
-		var usage = data.usage || {};
-	var usageCard = document.getElementById('vc-usage-card');
-	if (usageCard) {
-		usageCard.hidden = false;
-		var plan = String(data.plan || 'free');
-		document.getElementById('vc-usage-plan').textContent = plan.charAt(0).toUpperCase() + plan.slice(1);
-		var used = usage.used || 0;
-		var limit = usage.effective_limit != null ? usage.effective_limit : (usage.limit || 0);
-		var fill = document.getElementById('vc-usage-fill');
-		fill.style.width = limit > 0 ? Math.min(100, Math.round((used / limit) * 100)) + '%' : '0%';
-		var labels = (VCConfig && VCConfig.labels) || {};
-		var txt = (labels.usage || 'Used %1$s of %2$s this cycle.')
-			.replace('%1$s', String(used)).replace('%2$s', String(limit));
-		document.getElementById('vc-usage-text').textContent = txt;
-		var showCta = data.free === true || usage.overage_blocked === true;
-		document.getElementById('vc-usage-cta').hidden = !showCta;
-	}
-
-	var circuit = data.circuit || {};
-		var pill = document.getElementById('vc-circuit-pill');
-
-		if (pill) {
-			pill.hidden = !circuit.is_tripped;
-		}
-
-		document.querySelectorAll('.vc-circuit-reset').forEach(function (b) {
-			b.hidden = !circuit.is_tripped;
-		});
-
-		var halts = document.getElementById('vc-connector-halts');
-
-		if (halts) {
-			halts.innerHTML = '';
-
-			(data.mcps || []).forEach(function (mcp) {
-				if ((mcp.total_requests || 0) > 0) {
-					var row = el('div', 'vc-connector-halt-row');
-					var btn = el('button', 'button vc-halt-connector', L('halt_connector', 'Halt this connector'));
-
-					btn.dataset.serverId = mcp.id;
-					btn.dataset.name = mcp.name;
-					row.appendChild(el('span', null, mcp.name));
-					row.appendChild(btn);
-					halts.appendChild(row);
-				}
-			});
-		}
-	}
-
-
-	function loadOperations() {
-		if (!connected()) { return; }
-		rest('panel/operations').then(function (res) {
-			if (res.state === 'ok') {
-				renderOperations(res.data);
-			} else {
-				var live = document.getElementById('vc-live');
-				var labels = (VCConfig && VCConfig.labels) || {};
-				var msg = labels.session_expired || 'Session expired. Log in again from Settings to see live data.';
-				if (live) {
-					live.innerHTML = '';
-					var li = document.createElement('li');
-					li.className = 'vc-feed-empty';
-					li.textContent = msg;
-					live.appendChild(li);
-				}
-			}
-		}).catch(function () {});
-	}
-
-	// The dashboard is now the governance workbench (vc-governance.js owns it).
-	// Only run the legacy operations poll when its targets exist.
-	if (!document.getElementById('vc-gov-body')) {
-		loadOperations();
-		setInterval(loadOperations, 30000);
-	}
-
-	var fleetRows = document.getElementById('vc-fleet-rows');
-
-	if (fleetRows && connected()) {
-		rest('panel/agents').then(function (res) {
-			var mcps = (res.data || {}).mcps || [];
-
-			fleetRows.innerHTML = '';
-
-			if (!mcps.length) {
-				var tr0 = el('tr');
-
-				tr0.appendChild(el('td', 'vc-muted', L('fleet_empty', 'No connectors with activity.')));
-				fleetRows.appendChild(tr0);
+	if (document.getElementById('vc-incident-errors') && connected()) {
+		rest('panel/incidents').then(function (res) {
+			if (!res || res.state !== 'ok') {
+				renderQuarantine(null);
 				return;
 			}
 
-			mcps.forEach(function (m) {
-				var tr = el('tr');
-
-				tr.appendChild(el('td', null, m.name || m.id));
-				tr.appendChild(el('td', null, String(m.token_count || 0)));
-				tr.appendChild(el('td', null, String(m.total_requests || 0)));
-				tr.appendChild(el('td', null, (m.avg_latency_ms != null ? m.avg_latency_ms : '\u2014') + ' ms'));
-				tr.appendChild(el('td', null, m.status || '\u2014'));
-				fleetRows.appendChild(tr);
-			});
-		}).catch(function () {});
-	}
-
-	if (document.getElementById('vc-incident-errors') && connected()) {
-		rest('panel/incidents').then(function (res) {
 			var d = res.data || {};
 			var ek = d.errors_kpi || {};
 			var sk = d.security_kpi || {};
@@ -243,72 +97,205 @@
 			if (brief && d.briefing) {
 				brief.textContent = typeof d.briefing === 'string' ? d.briefing : JSON.stringify(d.briefing);
 			}
-		}).catch(function () {});
+
+			renderQuarantine(d.quarantine || []);
+		}).catch(function () {
+			renderQuarantine(null);
+		});
+
+	function humanTtl(seconds) {
+		seconds = Number(seconds) || 0;
+
+		if (seconds <= 0) {
+			return L('tb_expiry_soon', 'expiring now');
+		}
+
+		var m = Math.round(seconds / 60);
+
+		return m <= 1 ? L('tb_expiry_min', '< 1 min') : L('tb_expiry_mins', '{n} min').replace('{n}', m);
 	}
 
-	var picker = document.getElementById('vc-evidence-picker');
+	function renderQuarantine(rows) {
+		var box = document.getElementById('vc-incident-quarantine');
 
-	if (picker && connected()) {
-		rest('panel/connectors').then(function (res) {
-			var servers = res.data || [];
+		if (!box) {
+			return;
+		}
 
-			if (servers && servers.servers) {
-				servers = servers.servers;
+		box.innerHTML = '';
+
+		// null = state not readable (not connected / upstream failure);
+		// [] = read fine, nothing quarantined.
+		if (rows === null) {
+			box.appendChild(el('p', 'description', L('quarantine_na', 'Quarantine state is unavailable right now.')));
+			return;
+		}
+
+		rows = Array.isArray(rows) ? rows : [];
+		var quarantined = rows.filter(function (r) { return r.quarantined; });
+
+		if (!quarantined.length) {
+			box.appendChild(el('p', 'description', L('quarantine_none', 'No connector session is quarantined. SOAR kills and their reasons show up here.')));
+			return;
+		}
+
+		quarantined.forEach(function (row) {
+			var item = el('div', 'vc-quar-item');
+			var main = el('div', 'vc-quar-main');
+			var line = el('div', 'vc-quar-line');
+			var name = el('span', 'vc-quar-name', row.name || String(row.id || '').slice(0, 8));
+
+			name.title = row.name || '';
+			line.appendChild(name);
+			item.appendChild(main);
+			main.appendChild(line);
+
+			if (row.reason) {
+				main.appendChild(el('p', 'vc-quar-reason', '"' + row.reason + '"'));
 			}
 
-			if (!Array.isArray(servers)) {
-				return;
-			}
+			var side = el('div', 'vc-quar-side');
 
-			servers.forEach(function (s) {
-				var opt = el('option', null, s.name || s.id);
+			side.appendChild(el('span', 'vc-pill vc-pill-warn', L('quarantine_expires', 'expires in {ttl}').replace('{ttl}', humanTtl(row.ttl_seconds))));
 
-				opt.value = s.id || s.server_id;
-				picker.appendChild(opt);
+			var actions = el('div', 'vc-incident-q-actions');
+
+			var lift = document.createElement('button');
+
+			lift.type = 'button';
+			lift.className = 'button button-small';
+			lift.textContent = L('quarantine_lift', 'Lift');
+			lift.addEventListener('click', function () {
+				rest('panel/connector', { method: 'POST', body: JSON.stringify({ action: 'lift', server_id: row.id }) })
+					.then(function () { window.location.reload(); });
 			});
-		}).catch(function () {});
+			actions.appendChild(lift);
 
-		picker.addEventListener('change', function () {
-			var sid = picker.value;
+			var extend = document.createElement('button');
 
-			if (!sid) {
+			extend.type = 'button';
+			extend.className = 'button button-small';
+			extend.textContent = L('quarantine_extend', 'Extend +1h');
+			extend.addEventListener('click', function () {
+				rest('panel/connector', { method: 'POST', body: JSON.stringify({ action: 'extend', server_id: row.id }) })
+					.then(function () { window.location.reload(); });
+			});
+			actions.appendChild(extend);
+			side.appendChild(actions);
+			item.appendChild(side);
+			box.appendChild(item);
+		});
+	}
+
+	function escHtml(s) {
+		return String(s === undefined || s === null ? '' : s).replace(/[&<>"']/g, function (ch) {
+			return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch];
+		});
+	}
+
+	/* Canonical loading line (same markup family as the governance file):
+	 * flexible spinner + caption, min-height keeps layout steady. */
+	function loaderLine(text) {
+		var p = el('p', 'vc-loading');
+
+		p.appendChild(el('span', 'spinner is-active'));
+		p.firstChild.setAttribute('aria-hidden', 'true');
+		p.appendChild(el('span', null, text || L('loading', 'Loading…')));
+		return p;
+	}
+
+	function renderAuditFeed(scope) {
+		var feed = document.getElementById('vc-audit-feed');
+
+		if (!feed) {
+			return;
+		}
+
+		feed.innerHTML = '';
+		feed.appendChild(loaderLine(L('audit_loading', 'Reading the trail…')));
+
+		rest('panel/audit?scope=' + encodeURIComponent(scope)).then(function (res) {
+			feed.innerHTML = '';
+
+			if (!res || res.state !== 'ok') {
+				feed.appendChild(el('p', 'description', L('audit_unavailable', 'This trail is unavailable right now.')));
 				return;
 			}
 
-			rest('panel/evidence?server_id=' + encodeURIComponent(sid)).then(function (res) {
-				var rows = (res.data || {}).logs || [];
-				var table = document.getElementById('vc-evidence');
-				var tbody = document.getElementById('vc-evidence-rows');
+			var d = res.data || {};
+			var rawRows = d.data || d;
+			var rows = rawRows.rows || rawRows.data || (Array.isArray(rawRows) ? rawRows : []);
 
-				if (table) {
-					table.hidden = false;
-				}
+			if (!Array.isArray(rows) || !rows.length) {
+				feed.appendChild(el('p', 'description', L('audit_none', 'No activity in this trail yet.')));
+				return;
+			}
 
-				tbody.innerHTML = '';
+			var t = document.createElement('table');
 
-				if (!rows.length) {
-					var tr = el('tr');
-					var td = el('td', 'vc-muted', L('evidence_empty', 'No executions recorded for this connector.'));
+			t.className = 'vc-tbl widefat';
 
-					td.colSpan = 6;
-					tr.appendChild(td);
-					tbody.appendChild(tr);
-					return;
-				}
+			if (scope === 'activity') {
+				t.innerHTML = '<thead><tr>' +
+					'<th>' + escHtml(L('col_when', 'When')) + '</th>' +
+					'<th>' + escHtml(L('col_event', 'Event')) + '</th>' +
+					'<th>' + escHtml(L('col_connector', 'Connector')) + '</th>' +
+					'<th>' + escHtml(L('col_actor', 'Actor')) + '</th>' +
+					'</tr></thead><tbody>' +
+					rows.slice(0, 30).map(function (e) {
+						return '<tr>' +
+							'<td>' + escHtml(e.created_at ? String(e.created_at).replace('T', ' ').slice(0, 19) : '\u2014') + '</td>' +
+							'<td>' + escHtml(e.event || '\u2014') + '</td>' +
+							'<td>' + escHtml((e.server && e.server.name) || '\u2014') + '</td>' +
+							'<td>' + escHtml((e.actor_user && e.actor_user.name) || '\u2014') + '</td>' +
+							'</tr>';
+					}).join('') + '</tbody>';
+			} else {
+				t.innerHTML = '<thead><tr>' +
+					'<th>' + escHtml(L('col_when', 'When')) + '</th>' +
+					'<th>' + escHtml(L('col_action', 'Action')) + '</th>' +
+					'<th>' + escHtml(L('col_actor', 'Actor')) + '</th>' +
+					'<th>' + escHtml(L('col_ip', 'IP')) + '</th>' +
+					'</tr></thead><tbody>' +
+					rows.slice(0, 30).map(function (e) {
+						var actorName = e.actor ? (e.actor.name || e.actor.id) : e.actor_id;
 
-				rows.forEach(function (r) {
-					var tr = el('tr');
+						return '<tr>' +
+							'<td>' + escHtml(e.created_at ? String(e.created_at).replace('T', ' ').slice(0, 19) : '\u2014') + '</td>' +
+							'<td>' + escHtml(e.action || e.event || '\u2014') + '</td>' +
+							'<td>' + escHtml(actorName || '\u2014') + '</td>' +
+							'<td>' + escHtml(e.ip_address || e.ip || '\u2014') + '</td>' +
+							'</tr>';
+					}).join('') + '</tbody>';
+			}
 
-					tr.appendChild(el('td', null, r.created_at || ''));
-					tr.appendChild(el('td', null, r.tool_name || ''));
-					tr.appendChild(el('td', null, r.token_name || ''));
-					tr.appendChild(el('td', null, String(r.status_code != null ? r.status_code : '')));
-					tr.appendChild(el('td', null, r.response_time_ms != null ? r.response_time_ms + ' ms' : ''));
-					tr.appendChild(el('td', null, r.dlp_redactions > 0 ? String(r.dlp_redactions) : ''));
-					tbody.appendChild(tr);
-				});
-			}).catch(function () {});
+			feed.appendChild(t);
+		}).catch(function () {
+			feed.innerHTML = '';
+			feed.appendChild(el('p', 'description', L('audit_unavailable', 'This trail is unavailable right now.')));
 		});
+	}
+
+	var auditRoot = document.getElementById('vc-audit-root');
+
+	if (auditRoot && connected()) {
+		var tabs = auditRoot.querySelectorAll('#vc-audit-tabs .nav-tab');
+
+		tabs.forEach(function (tab) {
+			tab.addEventListener('click', function () {
+				tabs.forEach(function (t) { t.classList.remove('nav-tab-active'); });
+				tab.classList.add('nav-tab-active');
+				renderAuditFeed(tab.dataset.scope);
+			});
+		});
+
+		var first = auditRoot.querySelector('#vc-audit-tabs .nav-tab[data-scope="activity"]');
+
+		if (first) {
+			first.classList.add('nav-tab-active');
+			renderAuditFeed('activity');
+		}
+	}
 	}
 
 	document.querySelectorAll('.vc-halt-all').forEach(function (btn) {
@@ -323,25 +310,6 @@
 				});
 		});
 	});
-
-	var haltsRoot = document.getElementById('vc-connector-halts');
-
-	if (haltsRoot) {
-		haltsRoot.addEventListener('click', function (e) {
-			var btn = e.target.closest ? e.target.closest('.vc-halt-connector') : null;
-
-			if (!btn || !btn.dataset.serverId) {
-				return;
-			}
-
-			rest('panel/halt', {
-				method: 'POST',
-				body: JSON.stringify({ scope: 'connector', server_id: btn.dataset.serverId, reason: btn.dataset.name })
-			}).then(function () {
-				window.location.reload();
-			});
-		});
-	}
 
 	var resume = document.querySelector('.vc-halt-resume');
 
@@ -387,9 +355,15 @@
 	}
 
 	var devicePolling = false;
+	var devicePollFails = 0;
+	/* Stop hammering the endpoint: a nonce that returns 401/403 will never
+	 * recover on its own, and neither will a persistent network error. */
+	var DEVICE_POLL_MAX_FAILS = 20; // ~100 s of consecutive failures
 
 	function pollDevice() {
 		rest('auth/device/poll', { method: 'POST', body: '{}' }).then(function (result) {
+			devicePollFails = 0;
+
 			if (result.state === 'ok' && result.data && result.data.status === 'success') {
 				window.location.reload();
 				return;
@@ -405,6 +379,14 @@
 
 			setTimeout(pollDevice, 5000);
 		}).catch(function () {
+			devicePollFails += 1;
+
+			if (devicePollFails >= DEVICE_POLL_MAX_FAILS) {
+				devicePolling = false;
+				showDeviceError(L('device_error', 'Could not start device login. Please try again.'));
+				return;
+			}
+
 			setTimeout(pollDevice, 5000);
 		});
 	}
@@ -429,7 +411,7 @@
 			box.appendChild(el('p', null, L('device_code', 'Device code')));
 			box.appendChild(el('code', 'vc-device-code', bundle.user_code || '\u2026'));
 
-			var p = el('p', null);
+			var p = el('p');
 			var link = el('a', 'button', L('device_open', 'Open approval page'));
 
 			link.href = bundle.verification_url || (VCConfig.links && VCConfig.links.device ? VCConfig.links.device : '#');
