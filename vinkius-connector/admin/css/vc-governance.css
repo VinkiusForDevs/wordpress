@@ -1300,7 +1300,6 @@
 }
 
 .vc-tbl th {
-	padding: 8px 14px;
 	font-size: 0.75rem;
 	font-weight: 600;
 	color: #71717a;
@@ -1574,11 +1573,22 @@
 }
 
 /* == Evidence packs (generate + verify, in-panel) ======================= */
+/* Right column of the generate band: button and its result line stacked,
+ * closed at the row edge. */
+.vc-pack-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 6px;
+	flex-shrink: 0;
+}
+
 .vc-pack-gen {
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
-	margin-top: 10px;
+	margin-top: 4px;
+	text-align: right;
 }
 
 .vc-pack-hint {
@@ -1695,7 +1705,7 @@
 }
 
 .vc-settings .vc-table-card {
-	margin: 0 0 14px;
+	margin: 0 0 16px;
 }
 
 .vc-settings .vc-table-card:last-child {
@@ -1780,12 +1790,14 @@
 	overflow: hidden;
 }
 
+/* Row gutters match the control-trail table padding (8px/14px) so text
+ * columns and separators align across the two postboxes on this screen. */
 .vc-quar-item {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
 	gap: 12px;
-	padding: 12px 2px 14px;
+	padding: 12px 14px 14px;
 }
 
 .vc-quar-item + .vc-quar-item {

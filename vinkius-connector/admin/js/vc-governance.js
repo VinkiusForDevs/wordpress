@@ -2289,7 +2289,7 @@
 		/* Evidence packs: generate + verify, in-panel. */
 		var packRow = el('div', 'vc-band-row');
 		var packText = el('div');
-		var packActions = el('div', 'vc-actions-wrap');
+		var packActions = el('div', 'vc-pack-actions');
 
 		packText.appendChild(el('h3', 'vc-band-title', L('cp_pack_title', 'Evidence pack')));
 		packText.appendChild(el('p', 'vc-band-hint', L('cp_pack_desc', 'A frozen, re-verifiable snapshot of your governance evidence. Share it with a board, regulator, or auditor.')));
@@ -2337,10 +2337,10 @@
 					setPackMsg(L('cp_pack_fail', 'The pack could not be generated. Try again.'), 'err');
 				});
 		});
-		packActions.appendChild(genBtn);
 		genWrap.appendChild(el('span', 'vc-muted vc-pack-hint', L('cp_pack_hint', 'Generation is one click; the pack is immutable once created.')));
+		packActions.appendChild(genBtn);
+		packActions.appendChild(genWrap);
 		packRow.appendChild(packActions);
-		packRow.appendChild(genWrap);
 		wrap.appendChild(packRow);
 
 		var packListWrap = el('div', 'vc-pack-list');
@@ -3116,7 +3116,11 @@
 					tbody.appendChild(tr);
 				});
 				t.appendChild(tbody);
-				host.appendChild(t);
+
+				var card = el('div', 'vc-table-card');
+
+				card.appendChild(t);
+				host.appendChild(card);
 
 				var pag = d.pagination || (d.data && d.data.pagination);
 
