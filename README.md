@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/License-GPLv2%20or%20later-blue.svg)
 ![WordPress](https://img.shields.io/badge/WordPress-6.2%2B-21759b?logo=wordpress&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-4F5B93?logo=php&logoColor=white)
-![Version](https://img.shields.io/badge/version-1.0.1-orange.svg)
+![Version](https://img.shields.io/badge/version-1.0.2-orange.svg)
 
 **Vinkius Connector** turns a WordPress site into a first-class node in the
 [Vinkius](https://vinkius.com) AI platform. It gives the site owner a live

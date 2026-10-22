@@ -3127,7 +3127,7 @@
 					});
 
 					if (bar) {
-						bar.setAttribute('style', 'margin-top:12px');
+						bar.classList.add('vc-drill-pagbar');
 						host.appendChild(bar);
 					}
 				}

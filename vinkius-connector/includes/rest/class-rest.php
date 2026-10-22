@@ -146,6 +146,15 @@ final class Rest {
 	 * @return \WP_REST_Response
 	 */
 	public static function consent_revoke( $request ) {
+		$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+
+		if ( ! ConsentService::revoke_throttle_ok( $ip ) ) {
+			return new \WP_REST_Response(
+				array( 'error' => 'rate_limited', 'message' => __( 'Too many requests. Please try again later.', 'vinkius-connector' ) ),
+				429
+			);
+		}
+
 		$row_id = ConsentRepo::resolve_revoke_token( (string) $request->get_param( 'token' ) );
 
 		if ( ! $row_id || ! ConsentRepo::revoke( $row_id ) ) {

@@ -1666,6 +1666,11 @@
 	margin-top: 4px;
 }
 
+/* Drill-down pagination sits below the drill table. */
+.vc-drill-pagbar {
+	margin-top: 12px;
+}
+
 .vc-pack-detail .vc-acc-band-grid {
 	margin-top: 10px;
 }

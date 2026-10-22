@@ -40,5 +40,5 @@ delete_transient( 'vc_device_bundle' );
 $wpdb->query(
 	"DELETE FROM {$wpdb->options}
 	 WHERE option_name LIKE '_transient_vc_consent_rl_%'
-		OR option_name LIKE '_transient_timeout_vc_consent_rl_%"
+		OR option_name LIKE '_transient_timeout_vc_consent_rl_%'"
 ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedSQL

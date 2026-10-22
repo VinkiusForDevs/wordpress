@@ -82,7 +82,7 @@ final class DeviceFlow {
 	/**
 	 * Poll for approval.
 	 *
-	 * @return Result Data: {status: pending|success|expired|denied|no_session, access_token?, refresh_token?, expires_in?}
+	 * @return Result Data: {status: pending|success|expired|denied|no_session}
 	 */
 	public function poll() {
 		$bundle = get_transient( self::BUNDLE_KEY );
@@ -124,14 +124,13 @@ final class DeviceFlow {
 			AuthStore::store( $data );
 			delete_transient( self::BUNDLE_KEY );
 
-			return Result::ok(
-				array(
-					'status'        => 'success',
-					'access_token'  => $data['access_token'],
-					'refresh_token' => isset( $data['refresh_token'] ) ? $data['refresh_token'] : '',
-					'expires_in'    => isset( $data['expires_in'] ) ? (int) $data['expires_in'] : 0,
-				)
-			);
+			/*
+			 * The tokens were persisted server-side (AuthStore::store). The
+			 * browser only needs the status — echoing the access/refresh
+			 * pair into an admin REST response would defeat the contract in
+			 * AuthStore ("never expose these values to the browser").
+			 */
+			return Result::ok( array( 'status' => 'success' ) );
 		}
 
 		return Result::ok( array( 'status' => 'pending' ) );

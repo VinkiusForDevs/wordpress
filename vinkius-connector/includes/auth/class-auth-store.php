@@ -105,6 +105,28 @@ final class AuthStore {
 			return Result::not_connected();
 		}
 
+		/*
+		 * Concurrency guard: if the runtime rotates refresh tokens on use,
+		 * two parallel callers exchanging the same refresh token would make
+		 * the second exchange fail (400/401) and clear() a perfectly good
+		 * session — a burst of admin page loads could log the site out.
+		 * A short lock makes losers wait and reuse the winner's fresh pair.
+		 */
+		$lock = 'vc_refresh_lock';
+
+		if ( false !== get_transient( $lock ) ) {
+			for ( $i = 0; $i < 10; $i++ ) {
+				usleep( 200000 );
+				$row = self::get();
+
+				if ( ! empty( $row['access_token'] ) && (int) ( $row['expires_at'] ?? 0 ) > time() + 30 ) {
+					return Result::ok( array( 'token' => $row['access_token'] ) );
+				}
+			}
+		}
+
+		set_transient( $lock, time(), 30 );
+
 		$client = new \VinkiusConnector\HttpClient();
 		$result = $client->request( 'POST', '/auth/refresh', array( 'refresh_token' => $row['refresh_token'] ) );
 
@@ -115,6 +137,8 @@ final class AuthStore {
 				self::clear();
 			}
 
+			delete_transient( $lock );
+
 			return $result;
 		}
 
@@ -123,6 +147,8 @@ final class AuthStore {
 		if ( ! empty( $data['access_token'] ) ) {
 			self::store( $data );
 		}
+
+		delete_transient( $lock );
 
 		return Result::ok( array( 'token' => $data['access_token'] ?? '' ) );
 	}

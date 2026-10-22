@@ -138,4 +138,38 @@ final class ConsentService {
 	private static function revoke_path( $row_id ) {
 		return 'vinkius/v1/consent/revoke?token=' . ConsentRepo::revoke_token( $row_id );
 	}
+
+	/**
+	 * Revoke throttle gate for the public GET revoke route.
+	 *
+	 * Without a cap, a scanner could walk the token space for free, and
+	 * every miss pages through the whole consent table (HMAC per row).
+	 * Legit visitors click their own revoke link once, so a generous
+	 * per-IP window is enough.
+	 *
+	 * @param string $ip Remote IP.
+	 * @return bool True when the request may proceed.
+	 */
+	public static function revoke_throttle_ok( $ip ) {
+		$ip = (string) $ip;
+
+		if ( '' === $ip ) {
+			return true;
+		}
+
+		$rl_key  = 'vc_revoke_rl_' . substr( sha1( $ip ), 0, 16 );
+		$rl_hits = (int) get_transient( $rl_key );
+
+		if ( $rl_hits >= 10 ) {
+			return false;
+		}
+
+		if ( 0 === $rl_hits && false === get_transient( $rl_key ) ) {
+			set_transient( $rl_key, 1, 10 * MINUTE_IN_SECONDS );
+		} else {
+			set_transient( $rl_key, $rl_hits + 1, 10 * MINUTE_IN_SECONDS );
+		}
+
+		return true;
+	}
 }
